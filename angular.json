@@ -32,12 +32,17 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/assets/manifest/site.webmanifest"
             ],
             "styles": [
+              "src/global_styles/custom_resset.scss",
+              "src/global_styles/variables.scss",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "serviceWorker": true,
+            "ngswConfigPath": "ngsw-config.json"
           },
           "configurations": {
             "production": {
@@ -100,7 +105,8 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/assets/manifest/site.webmanifest"
             ],
             "styles": [
               "src/styles.scss"

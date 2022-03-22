@@ -40,7 +40,8 @@
     },
     {
       "files": [
-        "*.html"
+        "*.html",
+        "*.scss"
       ],
       "extends": [
         "plugin:@angular-eslint/template/recommended"
