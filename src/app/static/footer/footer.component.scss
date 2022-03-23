@@ -1,23 +1,7 @@
+@import "/src/global_styles/variables.scss";
+
 .footer {
   width: 100%;
   padding: 30px 0;
-  background: #1b242f;
-
-  ul {
-    display: flex;
-    justify-content: center;
-
-    li {
-      margin: 10px;
-
-      a {
-        color: whitesmoke;
-        transition: all 0.3s;
-
-        &:hover {
-          color: rgb(150, 148, 148);
-        }
-      }
-    }
-  }
+  background: $main_color;
 }
