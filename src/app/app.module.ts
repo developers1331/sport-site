@@ -13,6 +13,7 @@ import { FooterComponent } from './static/footer/footer.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { FooterBtnComponent } from './static/footer/footer-btn/footer-btn.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { FooterBtnComponent } from './static/footer/footer-btn/footer-btn.compon
     HeaderComponent,
     FooterComponent,
     FooterBtnComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
