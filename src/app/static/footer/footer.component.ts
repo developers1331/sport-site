@@ -1,14 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { dataBtn, btns } from 'src/app/static/footer/footer.params';
 
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss'],
 })
-export class FooterComponent implements OnInit {
+export class FooterComponent {
   constructor() {}
-
-  ngOnInit(): void {
-    console.log('init');
-  }
+  public dataBtns: btns = dataBtn;
 }

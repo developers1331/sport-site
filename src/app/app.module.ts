@@ -12,6 +12,7 @@ import { HeaderComponent } from './static/header/header.component';
 import { FooterComponent } from './static/footer/footer.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { FooterBtnComponent } from './static/footer/footer-btn/footer-btn.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { environment } from '../environments/environment';
     PostComponent,
     HeaderComponent,
     FooterComponent,
+    FooterBtnComponent,
   ],
   imports: [
     BrowserModule,

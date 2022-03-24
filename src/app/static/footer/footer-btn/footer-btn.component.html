@@ -1,0 +1,9 @@
+<li *ngIf="defaultBtns; else routBtns" class="footer__elem">
+  <a [href]="hrefLink" [target]="target">{{ text }}</a>
+</li>
+
+<ng-template #routBtns>
+  <li class="footer__elem">
+    <a [routerLink]="routLink">{{ text }}</a>
+  </li>
+</ng-template>
