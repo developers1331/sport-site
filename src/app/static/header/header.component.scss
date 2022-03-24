@@ -36,10 +36,6 @@
     align-items: center;
     list-style: none;
     width: 100%;
-    &-link {
-      color: $main_color;
-      text-decoration: none;
-    }
   }
   &__search-link {
     display: block;
@@ -94,9 +90,6 @@
   .header {
     &__nav-list {
       justify-content: flex-end;
-      &-item:nth-child(-n + 4) {
-        display: none;
-      }
     }
     &__right {
       flex-direction: row-reverse;

@@ -2,42 +2,37 @@
   <div class="container container_flex-sb">
     <div class="header__left">
       <div class="header__logo">
-        <picture>
-          <source srcset="assets/images/logo.webp" type="image/webp" />
-          <img
-            src="assets/images/logo.png"
-            alt="logo"
-            class="header__logo-picture"
-          />
-        </picture>
+        <a routerLink="/">
+          <picture>
+            <source srcset="assets/images/logo.webp" type="image/webp" />
+            <img
+              src="assets/images/logo.png"
+              alt="logo"
+              class="header__logo-picture"
+            />
+          </picture>
+        </a>
       </div>
     </div>
     <div class="header__right">
       <nav class="header__nav">
         <ul class="header__nav-list">
-          <li class="header__nav-list-item">
-            <a href="#!" class="header__nav-list-link"> About </a>
-          </li>
-          <li class="header__nav-list-item">
-            <a href="#!" class="header__nav-list-link"> Program </a>
-          </li>
-          <li class="header__nav-list-item">
-            <a href="#!" class="header__nav-list-link"> Blog </a>
-          </li>
-          <li class="header__nav-list-item">
-            <a href="#!" class="header__nav-list-link"> Shop </a>
-          </li>
-          <li
+          <app-header-btn
+            *ngFor="let item of btns"
+            text="{{ item.text }}"
+            hrefLink="{{ item.hrefLink }}"
+          ></app-header-btn>
+          <div
             (click)="toggle()"
             [ngClass]="{ active: isActive }"
-            class="header__nav-list-item active"
+            class="header__nav-list-block active"
           >
-            <a href="#!" class="header__nav-list-link burger">
+            <div class="header__nav-list-link burger">
               <i class="burger__line-1"></i>
               <i class="burger__line-2"></i>
               <i class="burger__line-3"></i>
-            </a>
-          </li>
+            </div>
+          </div>
         </ul>
       </nav>
       <div class="header__search">

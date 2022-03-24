@@ -14,6 +14,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { FooterBtnComponent } from './static/footer/footer-btn/footer-btn.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HeaderBtnComponent } from './static/header/header-btn/header-btn.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     FooterComponent,
     FooterBtnComponent,
     PageNotFoundComponent,
+    HeaderBtnComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,4 +43,4 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

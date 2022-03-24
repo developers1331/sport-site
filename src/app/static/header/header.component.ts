@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { dataBtns, Ibtns } from 'src/app/static/header/header.params';
 
 @Component({
   selector: 'app-header',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   public isActive: boolean = false;
+  public btns: Ibtns[] = dataBtns;
 
   constructor() {}
 
