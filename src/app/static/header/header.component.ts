@@ -18,5 +18,10 @@ export class HeaderComponent implements OnInit {
 
   public toggle() {
     this.isActive = !this.isActive;
+    if (this.isActive) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
   }
 }

@@ -15,6 +15,8 @@ import { environment } from '../environments/environment';
 import { FooterBtnComponent } from './static/footer/footer-btn/footer-btn.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HeaderBtnComponent } from './static/header/header-btn/header-btn.component';
+import { HeaderMobileComponent } from './static/header/header-mobile/header-mobile.component';
+import { HeaderMobileBtnComponent } from './static/header/header-mobile/header-mobile-btn/header-mobile-btn.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { HeaderBtnComponent } from './static/header/header-btn/header-btn.compon
     FooterBtnComponent,
     PageNotFoundComponent,
     HeaderBtnComponent,
+    HeaderMobileComponent,
+    HeaderMobileBtnComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,4 +47,4 @@ import { HeaderBtnComponent } from './static/header/header-btn/header-btn.compon
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

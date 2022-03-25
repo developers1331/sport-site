@@ -1,0 +1,24 @@
+@import "/src/global_styles/variables.scss";
+.header__mobile {
+  &-nav {
+    &-list {
+      &-item {
+        margin-bottom: 35px;
+      }
+      &-link {
+        color: #fff;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-size: 49px;
+        &:hover {
+          color: $header_text_link;
+          transition: all 0.3s ease;
+        }
+      }
+    }
+  }
+}
+
+.active {
+  color: $header_text_link;
+}

@@ -1,0 +1,12 @@
+<div [ngClass]="{ active: isActive }" class="header__mobile">
+  <nav class="header__mobile-nav">
+    <ul class="header__mobile-nav-list">
+      <app-header-mobile-btn
+        *ngFor="let item of btns"
+        text="{{ item.text }}"
+        hrefLink="{{ item.hrefLink }}"
+      >
+      </app-header-mobile-btn>
+    </ul>
+  </nav>
+</div>
