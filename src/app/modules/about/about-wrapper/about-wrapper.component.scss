@@ -1,15 +1,12 @@
 @import "/src/global_styles/variables.scss";
-
 .container {
   max-width: $container_width;
-  margin: 40px auto 80px auto;
-
+  margin: 0 auto 80px auto;
   .head {
     max-width: 600px;
-    padding: 16px;
-    margin: 50px auto;
+    padding: 50px 16px 16px;
+    margin: 0 auto 50px;
     text-align: center;
-
     &__title {
       max-width: 200px;
       margin: 0 auto;
@@ -19,7 +16,6 @@
       margin-bottom: 20px;
       text-transform: uppercase;
       position: relative;
-
       &::before {
         content: "";
         position: absolute;
@@ -32,7 +28,6 @@
         border-radius: 22%;
       }
     }
-
     &__subtitle {
       position: relative;
       font-weight: bold;
@@ -41,10 +36,8 @@
       text-transform: uppercase;
       color: $main_color;
     }
-
     &__subtitle-line {
       position: relative;
-
       &::before {
         content: "";
         position: absolute;
@@ -58,7 +51,6 @@
         border-radius: 22%;
       }
     }
-
     &__description {
       color: $gray_color;
     }
