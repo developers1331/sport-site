@@ -11,6 +11,7 @@ import { dataBtns, Ibtns } from 'src/app/static/header/header.params';
 export class HeaderComponent implements OnInit {
   public isActive: boolean = false;
   public btns: Ibtns[] = dataBtns;
+  public imgPath: string = 'assets/images/bg-header.jpg';
   private widthScreen: number = 0;
   private modalHref!: BsModalRef;
 

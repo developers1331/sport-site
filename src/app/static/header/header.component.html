@@ -52,6 +52,10 @@
       </div>
     </div>
   </div>
+  <div
+    class="header__background"
+    [ngStyle]="{ 'background-image': 'url(' + imgPath + ')' }"
+  ></div>
   <app-header-mobile
     (click)="toggle()"
     [isActive]="isActive"

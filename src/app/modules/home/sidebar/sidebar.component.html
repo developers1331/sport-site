@@ -1,0 +1,13 @@
+<aside class="home__aside">
+  <nav class="home__aside-nav">
+    <ul class="home__aside-nav-list">
+      <app-sidebar-btn
+        (click)="toggle(item.id)"
+        *ngFor="let item of dataSidebar2"
+        direction="{{ item.direction }}"
+        id="{{ item.id }}"
+        [open]="item.open"
+      ></app-sidebar-btn>
+    </ul>
+  </nav>
+</aside>

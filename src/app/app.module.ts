@@ -17,6 +17,7 @@ import { ModalComponent } from './modal/modal.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PostsModule } from 'src/app/modules/posts/posts.module';
 import { ProgramsModule } from 'src/app/modules/programs/programs.module';
+import { HomeModule } from 'src/app/modules/home/home.module';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { ProgramsModule } from 'src/app/modules/programs/programs.module';
       registrationStrategy: 'registerWhenStable:30000',
     }),
     ModalModule.forRoot(),
+    HomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
