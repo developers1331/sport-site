@@ -16,6 +16,9 @@ MIT
 @angular/service-worker
 MIT
 
+angular-responsive-carousel
+Apache License 2.0
+
 ngx-bootstrap/component-loader
 MIT
 
