@@ -1,4 +1,6 @@
 import { Component, Input } from '@angular/core';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import { ModalComponent } from 'src/app/modal/modal.component';
 import { Ibtns, dataBtns } from 'src/app/static/header/header.params';
 
 @Component({
@@ -9,6 +11,10 @@ import { Ibtns, dataBtns } from 'src/app/static/header/header.params';
 export class HeaderMobileComponent {
   @Input() isActive: boolean = false;
   public btns: Ibtns[] = dataBtns;
+  private modalHref!: BsModalRef;
+  constructor(private modalService: BsModalService) {}
 
-  constructor() {}
+  public openModal() {
+    this.modalHref = this.modalService.show(ModalComponent);
+  }
 }

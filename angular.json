@@ -36,6 +36,7 @@
               "src/assets/manifest/site.webmanifest"
             ],
             "styles": [
+              "src/global_styles/libs.scss",
               "src/global_styles/custom_resset.scss",
               "src/global_styles/variables.scss",
               "src/styles.scss"

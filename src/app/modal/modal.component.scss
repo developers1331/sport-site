@@ -1,0 +1,141 @@
+@import "/src/global_styles/variables.scss";
+
+.pull-right {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
+
+.form-title {
+  margin-bottom: 20px;
+}
+
+.form-left-decoration,
+.form-right-decoration {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 20px;
+  background: $main_color;
+  border-radius: 20px;
+}
+
+.form-left-decoration {
+  bottom: 60px;
+  left: -30px;
+}
+
+.form-right-decoration {
+  top: 60px;
+  right: -30px;
+}
+
+.form-left-decoration:before,
+.form-left-decoration:after,
+.form-right-decoration:before,
+.form-right-decoration:after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 20px;
+  border-radius: 30px;
+  background: white;
+}
+
+.form-left-decoration:before {
+  top: -20px;
+}
+
+.form-left-decoration:after {
+  top: 20px;
+  left: 10px;
+}
+
+.form-right-decoration:before {
+  top: -20px;
+  right: 0;
+}
+
+.form-right-decoration:after {
+  top: 20px;
+  right: 10px;
+}
+
+.circle {
+  position: absolute;
+  bottom: 80px;
+  left: -55px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: white;
+}
+
+.form-inner {
+  padding: 50px;
+}
+
+.form-inner input,
+.form-inner textarea {
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  background: #e9eff6;
+  line-height: 40px;
+  border-width: 0;
+  border-radius: 30px;
+  font-family: "Roboto", sans-serif;
+  outline: none;
+  border: 2px solid #fff;
+
+  &.ng-invalid.ng-touched {
+    border: 2px solid $easy_color;
+  }
+
+  &.ng-valid {
+    border: 2px solid $main_color;
+  }
+}
+
+.submit_btn {
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  background: $main_color;
+  line-height: 40px;
+  border-width: 0;
+  border-radius: 20px;
+  border-bottom: 4px solid #05092c;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-size: 14px;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    background: $easy_color;
+    border-bottom: 4px solid #a86053;
+  }
+
+  &:disabled {
+    background: #eee;
+    color: #aaa;
+    border-color: #aaa;
+    cursor: not-allowed;
+    text-shadow: none;
+    box-shadow: none;
+  }
+}
+
+.form-inner textarea {
+  resize: none;
+}
+
+.form-inner h3 {
+  margin-top: 0;
+  font-weight: 500;
+  font-size: 24px;
+  color: #707981;
+}

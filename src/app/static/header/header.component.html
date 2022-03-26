@@ -22,6 +22,9 @@
             text="{{ item.text }}"
             hrefLink="{{ item.hrefLink }}"
           ></app-header-btn>
+          <div class="header__sup-modal" (click)="openModal()">
+            Написать нам
+          </div>
           <div
             (click)="toggle()"
             [ngClass]="{ active: isActive }"

@@ -1,4 +1,5 @@
 @import "/src/global_styles/variables.scss";
+
 .header {
   &__mobile {
     position: absolute;
@@ -10,8 +11,10 @@
     opacity: 0;
     transition: all 0.5s ease;
     visibility: hidden;
+
     &-nav {
       height: 100%;
+
       &-list {
         display: flex;
         justify-content: center;
@@ -28,4 +31,40 @@
   opacity: 0.8;
   transition: all 0.5s ease;
   visibility: visible;
+}
+
+@media screen and (min-width: 768px) {
+  .header__mobile,
+  .active {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@import "/src/global_styles/variables.scss";
+
+.header__mobile {
+  &-nav {
+    &-list {
+      &-item {
+        margin-bottom: 35px;
+      }
+
+      &-link {
+        color: #fff;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-size: 49px;
+
+        &:hover {
+          color: $header_text_link;
+          transition: all 0.3s ease;
+        }
+      }
+    }
+  }
+}
+
+.active {
+  color: $header_text_link;
 }

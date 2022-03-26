@@ -17,7 +17,9 @@
           <ul class="footer__info-wrapper">
             <li class="footer__info-elem title">СВЯЗЬ</li>
             <li class="footer__elem">
-              <a target="_blank" href="" class="footer__sup-modal">Саппорт</a>
+              <div class="footer__sup-modal" (click)="openModal()">
+                Написать нам
+              </div>
             </li>
             <app-footer-btn
               *ngFor="let item of dataBtns.infoBtns"
@@ -25,6 +27,7 @@
               target="{{ item.target }}"
               text="{{ item.text }}"
               routLink="{{ item.linkHref }}"
+              targetBtn="href"
             >
             </app-footer-btn>
           </ul>

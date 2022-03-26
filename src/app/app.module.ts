@@ -17,6 +17,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { HeaderBtnComponent } from './static/header/header-btn/header-btn.component';
 import { HeaderMobileComponent } from './static/header/header-mobile/header-mobile.component';
 import { HeaderMobileBtnComponent } from './static/header/header-mobile/header-mobile-btn/header-mobile-btn.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { ModalComponent } from './modal/modal.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -33,16 +36,20 @@ import { HeaderMobileBtnComponent } from './static/header/header-mobile/header-m
     HeaderBtnComponent,
     HeaderMobileComponent,
     HeaderMobileBtnComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the application is stable
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000',
     }),
+    ModalModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],
