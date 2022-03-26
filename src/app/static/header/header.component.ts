@@ -28,8 +28,11 @@ export class HeaderComponent implements OnInit {
     this.isActive = !this.isActive;
     if (this.isActive) {
       document.body.style.overflow = 'hidden';
+      document.body.style.touchAction = 'none';
+      window.scrollTo(0, 0);
     } else {
       document.body.style.overflow = '';
+      document.body.style.touchAction = '';
     }
   }
 
@@ -38,6 +41,7 @@ export class HeaderComponent implements OnInit {
     if (this.widthScreen >= 768) {
       this.isActive = false;
       document.body.style.overflow = '';
+      document.body.style.touchAction = '';
     }
   }
 }
