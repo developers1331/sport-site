@@ -1,7 +1,7 @@
 {
   "configVersion": 1,
-  "timestamp": 1648257058489,
-  "index": "https://doken1331.github.io/Sport-Site/index.html",
+  "timestamp": 1648297262285,
+  "index": "https://doken1331.github.io/sport-site/index.html",
   "assetGroups": [
     {
       "name": "app",
@@ -11,13 +11,13 @@
         "ignoreVary": true
       },
       "urls": [
-        "https://doken1331.github.io/Sport-Site/assets/manifest/site.webmanifest",
-        "https://doken1331.github.io/Sport-Site/favicon.ico",
-        "https://doken1331.github.io/Sport-Site/index.html",
-        "https://doken1331.github.io/Sport-Site/main.82cec34f4c8be982.js",
-        "https://doken1331.github.io/Sport-Site/polyfills.56519e223aca727c.js",
-        "https://doken1331.github.io/Sport-Site/runtime.0db38bcf9f5ebc8c.js",
-        "https://doken1331.github.io/Sport-Site/styles.ce5c4138e9362cbc.css"
+        "https://doken1331.github.io/sport-site/assets/manifest/site.webmanifest",
+        "https://doken1331.github.io/sport-site/favicon.ico",
+        "https://doken1331.github.io/sport-site/index.html",
+        "https://doken1331.github.io/sport-site/main.555cb4f6c2b9e9db.js",
+        "https://doken1331.github.io/sport-site/polyfills.56519e223aca727c.js",
+        "https://doken1331.github.io/sport-site/runtime.0db38bcf9f5ebc8c.js",
+        "https://doken1331.github.io/sport-site/styles.ce5c4138e9362cbc.css"
       ],
       "patterns": []
     },
@@ -29,47 +29,47 @@
         "ignoreVary": true
       },
       "urls": [
-        "https://doken1331.github.io/Sport-Site/assets/images/404.png",
-        "https://doken1331.github.io/Sport-Site/assets/images/logo-footer.png",
-        "https://doken1331.github.io/Sport-Site/assets/images/logo.png",
-        "https://doken1331.github.io/Sport-Site/assets/images/logo.webp",
-        "https://doken1331.github.io/Sport-Site/assets/images/search-icon.png",
-        "https://doken1331.github.io/Sport-Site/assets/images/search-icon.webp",
-        "https://doken1331.github.io/Sport-Site/assets/manifest/android-chrome-192x192.png",
-        "https://doken1331.github.io/Sport-Site/assets/manifest/android-chrome-512x512.png",
-        "https://doken1331.github.io/Sport-Site/assets/manifest/apple-touch-icon.png",
-        "https://doken1331.github.io/Sport-Site/assets/manifest/browserconfig.xml",
-        "https://doken1331.github.io/Sport-Site/assets/manifest/favicon-16x16.png",
-        "https://doken1331.github.io/Sport-Site/assets/manifest/favicon-32x32.png",
-        "https://doken1331.github.io/Sport-Site/assets/manifest/favicon.ico",
-        "https://doken1331.github.io/Sport-Site/assets/manifest/mstile-150x150.png"
+        "https://doken1331.github.io/sport-site/assets/images/404.png",
+        "https://doken1331.github.io/sport-site/assets/images/logo-footer.png",
+        "https://doken1331.github.io/sport-site/assets/images/logo.png",
+        "https://doken1331.github.io/sport-site/assets/images/logo.webp",
+        "https://doken1331.github.io/sport-site/assets/images/search-icon.png",
+        "https://doken1331.github.io/sport-site/assets/images/search-icon.webp",
+        "https://doken1331.github.io/sport-site/assets/manifest/android-chrome-192x192.png",
+        "https://doken1331.github.io/sport-site/assets/manifest/android-chrome-512x512.png",
+        "https://doken1331.github.io/sport-site/assets/manifest/apple-touch-icon.png",
+        "https://doken1331.github.io/sport-site/assets/manifest/browserconfig.xml",
+        "https://doken1331.github.io/sport-site/assets/manifest/favicon-16x16.png",
+        "https://doken1331.github.io/sport-site/assets/manifest/favicon-32x32.png",
+        "https://doken1331.github.io/sport-site/assets/manifest/favicon.ico",
+        "https://doken1331.github.io/sport-site/assets/manifest/mstile-150x150.png"
       ],
       "patterns": []
     }
   ],
   "dataGroups": [],
   "hashTable": {
-    "https://doken1331.github.io/Sport-Site/assets/images/404.png": "1e569b9c18ed02d52bfd0797964b0bdeca9788a2",
-    "https://doken1331.github.io/Sport-Site/assets/images/logo-footer.png": "df4aee196c94f0f3178f0af7970f7d745adabf55",
-    "https://doken1331.github.io/Sport-Site/assets/images/logo.png": "79d16a56ef8d2ca7beba765d62e9f8d35285f1e6",
-    "https://doken1331.github.io/Sport-Site/assets/images/logo.webp": "6bf0cc1ea4298ddb1ae564f6c525b013d903c687",
-    "https://doken1331.github.io/Sport-Site/assets/images/search-icon.png": "63a6ea9399b8ede133b5f1fb1f5ed996f6f7e3bb",
-    "https://doken1331.github.io/Sport-Site/assets/images/search-icon.webp": "2f126834a32de4c0b99ce2ac698ba849ca4a43a5",
-    "https://doken1331.github.io/Sport-Site/assets/manifest/android-chrome-192x192.png": "c5b23aca38f1111af1287c8ebddbaf0daec292e8",
-    "https://doken1331.github.io/Sport-Site/assets/manifest/android-chrome-512x512.png": "0c9da6c981501ee54258e42b126871c7b024d5b3",
-    "https://doken1331.github.io/Sport-Site/assets/manifest/apple-touch-icon.png": "1f3326002115c9977c6055ced97ab0aef5e42877",
-    "https://doken1331.github.io/Sport-Site/assets/manifest/browserconfig.xml": "814bc68dd1658927ce6afa162ea2872da7ff6b1b",
-    "https://doken1331.github.io/Sport-Site/assets/manifest/favicon-16x16.png": "b78acc9ffa09e93457e3697ee41a187e20044b72",
-    "https://doken1331.github.io/Sport-Site/assets/manifest/favicon-32x32.png": "83fc09aec36ae45ef875e858cd6084e7a9690762",
-    "https://doken1331.github.io/Sport-Site/assets/manifest/favicon.ico": "590c59650bb3defa5f56910ccc73398526be2d2a",
-    "https://doken1331.github.io/Sport-Site/assets/manifest/mstile-150x150.png": "fc3e4e012582d32db137926d2a3a71b9e8be615f",
-    "https://doken1331.github.io/Sport-Site/assets/manifest/site.webmanifest": "06022e9ee027354bf85e8207f0b0c707be8fb56d",
-    "https://doken1331.github.io/Sport-Site/favicon.ico": "590c59650bb3defa5f56910ccc73398526be2d2a",
-    "https://doken1331.github.io/Sport-Site/index.html": "2921973d7ccbeb2922085a547b588ab17b705b4e",
-    "https://doken1331.github.io/Sport-Site/main.82cec34f4c8be982.js": "94eb095080345af4ccbf1a6f6c126ece0ed4de91",
-    "https://doken1331.github.io/Sport-Site/polyfills.56519e223aca727c.js": "f6444c07cf41be876f0b7df8edf94cb598be93a7",
-    "https://doken1331.github.io/Sport-Site/runtime.0db38bcf9f5ebc8c.js": "4690da880f81749b3ab6a63aac978a375574ddf4",
-    "https://doken1331.github.io/Sport-Site/styles.ce5c4138e9362cbc.css": "33fec2fa63a133d9e576b8d92529aed80712d339"
+    "https://doken1331.github.io/sport-site/assets/images/404.png": "1e569b9c18ed02d52bfd0797964b0bdeca9788a2",
+    "https://doken1331.github.io/sport-site/assets/images/logo-footer.png": "df4aee196c94f0f3178f0af7970f7d745adabf55",
+    "https://doken1331.github.io/sport-site/assets/images/logo.png": "79d16a56ef8d2ca7beba765d62e9f8d35285f1e6",
+    "https://doken1331.github.io/sport-site/assets/images/logo.webp": "6bf0cc1ea4298ddb1ae564f6c525b013d903c687",
+    "https://doken1331.github.io/sport-site/assets/images/search-icon.png": "63a6ea9399b8ede133b5f1fb1f5ed996f6f7e3bb",
+    "https://doken1331.github.io/sport-site/assets/images/search-icon.webp": "2f126834a32de4c0b99ce2ac698ba849ca4a43a5",
+    "https://doken1331.github.io/sport-site/assets/manifest/android-chrome-192x192.png": "c5b23aca38f1111af1287c8ebddbaf0daec292e8",
+    "https://doken1331.github.io/sport-site/assets/manifest/android-chrome-512x512.png": "0c9da6c981501ee54258e42b126871c7b024d5b3",
+    "https://doken1331.github.io/sport-site/assets/manifest/apple-touch-icon.png": "1f3326002115c9977c6055ced97ab0aef5e42877",
+    "https://doken1331.github.io/sport-site/assets/manifest/browserconfig.xml": "814bc68dd1658927ce6afa162ea2872da7ff6b1b",
+    "https://doken1331.github.io/sport-site/assets/manifest/favicon-16x16.png": "b78acc9ffa09e93457e3697ee41a187e20044b72",
+    "https://doken1331.github.io/sport-site/assets/manifest/favicon-32x32.png": "83fc09aec36ae45ef875e858cd6084e7a9690762",
+    "https://doken1331.github.io/sport-site/assets/manifest/favicon.ico": "590c59650bb3defa5f56910ccc73398526be2d2a",
+    "https://doken1331.github.io/sport-site/assets/manifest/mstile-150x150.png": "fc3e4e012582d32db137926d2a3a71b9e8be615f",
+    "https://doken1331.github.io/sport-site/assets/manifest/site.webmanifest": "06022e9ee027354bf85e8207f0b0c707be8fb56d",
+    "https://doken1331.github.io/sport-site/favicon.ico": "590c59650bb3defa5f56910ccc73398526be2d2a",
+    "https://doken1331.github.io/sport-site/index.html": "efe3d08fda52c736ebd1d77ce0d6d0d823c74777",
+    "https://doken1331.github.io/sport-site/main.555cb4f6c2b9e9db.js": "69d77e32d3cf671d8b55b5bf20cecc1072f07c0b",
+    "https://doken1331.github.io/sport-site/polyfills.56519e223aca727c.js": "f6444c07cf41be876f0b7df8edf94cb598be93a7",
+    "https://doken1331.github.io/sport-site/runtime.0db38bcf9f5ebc8c.js": "4690da880f81749b3ab6a63aac978a375574ddf4",
+    "https://doken1331.github.io/sport-site/styles.ce5c4138e9362cbc.css": "33fec2fa63a133d9e576b8d92529aed80712d339"
   },
   "navigationUrls": [
     {
