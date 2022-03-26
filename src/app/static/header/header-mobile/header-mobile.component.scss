@@ -9,6 +9,7 @@
     background: #000;
     opacity: 0;
     transition: all 0.5s ease;
+    visibility: hidden;
     &-nav {
       height: 100%;
       &-list {
@@ -26,4 +27,5 @@
 .active {
   opacity: 0.8;
   transition: all 0.5s ease;
+  visibility: visible;
 }
