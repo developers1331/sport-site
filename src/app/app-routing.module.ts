@@ -1,27 +1,27 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AboutComponent } from 'src/app/about/about.component';
-import { HomeComponent } from 'src/app/home/home.component';
+import { AboutWrapperComponent } from 'src/app/modules/about/about-wrapper/about-wrapper.component';
+import { HomeWrapperComponent } from 'src/app/modules/home/home-wrapper/home-wrapper.component';
+import { PostsWrapperComponent } from 'src/app/modules/posts/posts-wrapper/posts-wrapper.component';
+import { ProgramsWrapperComponent } from 'src/app/modules/programs/programs-wrapper/programs-wrapper.component';
 import { PageNotFoundComponent } from 'src/app/page-not-found/page-not-found.component';
-import { PostsComponent } from 'src/app/posts/posts.component';
-import { ProgramsComponent } from 'src/app/programs/programs.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
+    component: HomeWrapperComponent,
   },
   {
     path: 'about',
-    component: AboutComponent,
+    component: AboutWrapperComponent,
   },
   {
     path: 'programs',
-    component: ProgramsComponent,
+    component: ProgramsWrapperComponent,
   },
   {
     path: 'posts',
-    component: PostsComponent,
+    component: PostsWrapperComponent,
   },
   {
     path: '**',

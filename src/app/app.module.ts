@@ -3,11 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-import { ProgramsComponent } from './programs/programs.component';
-import { PostsComponent } from './posts/posts.component';
-import { PostComponent } from './posts/post/post.component';
 import { HeaderComponent } from './static/header/header.component';
 import { FooterComponent } from './static/footer/footer.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
@@ -20,15 +15,12 @@ import { HeaderMobileBtnComponent } from './static/header/header-mobile/header-m
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { ModalComponent } from './modal/modal.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PostsModule } from 'src/app/modules/posts/posts.module';
+import { ProgramsModule } from 'src/app/modules/programs/programs.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    AboutComponent,
-    ProgramsComponent,
-    PostsComponent,
-    PostComponent,
     HeaderComponent,
     FooterComponent,
     FooterBtnComponent,
@@ -43,6 +35,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    PostsModule,
+    ProgramsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the application is stable
