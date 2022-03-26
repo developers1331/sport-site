@@ -1,0 +1,43 @@
+<div class="container">
+  <carousel
+    class="carousel-custom"
+    [cellWidth]="'100%'"
+    [cellsToShow]="1"
+    [arrows]="true"
+    [dots]="true"
+    [height]="600"
+  >
+    <div class="carousel-cell" *ngFor="let item of swiperImagePath">
+      <div
+        class="carousel-img"
+        [ngStyle]="{ 'background-image': 'url(' + item.imgPath + ')' }"
+      >
+        <div class="review__wrapper">
+          <div class="review__left">
+            <div class="review__left-title">Спорт</div>
+            <div class="review__left-description">
+              Что люди говорят о нас и о нашей работе
+            </div>
+          </div>
+
+          <div class="review__right">
+            <div class="review__right-info">
+              <div
+                class="review__right-info__photo"
+                [ngStyle]="{
+                  'background-image': 'url(' + item.imgFacePath + ')'
+                }"
+              ></div>
+              <div class="review__right-info__name">
+                {{ item.name }}
+              </div>
+            </div>
+            <div class="review__right-text">
+              {{ item.textMsg }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </carousel>
+</div>

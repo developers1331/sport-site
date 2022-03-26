@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="trainers">
+    <div class="trainers__wrapper">
+      <ng-container *ngFor="let item of trainerList">
+        <div
+          class="trainers__elem"
+          [ngStyle]="{ 'background-image': 'url(' + item.imgPath + ')' }"
+        >
+          <div class="trainers__elem-name">
+            {{ item.fullname }}
+          </div>
+          <div class="trainers__elem-coach">
+            {{ item.coach }}
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

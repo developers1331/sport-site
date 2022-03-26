@@ -1,0 +1,47 @@
+@import "/src/global_styles/variables.scss";
+
+.container {
+  max-width: $container_width;
+  padding: 20px;
+  margin: 0 auto 80px auto;
+
+  .trainers {
+    &__wrapper {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: -15px -15px;
+    }
+
+    &__elem {
+      margin: 15px 15px;
+      width: 400px;
+      height: 500px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 3px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      &-name {
+        color: $second_color;
+        font-size: 22px;
+      }
+
+      &-coach {
+        color: $easy_color;
+        font-size: 18px;
+      }
+
+      &-name,
+      &-coach {
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: 0 0 10px 20px;
+      }
+    }
+  }
+}

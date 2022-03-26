@@ -1,0 +1,122 @@
+@import "/src/global_styles/variables.scss";
+
+.container {
+  max-width: 100%;
+  margin: 0 0 80px 0;
+  padding: 0;
+
+  .carousel-custom {
+    .carousel-img {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .review__wrapper {
+    max-width: 900px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    padding: 20px;
+
+    padding-top: 200px;
+    color: #fff;
+
+    .review__left {
+      margin-right: 40px;
+      width: 35%;
+
+      &-title {
+        margin-left: 55px;
+        color: $easy_color;
+        font-weight: bold;
+        font-size: $middle_text;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          display: block;
+          height: 3px;
+          width: 34px;
+          background: $easy_color;
+          top: 18px;
+          left: -55px;
+          border-radius: 22%;
+        }
+      }
+
+      &-description,
+      &-title {
+        text-transform: uppercase;
+      }
+
+      &-description {
+        font-size: $big_text;
+        font-weight: bold;
+      }
+    }
+
+    .review__right {
+      width: 45%;
+
+      &-info {
+        display: flex;
+        justify-items: flex-start;
+        margin-bottom: 20px;
+
+        &__photo {
+          min-width: 60px;
+          min-height: 60px;
+          width: 60px;
+          height: 60px;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          border: 4px solid $easy_color;
+          border-radius: 5px;
+        }
+
+        &__name {
+          margin-left: 30px;
+          color: $easy_color;
+          font-size: $middle_text;
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 700px) {
+    .review__wrapper {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+
+      .review__right {
+        width: 70%;
+
+        &-text {
+          /* Убираем внешний отступ */
+          -webkit-line-clamp: 6;
+          /* Число отображаемых строк */
+          display: -webkit-box;
+          /* Включаем флексбоксы */
+          -webkit-box-orient: vertical;
+          /* Вертикальная ориентация */
+          overflow: hidden;
+        }
+      }
+    }
+
+    .review__left {
+      display: none;
+    }
+  }
+}
