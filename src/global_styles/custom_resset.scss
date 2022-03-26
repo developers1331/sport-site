@@ -121,3 +121,8 @@ select {
 .carousel-dot-active {
   background-color: #eef0f4 !important;
 }
+
+.modal,
+.modal-backdrop {
+  z-index: 20001;
+}
