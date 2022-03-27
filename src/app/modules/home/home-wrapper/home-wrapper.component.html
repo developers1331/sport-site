@@ -6,17 +6,19 @@
     <div class="home__right">
       <div
         class="home__main-picture"
-        [ngStyle]="{ 'background-image': 'url(' + dataPage2[0].imgMain + ')' }"
+        [ngStyle]="{
+          'background-image': 'url(' + dataPage2[currentId].imgMain + ')'
+        }"
       ></div>
       <h2 class="home__title">
-        {{ dataPage2[0].title }}
+        {{ dataPage2[currentId].title }}
       </h2>
       <p class="home__description">
-        {{ dataPage2[0].topDescription }}
+        {{ dataPage2[currentId].topDescription }}
       </p>
       <div class="home__pluses">
         <app-pluses
-          *ngFor="let item of dataPluses2"
+          *ngFor="let item of dataPluses2[currentId].elems"
           img="{{ item.img }}"
           title="{{ item.title }}"
           description="{{ item.description }}"
@@ -26,11 +28,11 @@
       <div
         class="home__picture"
         [ngStyle]="{
-          'background-image': 'url(' + dataPage2[0].imgSecond + ')'
+          'background-image': 'url(' + dataPage2[currentId].imgSecond + ')'
         }"
       ></div>
       <p class="home__description-second">
-        {{ dataPage2[0].bottomDescription }}
+        {{ dataPage2[currentId].bottomDescription }}
       </p>
     </div>
   </section>

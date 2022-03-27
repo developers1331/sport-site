@@ -1,5 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Ipluses, dataPluses } from 'src/app/modules/home/pluses/pluses.params';
+import { HomeService } from 'src/app/modules/home/services/home.service';
+import { takeUntil } from 'rxjs/operators';
+import { Subject } from 'rxjs';
+
 import {
   Ipage,
   dataPage,
@@ -14,15 +18,25 @@ import {
   templateUrl: './home-wrapper.component.html',
   styleUrls: ['./home-wrapper.component.scss'],
 })
-export class HomeWrapperComponent implements OnInit {
-  public imgMain: string = 'assets/images/exercise-1.jpg';
-  public dataPluses2: Ipluses[] = dataPluses;
+export class HomeWrapperComponent implements OnInit, OnDestroy {
   @Input() dataPage2: Ipage[] = dataPage;
   @Input() dataTrainers2: Itrainers[] = dataTrainers;
+  private destroy$ = new Subject<void>();
 
-  constructor() {}
+  public currentId: number = 0;
+  public imgMain: string = 'assets/images/exercise-1.jpg';
+  public dataPluses2: Ipluses[] = dataPluses;
+
+  constructor(private readonly homeService: HomeService) {}
 
   ngOnInit(): void {
-    console.log('todo');
+    this.homeService.homeId$.pipe(takeUntil(this.destroy$)).subscribe((id) => {
+      this.currentId = id;
+    });
+  }
+
+  ngOnDestroy() {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 }

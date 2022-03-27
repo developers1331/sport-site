@@ -7,22 +7,22 @@ export interface Isidebar {
 export const dataSidebar: Isidebar[] = [
   {
     id: 0,
-    direction: 'Bodybuilding',
+    direction: 'Бодибилдинг',
     open: true,
   },
   {
     id: 1,
-    direction: 'Powerlifting',
+    direction: 'Пауэрлифтинг',
     open: false,
   },
   {
     id: 2,
-    direction: 'Crossfit',
+    direction: 'Кроссфит',
     open: false,
   },
   {
     id: 3,
-    direction: 'Workout',
+    direction: 'Воркаут',
     open: false,
   },
 ];

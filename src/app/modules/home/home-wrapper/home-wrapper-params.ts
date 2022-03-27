@@ -4,16 +4,48 @@ export interface Ipage {
   topDescription: string;
   imgSecond: string;
   bottomDescription: string;
+  id: number;
 }
 
 export const dataPage: Ipage[] = [
   {
+    id: 0,
     imgMain: 'assets/images/exercise-1.jpg',
-    title: 'Bodybuilding pack',
+    title: 'Бодибилдинг',
     topDescription:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit corrupti enim laudantium dignissimos dicta sunt minus in atque. Dicta sed odit dolor quam cum, pariatur error voluptatum possimus at nulla! Iste, quod dolore? Saepe eos voluptas accusantium doloremque, sit fugiat odio sapiente quidem et ratione quia incidunt, nostrum sint ea maxime. Beatae corrupti voluptates quod assumenda eaque incidunt, esse ipsa.',
+      'Вид спорта, целью которого является максимальное развитие всех мышечных групп атлета и построение эталонных пропорций тела, что и оценивается во время соревнований (в различных весовых категориях). Состязания делятся на несколько раундов и включают в себя обязательное и свободное позирование, в ходе которого участники (в группе и индивидуально) должны продемонстрировать в том или ином ракурсе определенные группы мышц: двойной бицепс, трицепс, пресс, бедра и т.д. Судьи оценивают выступление атлетов по нескольким критериям в баллах, которые затем суммируются.',
     imgSecond: 'assets/images/exercise-2.jpg',
     bottomDescription:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sit distinctio laboriosam repellendus magnam nihil libero nemo, minima quos eveniet maiores accusamus dignissimos, voluptatibus aliquid veritatis earum nostrum perferendis quis! Hic aliquid ducimus ipsam! Repellendus, eaque. Molestiae nulla, inventore perspiciatis pariatur autem reprehenderit accusantium ipsum veniam vitae dolore aliquam vero accusamus non perferendis maxime, fugit alias ab, provident veritatis voluptates.',
+      'Основополагающая идея бодибилдинга заключается в том, что можно вылепить из кого угодно что угодно. В отличие от тяжелой атлетики, на базе которой он возник, в бодибилдинге не имеет значения, какой вес может «взять» (или «выжать») спортсмен. Важны результаты, отразившиеся на его внешности: равноценно и пропорционально проработанные мышцы (крупные и мелкие), их объем и рельеф (соотношение мышц и жира). Соревнования по бодибилдингу не может выиграть атлет с мощными руками, но тощими ногами, с хорошей спиной, но «пивным животом». Фактически, бодибилдинг – физкультура, культура тела. Отсюда и другое название этого вида спорта: «культуризм».',
+  },
+  {
+    id: 1,
+    imgMain: 'assets/images/power-1.jpg',
+    title: 'Пауэрлифтинг',
+    topDescription:
+      'Слово Power в переводе с английского означает силу, а Lifting — поднятие (тяжестей).',
+    imgSecond: 'assets/images/power-2.jpg',
+    bottomDescription:
+      'В пауэрлифтинге, как и в тяжёлой атлетике, спортсмены делятся на весовые категории, а общий результат спортсмена складывается из показателей во всех видах программы. Пауэрлифтинг возник как «дочерний» вид спорта для тяжёлой атлетики, поскольку упражнения, в которых соревнуются пауэрлифтеры, являются неотъемлемой частью тренировок «классических» штангистов. Несмотря на свою популярность, пауэрлифтинг пока не пробрался в Олимпийскую программу.',
+  },
+  {
+    id: 2,
+    imgMain: 'assets/images/cross-1.jpg',
+    title: 'Кроссфит',
+    topDescription:
+      'Кроссфит — это круговая тренировка (то есть, упражнения постоянно повторяются, как бы замыкаясь в цепочку), которая заключается в выполнении определенного комплекса упражнений за минимальное время. Она имеет принципиальные отличия от обычных круговых тренировок.',
+    imgSecond: 'assets/images/cross-2.jpg',
+    bottomDescription:
+      'Тренировочную концепцию кроссфита можно назвать одной из лучших в развитии общей физической подготовки. Индивидуальный комплекс подбирается исходя из возможности спортсмена и оснащения зала. По оборудованию и размерам залы для кроссфита немного отличаются от обычных. Но не будем пока вдваться в такие подробности!',
+  },
+  {
+    id: 3,
+    imgMain: 'assets/images/work-1.jpg',
+    title: 'Воркаут',
+    topDescription:
+      'Английский термин прямого перевода не имеет, но само понятие означает уличную тренировку, все упражнения которой можно выполнить без какого-либо специального оборудования. Достаточно обычной спортивной площадки с турником, брусьями, лестницами и скамейками. Более того – в большинстве упражнений нет ни гантелей, ни штанг – только вес собственного тела.',
+    imgSecond: 'assets/images/work-2.jpg',
+    bottomDescription:
+      'Особенность тренировочной программы заключается в выполнении стандартных комплексов базовых упражнений. При этом атлет может тренироваться как на специально оборудованных спортплощадках, так и без дополнительного оборудования (на земле).',
   },
 ];

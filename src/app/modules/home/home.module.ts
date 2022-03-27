@@ -5,6 +5,7 @@ import { SidebarComponent } from 'src/app/modules/home/sidebar/sidebar.component
 import { PlusesComponent } from 'src/app/modules/home/pluses/pluses.component';
 import { TrainerComponent } from './trainer/trainer.component';
 import { SidebarBtnComponent } from './sidebar-btn/sidebar-btn.component';
+import { HomeService } from 'src/app/modules/home/services/home.service';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { SidebarBtnComponent } from './sidebar-btn/sidebar-btn.component';
     SidebarBtnComponent,
   ],
   imports: [CommonModule],
+  providers: [HomeService],
   exports: [HomeWrapperComponent],
 })
 export class HomeModule {}

@@ -1,8 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { HomeService } from 'src/app/modules/home/services/home.service';
 import {
   Isidebar,
   dataSidebar,
-} from 'src/app/modules/home/sidebar-btn/sidebar-btn-params';
+} from 'src/app/modules/home/sidebar/sidebar.params';
 
 @Component({
   selector: 'app-sidebar',
@@ -12,7 +13,7 @@ import {
 export class SidebarComponent implements OnInit {
   @Input() dataSidebar2: Isidebar[] = dataSidebar;
 
-  constructor() {}
+  constructor(private readonly homeService: HomeService) {}
 
   ngOnInit(): void {
     console.log('init');
@@ -20,7 +21,7 @@ export class SidebarComponent implements OnInit {
 
   toggle(id: number) {
     this.dataSidebar2[id].open = !this.dataSidebar2[id].open;
-    console.log(this.dataSidebar2[id]);
+
     this.dataSidebar2.forEach((element) => {
       if (element.id === id) {
         element.open = true;
@@ -28,5 +29,6 @@ export class SidebarComponent implements OnInit {
         element.open = false;
       }
     });
+    this.homeService.changeId(id);
   }
 }
