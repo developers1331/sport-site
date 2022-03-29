@@ -14,34 +14,156 @@
     }
 
     &__elem {
-      margin: 15px 15px;
-      width: 400px;
-      height: 500px;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      border-radius: 3px;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-
       &-name {
         color: $second_color;
         font-size: 22px;
+        text-align: left;
       }
 
       &-coach {
         color: $easy_color;
         font-size: 18px;
+        text-align: left;
       }
 
       &-name,
       &-coach {
+        z-index: 20;
         text-transform: uppercase;
         font-weight: bold;
         margin: 0 0 10px 20px;
       }
+    }
+
+    .img {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      -webkit-transition: opacity 0.35s;
+      transition: opacity 0.35s;
+    }
+
+    figure.snip0015 {
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      margin: 10px;
+      width: 400px;
+      height: 500px;
+
+      text-align: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      cursor: pointer;
+      -webkit-transition: opacity 0.35s;
+      transition: opacity 0.35s;
+
+      &:hover {
+        .img {
+          opacity: 0.35;
+          -webkit-transition: opacity 0.35s;
+          transition: opacity 0.35s;
+        }
+      }
+    }
+
+    figure.snip0015 {
+      opacity: 1;
+      -webkit-transition: opacity 0.35s;
+      transition: opacity 0.35s;
+      background: #000000;
+    }
+
+    figure.snip0015 figcaption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 3em 3em;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+
+    figure.snip0015 figcaption::before {
+      position: absolute;
+      top: 50%;
+      right: 30px;
+      bottom: 50%;
+      left: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.8);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+      content: "";
+      opacity: 0;
+      background-color: #ffffff;
+      -webkit-transition: all 0.4s;
+      transition: all 0.4s;
+      -webkit-transition-delay: 0.6s;
+      transition-delay: 0.6s;
+    }
+
+    figure.snip0015 h2,
+    figure.snip0015 p {
+      margin: 0 0 5px;
+      opacity: 0;
+      -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+      transition: opacity 0.35s, -webkit-transform 0.35s, -moz-transform 0.35s,
+        -o-transform 0.35s, transform 0.35s;
+      -webkit-line-clamp: 4;
+      /* Число отображаемых строк */
+      display: -webkit-box;
+      /* Включаем флексбоксы */
+      -webkit-box-orient: vertical;
+      /* Вертикальная ориентация */
+      overflow: hidden;
+    }
+
+    figure.snip0015 h2 {
+      word-spacing: -0.15em;
+      font-weight: 300;
+      text-transform: uppercase;
+      -webkit-transform: translate3d(0%, 50%, 0);
+      transform: translate3d(0%, 50%, 0);
+      -webkit-transition-delay: 0.3s;
+      transition-delay: 0.3s;
+    }
+
+    figure.snip0015 p {
+      font-weight: 200;
+      -webkit-transition-delay: 0s;
+      transition-delay: 0s;
+    }
+
+    figure.snip0015:hover figcaption h2 {
+      opacity: 1;
+      -webkit-transform: translate3d(0%, 0%, 0);
+      transform: translate3d(0%, 0%, 0);
+      -webkit-transition-delay: 0.3s;
+      transition-delay: 0.3s;
+    }
+
+    figure.snip0015:hover figcaption p {
+      opacity: 0.9;
+      -webkit-transition-delay: 0.6s;
+      transition-delay: 0.6s;
+    }
+
+    figure.snip0015:hover figcaption::before {
+      background: rgba(255, 255, 255, 0.1);
+      top: 30px;
+      bottom: 100px;
+      opacity: 1;
+      -webkit-transition-delay: 0s;
+      transition-delay: 0s;
     }
   }
 }
