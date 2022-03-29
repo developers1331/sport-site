@@ -13,6 +13,11 @@ import {
   dataTrainers,
 } from 'src/app/modules/home/trainer/trainer-params';
 
+import {
+  dataProgramms,
+  Iprogramms,
+} from 'src/app/modules/home/programm/programm-params';
+
 @Component({
   selector: 'app-home-wrapper',
   templateUrl: './home-wrapper.component.html',
@@ -21,6 +26,7 @@ import {
 export class HomeWrapperComponent implements OnInit, OnDestroy {
   @Input() dataPage2: Ipage[] = dataPage;
   @Input() dataTrainers2: Itrainers[] = dataTrainers;
+  @Input() dataProgramms2: Iprogramms[] = dataProgramms;
   private destroy$ = new Subject<void>();
 
   public currentId: number = 0;

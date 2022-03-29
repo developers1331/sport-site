@@ -6,6 +6,7 @@ import { PlusesComponent } from 'src/app/modules/home/pluses/pluses.component';
 import { TrainerComponent } from './trainer/trainer.component';
 import { SidebarBtnComponent } from './sidebar-btn/sidebar-btn.component';
 import { HomeService } from 'src/app/modules/home/services/home.service';
+import { ProgrammComponent } from './programm/programm.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { HomeService } from 'src/app/modules/home/services/home.service';
     PlusesComponent,
     TrainerComponent,
     SidebarBtnComponent,
+    ProgrammComponent,
   ],
   imports: [CommonModule],
   providers: [HomeService],
