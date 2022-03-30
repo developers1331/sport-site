@@ -79,15 +79,6 @@
   }
 }
 
-.programms {
-  &__cards {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-}
-
 @media screen and (max-width: 768px) {
   .title {
     text-align: center;
