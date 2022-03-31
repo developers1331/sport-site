@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1648755619453,
+  "timestamp": 1648759400319,
   "index": "https://doken1331.github.io/Sport-Site/index.html",
   "assetGroups": [
     {
@@ -14,7 +14,7 @@
         "https://doken1331.github.io/Sport-Site/assets/manifest/site.webmanifest",
         "https://doken1331.github.io/Sport-Site/favicon.ico",
         "https://doken1331.github.io/Sport-Site/index.html",
-        "https://doken1331.github.io/Sport-Site/main.ea538fb5730b0105.js",
+        "https://doken1331.github.io/Sport-Site/main.5f1754825a1d29eb.js",
         "https://doken1331.github.io/Sport-Site/polyfills.56519e223aca727c.js",
         "https://doken1331.github.io/Sport-Site/runtime.0db38bcf9f5ebc8c.js",
         "https://doken1331.github.io/Sport-Site/styles.8bd48085713a6dae.css"
@@ -73,6 +73,7 @@
         "https://doken1331.github.io/Sport-Site/assets/images/swiper/swiper5_face.jpg",
         "https://doken1331.github.io/Sport-Site/assets/images/swiper/swiper6.jpg",
         "https://doken1331.github.io/Sport-Site/assets/images/swiper/swiper6_face.jpg",
+        "https://doken1331.github.io/Sport-Site/assets/images/terms.png",
         "https://doken1331.github.io/Sport-Site/assets/images/trainer-1.jpg",
         "https://doken1331.github.io/Sport-Site/assets/images/trainer-default.jpg",
         "https://doken1331.github.io/Sport-Site/assets/images/trainers/trainer-1.png",
@@ -140,6 +141,7 @@
     "https://doken1331.github.io/Sport-Site/assets/images/swiper/swiper5_face.jpg": "a701aad71b2beb618f93e4dcc15d3331100b87e6",
     "https://doken1331.github.io/Sport-Site/assets/images/swiper/swiper6.jpg": "976e4b667770bdde8aff4a501403697faae27ab3",
     "https://doken1331.github.io/Sport-Site/assets/images/swiper/swiper6_face.jpg": "a701aad71b2beb618f93e4dcc15d3331100b87e6",
+    "https://doken1331.github.io/Sport-Site/assets/images/terms.png": "d7a6ec9eb02fbdb48f659f61d55ed8f35ab7a8fd",
     "https://doken1331.github.io/Sport-Site/assets/images/trainer-1.jpg": "895479a478b6862df8e7cfd4c427a65c48f9c782",
     "https://doken1331.github.io/Sport-Site/assets/images/trainer-default.jpg": "103b957f22184e10a90381485e413a49ffc315da",
     "https://doken1331.github.io/Sport-Site/assets/images/trainers/trainer-1.png": "c72ce87af3758fe7a0d68f186ab301475f96eed0",
@@ -159,8 +161,8 @@
     "https://doken1331.github.io/Sport-Site/assets/manifest/mstile-150x150.png": "fc3e4e012582d32db137926d2a3a71b9e8be615f",
     "https://doken1331.github.io/Sport-Site/assets/manifest/site.webmanifest": "06022e9ee027354bf85e8207f0b0c707be8fb56d",
     "https://doken1331.github.io/Sport-Site/favicon.ico": "590c59650bb3defa5f56910ccc73398526be2d2a",
-    "https://doken1331.github.io/Sport-Site/index.html": "d35de5af1522f3c1285d9c3e9431829123712250",
-    "https://doken1331.github.io/Sport-Site/main.ea538fb5730b0105.js": "c619ce8e3919d80b67a3bf5eac09d43b4315adc0",
+    "https://doken1331.github.io/Sport-Site/index.html": "54a15722db8e663f54e68715668da63635ee024f",
+    "https://doken1331.github.io/Sport-Site/main.5f1754825a1d29eb.js": "3ba8444c80159778bbc7cb56d1ee52d11a934768",
     "https://doken1331.github.io/Sport-Site/polyfills.56519e223aca727c.js": "f6444c07cf41be876f0b7df8edf94cb598be93a7",
     "https://doken1331.github.io/Sport-Site/runtime.0db38bcf9f5ebc8c.js": "4690da880f81749b3ab6a63aac978a375574ddf4",
     "https://doken1331.github.io/Sport-Site/styles.8bd48085713a6dae.css": "149a65fae9b1e7e5686d1cb8003bc43051bdffd9"
