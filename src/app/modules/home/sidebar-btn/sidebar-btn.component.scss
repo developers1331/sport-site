@@ -1,20 +1,22 @@
 @import "/src/global_styles/variables.scss";
+
 .home__aside-nav-item {
-  background: #fff;
-  padding: 10px 0 10px 35px;
-  color: $main_color;
-  cursor: pointer;
-  border-bottom: 1px solid rgb(218, 218, 218);
-  font-size: 16px;
-  transition: all 0.15s ease-out;
-  &:hover {
-    background: $main_color;
-    color: #fff;
+    background: #fff;
+    padding: 10px 0 10px 35px;
+    color: $main_color;
+    cursor: pointer;
+    border-bottom: 1px solid rgb(218 218 218);
+    font-size: 16px;
     transition: all 0.15s ease-out;
-  }
+
+    &:hover {
+        background: $main_color;
+        color: #fff;
+        transition: all 0.15s ease-out;
+    }
 }
 
 .active {
-  background: $main_color;
-  color: #fff;
+    background: $main_color;
+    color: #fff;
 }

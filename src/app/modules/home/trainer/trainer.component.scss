@@ -1,28 +1,30 @@
 .trainers__cards-item {
-  width: 280px;
-  min-height: 400px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  position: relative;
-  margin: 0 20px 30px;
-  &-title {
-    text-transform: uppercase;
-    color: #fff;
-    font-weight: 700;
-    position: absolute;
-    bottom: 65px;
-    left: 15px;
-    font-size: 25px;
-  }
-  &-desc {
-    text-transform: uppercase;
-    color: #fff;
-    font-weight: 500;
-    position: absolute;
-    bottom: 36px;
-    left: 15px;
-    font-size: 18px;
-    letter-spacing: -1px;
-  }
+    width: 280px;
+    min-height: 400px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    margin: 0 20px 30px;
+
+    &-title {
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: 700;
+        position: absolute;
+        bottom: 65px;
+        left: 15px;
+        font-size: 25px;
+    }
+
+    &-desc {
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: 500;
+        position: absolute;
+        bottom: 36px;
+        left: 15px;
+        font-size: 18px;
+        letter-spacing: -1px;
+    }
 }

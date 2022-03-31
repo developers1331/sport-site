@@ -1,89 +1,88 @@
 @import "/src/global_styles/variables.scss";
 
 .footer {
-  width: 100%;
-  padding: 30px 0;
-  background: $main_color;
+    width: 100%;
+    padding: 30px 0;
+    background: $main_color;
 
-  &__wrapper-left,
-  &__explore {
-    padding: 30px;
-  }
-
-  &__container {
-    max-width: $container_width;
-    margin: 0 auto;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-
-    color: $footer_text_color;
-
-    .footer__wrapper-elems {
-      display: flex;
-      min-width: 700px;
-      justify-content: space-around;
-
-      .footer__wrapper-left {
-        .footer__sup-modal {
-          text-decoration: none;
-          color: $footer_text_color;
-          font-weight: 600;
-          font-size: $footer_elem_size;
-          margin: 5px 0;
-          cursor: pointer;
-
-          &:hover {
-            color: $footer_text_hover_color;
-            transition: all 0.3s;
-          }
-        }
-
-        .footer__contacts {
-          &-mail {
-            font-weight: 400;
-            font-size: 27px;
-            margin: 5px 0;
-
-            a {
-              text-decoration: none;
-              color: $footer_text_color;
-
-              &:hover {
-                color: $footer_text_hover_color;
-                transition: all 0.3s;
-              }
-            }
-          }
-        }
-      }
+    &__wrapper-left,
+    &__explore {
+        padding: 30px;
     }
 
-    @media (max-width: 700px) {
-      .footer__wrapper-elems {
-        min-width: 320px;
+    &__container {
+        max-width: $container_width;
+        margin: 0 auto;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
         flex-wrap: wrap;
-        justify-content: start;
-      }
+        color: $footer_text_color;
+
+        .footer__wrapper-elems {
+            display: flex;
+            min-width: 700px;
+            justify-content: space-around;
+
+            .footer__wrapper-left {
+                .footer__sup-modal {
+                    text-decoration: none;
+                    color: $footer_text_color;
+                    font-weight: 600;
+                    font-size: $footer_elem_size;
+                    margin: 5px 0;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: $footer_text_hover_color;
+                        transition: all 0.3s;
+                    }
+                }
+
+                .footer__contacts {
+                    &-mail {
+                        font-weight: 400;
+                        font-size: 27px;
+                        margin: 5px 0;
+
+                        a {
+                            text-decoration: none;
+                            color: $footer_text_color;
+
+                            &:hover {
+                                color: $footer_text_hover_color;
+                                transition: all 0.3s;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 700px) {
+            .footer__wrapper-elems {
+                min-width: 320px;
+                flex-wrap: wrap;
+                justify-content: start;
+            }
+        }
+
+        .title {
+            font-size: $footer_title_size;
+            color: $footer_text_color;
+            margin: 5px 0;
+        }
     }
 
-    .title {
-      font-size: $footer_title_size;
-      color: $footer_text_color;
-      margin: 5px 0;
-    }
-  }
+    &__logo {
+        img {
+            max-width: 254px;
+        }
 
-  &__logo {
-    img {
-      max-width: 254px;
+        @media (max-width: 600px) {
+            img {
+                display: none;
+            }
+        }
     }
-
-    @media (max-width: 600px) {
-      img {
-        display: none;
-      }
-    }
-  }
 }

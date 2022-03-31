@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="articles">
+        <div class="articles__title">Новости и статьи</div>
+        <div class="articles__description">Наши последние статьи</div>
+        <div class="articles__wrapper">
+            <div *ngFor="let item of articlesConfig" class="articles__elem">
+                <div
+                    class="articles__elem-img"
+                    [ngStyle]="{ 'background-image': 'url(' + item.img + ')' }"
+                ></div>
+                <div class="articles__elem-title">{{ item.title }}</div>
+                <div class="articles__elem-description">
+                    {{ item.description }}
+                </div>
+                <div class="articles__elem-bottom">
+                    <div class="articles__elem-data">{{ item.data }}</div>
+                    <div class="articles__elem-btn" (click)="goToInfo(item.id)">
+                        Подробнее &#8594;
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

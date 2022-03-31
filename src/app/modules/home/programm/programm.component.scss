@@ -1,48 +1,56 @@
 @import "/src/global_styles/variables.scss";
+
 .programms {
-  &__cards {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-  }
+    &__cards {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
 }
 
 .programms__cards-item {
-  max-width: 355px;
-  padding: 30px 20px;
-  &-picture {
-    max-width: 310px;
-    width: 100%;
-    height: 180px;
-    margin-bottom: 20px;
-  }
-  &-title {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  &-desc {
-    margin-bottom: 25px;
-  }
-  &-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 44px;
-    border: 1px solid $easy_color;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    &:hover {
-      background: $easy_color;
-      transition: all 0.3s ease;
-      span {
-        color: $second_color;
-      }
+    max-width: 355px;
+    padding: 30px 20px;
+
+    &-picture {
+        max-width: 310px;
+        width: 100%;
+        height: 180px;
+        margin-bottom: 20px;
     }
-    span {
-      text-transform: uppercase;
-      color: $easy_color;
+
+    &-title {
+        font-size: 24px;
+        margin-bottom: 20px;
     }
-  }
+
+    &-desc {
+        margin-bottom: 25px;
+    }
+
+    &-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 44px;
+        border: 1px solid $easy_color;
+        text-decoration: none;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background: $easy_color;
+            transition: all 0.3s ease;
+
+            span {
+                color: $second_color;
+            }
+        }
+
+        span {
+            text-transform: uppercase;
+            color: $easy_color;
+        }
+    }
 }

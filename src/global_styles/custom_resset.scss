@@ -2,13 +2,13 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /* Убираем внутренние отступы */
 ul[class],
 ol[class] {
-  padding: 0;
+    padding: 0;
 }
 
 /* Убираем внешние отступы */
@@ -26,37 +26,37 @@ figcaption,
 blockquote,
 dl,
 dd {
-  margin: 0;
+    margin: 0;
 }
 
 /* Выставляем основные настройки по-умолчанию для body */
 body {
-  min-height: 100vh;
-  scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizespeed;
+    line-height: 1.5;
 }
 
 /* Удаляем стандартную стилизацию для всех ul и il */
 ul,
 ol {
-  list-style: none;
+    list-style: none;
 }
 
 /* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
 a:not([class]) {
-  text-decoration-skip-ink: auto;
+    text-decoration-skip-ink: auto;
 }
 
 /* Упрощаем работу с изображениями */
 img {
-  max-width: 100%;
-  display: block;
+    max-width: 100%;
+    display: block;
 }
 
-/* Указываем понятную периодичность в потоке данных у article*/
+/* Указываем понятную периодичность в потоке данных у article */
 article > * + * {
-  margin-top: 1em;
+    margin-top: 1em;
 }
 
 /* Наследуем шрифты для инпутов и кнопок */
@@ -64,65 +64,65 @@ input,
 button,
 textarea,
 select {
-  font: inherit;
+    font: inherit;
 }
 
 /* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
 @media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
 
 .modal-content {
-  border-radius: 40px !important;
+    border-radius: 40px !important;
 }
 
 .carousel-arrow-prev {
-  left: 10% !important;
-  background-color: #ec8675 !important;
+    left: 10% !important;
+    background-color: #ec8675 !important;
 }
 
 .carousel-arrow-next {
-  right: 10% !important;
-  background-color: #ec8675 !important;
+    right: 10% !important;
+    background-color: #ec8675 !important;
 }
 
 @media (max-width: 1200px) {
-  .carousel-arrow-prev {
-    left: 3% !important;
-  }
+    .carousel-arrow-prev {
+        left: 3% !important;
+    }
 
-  .carousel-arrow-next {
-    right: 3% !important;
-  }
+    .carousel-arrow-next {
+        right: 3% !important;
+    }
 }
 
 @media (max-width: 1000px) {
-  .carousel-arrow-prev {
-    display: none !important;
-  }
+    .carousel-arrow-prev {
+        display: none !important;
+    }
 
-  .carousel-arrow-next {
-    display: none !important;
-  }
+    .carousel-arrow-next {
+        display: none !important;
+    }
 }
 
 .carousel-dot {
-  border: 2px solid #ec8675 !important;
-  margin: 8px !important;
-  width: 28px !important;
-  height: 8px !important;
+    border: 2px solid #ec8675 !important;
+    margin: 8px !important;
+    width: 28px !important;
+    height: 8px !important;
 }
 
 .carousel-dot-active {
-  background-color: #eef0f4 !important;
+    background-color: #eef0f4 !important;
 }
 
 .modal,
 .modal-backdrop {
-  z-index: 20001;
+    z-index: 20001;
 }

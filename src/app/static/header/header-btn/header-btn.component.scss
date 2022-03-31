@@ -1,20 +1,22 @@
 @import "/src/global_styles/variables.scss";
+
 .header__nav-list-link {
-  color: #fff;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  &:hover {
-    color: $header_text_link;
+    color: #fff;
+    text-decoration: none;
     transition: all 0.3s ease;
-  }
+
+    &:hover {
+        color: $header_text_link;
+        transition: all 0.3s ease;
+    }
 }
 
 .active {
-  color: $header_text_link;
+    color: $header_text_link;
 }
 
 @media screen and (max-width: 767px) {
-  .header__nav-list-item {
-    display: none;
-  }
+    .header__nav-list-item {
+        display: none;
+    }
 }

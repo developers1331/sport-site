@@ -1,24 +1,26 @@
 <div class="container">
-  <div class="trainers">
-    <div class="trainers__wrapper">
-      <ng-container *ngFor="let item of trainerList">
-        <figure class="snip0015">
-          <div
-            class="img"
-            [ngStyle]="{ 'background-image': 'url(' + item.imgPath + ')' }"
-          ></div>
-          <figcaption>
-            <h2>{{ item.slogan }}</h2>
-            <p>{{ item.description }}</p>
-          </figcaption>
-          <div class="trainers__elem-name">
-            {{ item.fullname }}
-          </div>
-          <div class="trainers__elem-coach">
-            {{ item.coach }}
-          </div>
-        </figure>
-      </ng-container>
+    <div class="trainers">
+        <div class="trainers__wrapper">
+            <ng-container *ngFor="let item of trainerList">
+                <figure class="snip0015">
+                    <div
+                        class="img"
+                        [ngStyle]="{
+                            'background-image': 'url(' + item.imgPath + ')'
+                        }"
+                    ></div>
+                    <figcaption>
+                        <h2>{{ item.slogan }}</h2>
+                        <p>{{ item.description }}</p>
+                    </figcaption>
+                    <div class="trainers__elem-name">
+                        {{ item.fullname }}
+                    </div>
+                    <div class="trainers__elem-coach">
+                        {{ item.coach }}
+                    </div>
+                </figure>
+            </ng-container>
+        </div>
     </div>
-  </div>
 </div>
