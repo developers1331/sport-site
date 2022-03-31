@@ -1,63 +1,77 @@
 <header class="header">
-  <div class="container container_flex-sb">
-    <div class="header__left">
-      <div class="header__logo">
-        <a routerLink="/">
-          <picture>
-            <source srcset="assets/images/logo.webp" type="image/webp" />
-            <img
-              src="assets/images/logo.png"
-              alt="logo"
-              class="header__logo-picture"
-            />
-          </picture>
-        </a>
-      </div>
-    </div>
-    <div class="header__right">
-      <nav class="header__nav">
-        <ul class="header__nav-list">
-          <app-header-btn
-            *ngFor="let item of btns"
-            text="{{ item.text }}"
-            hrefLink="{{ item.hrefLink }}"
-          ></app-header-btn>
-          <div class="header__sup-modal" (click)="openModal()">
-            Написать нам
-          </div>
-          <div
-            (click)="toggle()"
-            [ngClass]="{ active: isActive }"
-            class="header__nav-list-block active"
-          >
-            <div class="header__nav-list-link burger">
-              <i class="burger__line-1"></i>
-              <i class="burger__line-2"></i>
-              <i class="burger__line-3"></i>
+    <div class="container container_flex-sb">
+        <div class="header__left">
+            <div class="header__logo">
+                <a routerLink="/">
+                    <picture>
+                        <source
+                            srcset="assets/images/logo.webp"
+                            type="image/webp"
+                        />
+                        <img
+                            src="assets/images/logo.png"
+                            alt="logo"
+                            class="header__logo-picture"
+                        />
+                    </picture>
+                </a>
             </div>
-          </div>
-        </ul>
-      </nav>
-      <div class="header__search">
-        <a href="#!" class="header__search-link">
-          <picture>
-            <source srcset="assets/images/search-icon.webp" type="image/webp" />
-            <img
-              src="assets/images/search-icon.png"
-              alt="search-icon"
-              class="header__search-picture"
-            />
-          </picture>
-        </a>
-      </div>
+        </div>
+        <div class="header__right">
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <app-header-btn
+                        *ngFor="let item of btns"
+                        text="{{ item.text }}"
+                        hrefLink="{{ item.hrefLink }}"
+                    >
+                    </app-header-btn>
+                    <div class="header__sup-modal" (click)="openModal()">
+                        Написать нам
+                    </div>
+                    <div
+                        (click)="toggle()"
+                        [ngClass]="{ active: isActive }"
+                        class="header__nav-list-block active"
+                    >
+                        <div class="header__nav-list-link burger">
+                            <i class="burger__line-1"></i>
+                            <i class="burger__line-2"></i>
+                            <i class="burger__line-3"></i>
+                        </div>
+                    </div>
+                </ul>
+            </nav>
+            <div class="header__search">
+                <a href="#!" class="header__search-link">
+                    <picture>
+                        <source
+                            srcset="assets/images/search-icon.webp"
+                            type="image/webp"
+                        />
+                        <img
+                            src="assets/images/search-icon.png"
+                            alt="search-icon"
+                            class="header__search-picture"
+                        />
+                    </picture>
+                </a>
+            </div>
+        </div>
     </div>
-  </div>
-  <div
+    <!-- <div
     class="header__background"
     [ngStyle]="{ 'background-image': 'url(' + imgPath + ')' }"
-  ></div>
-  <app-header-mobile
-    (click)="toggle()"
-    [isActive]="isActive"
-  ></app-header-mobile>
+  ></div> -->
+
+    <div class="header__background">
+        <video autoplay muted loop preload="auto" class="full-screen">
+            <source type="video/mp4" src="assets/video/header.mp4" />
+        </video>
+    </div>
+
+    <app-header-mobile
+        (click)="toggle()"
+        [isActive]="isActive"
+    ></app-header-mobile>
 </header>
