@@ -5,32 +5,37 @@ import { HomeWrapperComponent } from 'src/app/modules/home/home-wrapper/home-wra
 import { PostsWrapperComponent } from 'src/app/modules/posts/posts-wrapper/posts-wrapper.component';
 import { ProgramsWrapperComponent } from 'src/app/modules/programs/programs-wrapper/programs-wrapper.component';
 import { PageNotFoundComponent } from 'src/app/page-not-found/page-not-found.component';
+import { TermsPageComponent } from 'src/app/static/terms-page/terms-page.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: HomeWrapperComponent,
-  },
-  {
-    path: 'about',
-    component: AboutWrapperComponent,
-  },
-  {
-    path: 'programs',
-    component: ProgramsWrapperComponent,
-  },
-  {
-    path: 'posts',
-    component: PostsWrapperComponent,
-  },
-  {
-    path: '**',
-    component: PageNotFoundComponent,
-  },
+    {
+        path: '',
+        component: HomeWrapperComponent,
+    },
+    {
+        path: 'about',
+        component: AboutWrapperComponent,
+    },
+    {
+        path: 'programs',
+        component: ProgramsWrapperComponent,
+    },
+    {
+        path: 'posts',
+        component: PostsWrapperComponent,
+    },
+    {
+        path: 'terms',
+        component: TermsPageComponent,
+    },
+    {
+        path: '**',
+        component: PageNotFoundComponent,
+    },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule],
 })
 export class AppRoutingModule {}

@@ -19,37 +19,39 @@ import { PostsModule } from 'src/app/modules/posts/posts.module';
 import { ProgramsModule } from 'src/app/modules/programs/programs.module';
 import { HomeModule } from 'src/app/modules/home/home.module';
 import { AboutModule } from 'src/app/modules/about/about.module';
+import { TermsPageComponent } from './static/terms-page/terms-page.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    FooterBtnComponent,
-    PageNotFoundComponent,
-    HeaderBtnComponent,
-    HeaderMobileComponent,
-    HeaderMobileBtnComponent,
-    ModalComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule,
-    PostsModule,
-    ProgramsModule,
-    AboutModule,
-    ServiceWorkerModule.register('ngsw-worker.js', {
-      enabled: environment.production,
-      // Register the ServiceWorker as soon as the application is stable
-      // or after 30 seconds (whichever comes first).
-      registrationStrategy: 'registerWhenStable:30000',
-    }),
-    ModalModule.forRoot(),
-    HomeModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent],
+    declarations: [
+        AppComponent,
+        HeaderComponent,
+        FooterComponent,
+        FooterBtnComponent,
+        PageNotFoundComponent,
+        HeaderBtnComponent,
+        HeaderMobileComponent,
+        HeaderMobileBtnComponent,
+        ModalComponent,
+        TermsPageComponent,
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        ReactiveFormsModule,
+        PostsModule,
+        ProgramsModule,
+        AboutModule,
+        ServiceWorkerModule.register('ngsw-worker.js', {
+            enabled: environment.production,
+            // Register the ServiceWorker as soon as the application is stable
+            // or after 30 seconds (whichever comes first).
+            registrationStrategy: 'registerWhenStable:30000',
+        }),
+        ModalModule.forRoot(),
+        HomeModule,
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
