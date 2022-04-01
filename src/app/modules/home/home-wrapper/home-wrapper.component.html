@@ -1,43 +1,57 @@
 <div class="container">
-  <section class="home">
-    <div class="home__left">
-      <app-sidebar></app-sidebar>
-    </div>
-    <div class="home__right">
-      <div
-        class="home__main-picture"
-        [ngStyle]="{
-          'background-image': 'url(' + dataPage2[currentId].imgMain + ')'
-        }"
-      ></div>
-      <h2 class="home__title">
-        {{ dataPage2[currentId].title }}
-      </h2>
-      <p class="home__description">
-        {{ dataPage2[currentId].topDescription }}
-      </p>
-      <div class="home__pluses">
-        <app-pluses
-          *ngFor="let item of dataPluses2[currentId].elems"
-          img="{{ item.img }}"
-          title="{{ item.title }}"
-          description="{{ item.description }}"
-        >
-        </app-pluses>
-      </div>
-      <div
-        class="home__picture"
-        [ngStyle]="{
-          'background-image': 'url(' + dataPage2[currentId].imgSecond + ')'
-        }"
-      ></div>
-      <p class="home__description-second">
-        {{ dataPage2[currentId].bottomDescription }}
-      </p>
-    </div>
-  </section>
-  <section class="programms">
-    <h2 class="title">Программы "{{ dataPage2[currentId].title }}"</h2>
-    <app-programm></app-programm>
-  </section>
+    <section class="home">
+        <div class="home__left">
+            <app-sidebar></app-sidebar>
+        </div>
+        <div class="home__right">
+            <div
+                class="home__main-picture"
+                [ngStyle]="{
+                    'background-image':
+                        'url(' + dataPage2[currentId].imgMain + ')'
+                }"
+            ></div>
+            <h2 class="home__title">
+                {{ dataPage2[currentId].title }}
+            </h2>
+            <p class="home__description">
+                {{ dataPage2[currentId].topDescription }}
+            </p>
+            <div class="home__pluses">
+                <app-pluses
+                    *ngFor="let item of dataPluses2[currentId].elems"
+                    img="{{ item.img }}"
+                    title="{{ item.title }}"
+                    description="{{ item.description }}"
+                >
+                </app-pluses>
+            </div>
+            <div
+                class="home__picture"
+                [ngStyle]="{
+                    'background-image':
+                        'url(' + dataPage2[currentId].imgSecond + ')'
+                }"
+            ></div>
+            <p class="home__description-second">
+                {{ dataPage2[currentId].bottomDescription }}
+            </p>
+        </div>
+    </section>
+</div>
+<section
+    class="parallax"
+    [ngStyle]="{
+        'background-image': 'url(assets/images/parallax.jpg)'
+    }"
+>
+    <h2 class="parallax__title">
+        Выбери программу {{ dataPage2[currentId].title }}a и начни прямо сейчас!
+    </h2>
+</section>
+<div class="container">
+    <section class="programms">
+        <!-- <h2 class="title">Программы "{{ dataPage2[currentId].title }}"</h2> -->
+        <app-programm></app-programm>
+    </section>
 </div>
