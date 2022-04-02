@@ -1,7 +1,7 @@
-import { Component, HostListener, OnInit } from '@angular/core';
-import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
-import { ModalComponent } from 'src/app/modal/modal.component';
-import { dataBtns, Ibtns } from 'src/app/static/header/header.params';
+import {Component, HostListener, OnInit} from '@angular/core';
+import {BsModalRef, BsModalService} from 'ngx-bootstrap/modal';
+import {ModalComponent} from 'src/app/static/modal/modal.component';
+import {dataBtns, Ibtns} from 'src/app/static/header/header.params';
 
 @Component({
     selector: 'app-header',
@@ -48,15 +48,12 @@ export class HeaderComponent implements OnInit {
             let _h = elem.offsetHeight / 2;
             let _mouseX = e.clientX;
             let _mouseY = e.clientY;
-            let _depth1 = `${50 + (_mouseX - _w) * 0.06}% ${
-                50 + (_mouseY - _h) * 0.06
-            }%`;
-            let _depth2 = `${50 + (_mouseX - _w) * 0.06}% ${
-                50 + (_mouseY - _h) * 0.06
-            }%`;
-            let _depth3 = `${50 + (_mouseX - _w) * 0.03}% ${
-                20 + (_mouseY - _h) * 0.02
-            }%`;
+            let _depth1 = `${50 + (_mouseX - _w) * 0.06}% ${50 + (_mouseY - _h) * 0.06
+                }%`;
+            let _depth2 = `${50 + (_mouseX - _w) * 0.06}% ${50 + (_mouseY - _h) * 0.06
+                }%`;
+            let _depth3 = `${50 + (_mouseX - _w) * 0.03}% ${20 + (_mouseY - _h) * 0.02
+                }%`;
             let x = `${_depth3}, ${_depth2}, ${_depth1}`;
 
             elem.style.backgroundPosition = x;

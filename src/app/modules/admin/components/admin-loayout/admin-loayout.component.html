@@ -1,1 +1,20 @@
-<router-outlet></router-outlet>
+<h3>
+    <a routerLink="/"> &#8592; Вернуться на сайт </a>
+</h3>
+<nav class="navbar">
+    <ul>
+        <li routerLinkActive="active">
+            <a [routerLink]="['/admin', 'dashboard']">Главная</a>
+        </li>
+        <li routerLinkActive="active">
+            <a [routerLink]="['/admin', 'create-post']">Создать пост</a>
+        </li>
+        <li>
+            <a href="#" (click)="logout($event)">Выйти</a>
+        </li>
+    </ul>
+</nav>
+
+<div class="container">
+    <router-outlet></router-outlet>
+</div>

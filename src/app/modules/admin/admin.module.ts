@@ -6,6 +6,8 @@ import { LoginPageComponent } from 'src/app/modules/admin/components/login-page/
 import { CreatePageComponent } from './components/create-page/create-page.component';
 import { EditPageComponent } from './components/edit-page/edit-page.component';
 import { DashboardPageComponent } from 'src/app/modules/admin/components/dashboard-page/dashboard-page.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     declarations: [
@@ -18,6 +20,9 @@ import { DashboardPageComponent } from 'src/app/modules/admin/components/dashboa
     imports: [
         CommonModule,
         RouterModule,
+        FormsModule,
+        ReactiveFormsModule,
+        HttpClientModule,
         RouterModule.forChild([
             {
                 path: '',

@@ -1,1 +1,28 @@
-<p>post works!</p>
+<div class="card">
+    <div class="card-header">
+        <h2 class="card-title">title</h2>
+        <small class="card-data">12.12.2022</small>
+    </div>
+    <div class="card-body">
+        <small>Test</small>
+    </div>
+    <button *ngIf="!showContent" [routerLink]="['/post', 12]">Открыть</button>
+
+    <div *ngIf="showContent" class="card-content">
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, modi.
+        </p>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, modi.
+        </p>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, modi.
+        </p>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, modi.
+        </p>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, modi.
+        </p>
+    </div>
+</div>

@@ -1,0 +1,60 @@
+<form class="form-wrapper" [formGroup]="form" (ngSubmit)="submit()">
+    <button
+        type="button"
+        class="btn-close close pull-right"
+        aria-label="Close"
+        (click)="bsModalRef.hide()"
+    >
+        <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+
+    <div class="form-left-decoration"></div>
+    <div class="form-right-decoration"></div>
+    <div class="circle"></div>
+
+    <div class="form-inner">
+        <h3 class="form-title">Написать нам</h3>
+        <input type="text" placeholder="Имя" formControlName="name" />
+        <div
+            *ngIf="form.get('name')?.invalid && form.get('name')?.touched"
+            class="validation"
+        >
+            <small *ngIf="form.get('name')?.errors?.['required']">
+                Поле имя не может быть пустым.
+            </small>
+        </div>
+        <input type="text" placeholder="Email" formControlName="email" />
+        <div
+            *ngIf="form.get('email')?.invalid && form.get('email')?.touched"
+            class="validation"
+        >
+            <small *ngIf="form.get('email')?.errors?.['required']">
+                Поле email не может быть пустым.
+            </small>
+            <small *ngIf="form.get('email')?.errors?.['email']">
+                Введите корректный email.
+            </small>
+        </div>
+        <textarea
+            placeholder="Сообщение..."
+            rows="3"
+            formControlName="text"
+        ></textarea>
+        <div
+            *ngIf="form.get('text')?.invalid && form.get('text')?.touched"
+            class="validation"
+        >
+            <small *ngIf="form.get('text')?.errors?.['required']">
+                Поле сообщения не может быть пустым.
+            </small>
+        </div>
+        <button
+            class="submit_btn"
+            type="submit"
+            [disabled]="form.invalid"
+            (click)="submit()"
+        >
+            Отправить
+        </button>
+    </div>
+</form>
