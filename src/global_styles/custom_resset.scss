@@ -81,45 +81,15 @@ select {
     border-radius: 40px !important;
 }
 
-.carousel-arrow-prev {
-    left: 10% !important;
-    background-color: #ec8675 !important;
+.swiper-pagination-bullet {
+    border-radius: 5px;
+    border: 2px solid #ec8675;
+    width: 28px;
+    height: 8px;
 }
 
-.carousel-arrow-next {
-    right: 10% !important;
-    background-color: #ec8675 !important;
-}
-
-@media (max-width: 1200px) {
-    .carousel-arrow-prev {
-        left: 3% !important;
-    }
-
-    .carousel-arrow-next {
-        right: 3% !important;
-    }
-}
-
-@media (max-width: 1000px) {
-    .carousel-arrow-prev {
-        display: none !important;
-    }
-
-    .carousel-arrow-next {
-        display: none !important;
-    }
-}
-
-.carousel-dot {
-    border: 2px solid #ec8675 !important;
-    margin: 8px !important;
-    width: 28px !important;
-    height: 8px !important;
-}
-
-.carousel-dot-active {
-    background-color: #eef0f4 !important;
+.swiper-pagination-bullet-active {
+    background-color: #eef0f4;
 }
 
 .modal,

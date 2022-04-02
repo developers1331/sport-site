@@ -20,7 +20,6 @@ import { ProgramsModule } from 'src/app/modules/programs/programs.module';
 import { HomeModule } from 'src/app/modules/home/home.module';
 import { AboutModule } from 'src/app/modules/about/about.module';
 import { TermsPageComponent } from './static/terms-page/terms-page.component';
-
 @NgModule({
     declarations: [
         AppComponent,
