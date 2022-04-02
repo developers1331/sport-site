@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AboutWrapperComponent } from 'src/app/modules/about/about-wrapper/about-wrapper.component';
 import { HomeWrapperComponent } from 'src/app/modules/home/home-wrapper/home-wrapper.component';
 import { PostsWrapperComponent } from 'src/app/modules/posts/posts-wrapper/posts-wrapper.component';
@@ -29,13 +29,20 @@ const routes: Routes = [
         component: TermsPageComponent,
     },
     {
+        path: 'admin',
+        loadChildren: () =>
+            import('./modules/admin/admin.module').then((m) => m.AdminModule),
+    },
+    {
         path: '**',
         component: PageNotFoundComponent,
     },
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
+    imports: [
+        RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
+    ],
     exports: [RouterModule],
 })
 export class AppRoutingModule {}
