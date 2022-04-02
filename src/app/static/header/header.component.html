@@ -64,19 +64,29 @@
     [ngStyle]="{ 'background-image': 'url(' + imgPath + ')' }"
   ></div> -->
 
-    <div class="header__background">
-        <video
+    <div
+        id="parallax"
+        class="header__background"
+        [ngStyle]="{
+            'background-image': 'url(' + imgPath + ')'
+        }"
+    >
+        <!-- url(assets/images/bg-element-1.png), url(assets/images/bg-element-2.png), url(assets/images/bg-element-3.png), -->
+        <!-- <video
             playsinline
             autoplay
             muted
             loop
             class="full-screen"
             src="assets/video/header.mp4"
-        ></video>
+        ></video> -->
+        <!-- <div  class="wrapper" [ngStyle]="{
+            'background-image':
+                'url(assets/images/bg-element-2.png)'
+        }">
+            <div class="header__background-picture">
+            </div>
+        </div> -->
     </div>
-
-    <app-header-mobile
-        (click)="toggle()"
-        [isActive]="isActive"
-    ></app-header-mobile>
 </header>
+<app-header-mobile (click)="toggle()" [isActive]="isActive"></app-header-mobile>
