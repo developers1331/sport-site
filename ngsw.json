@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1648772439491,
+  "timestamp": 1648893724987,
   "index": "https://doken1331.github.io/Sport-Site/index.html",
   "assetGroups": [
     {
@@ -14,10 +14,10 @@
         "https://doken1331.github.io/Sport-Site/assets/manifest/site.webmanifest",
         "https://doken1331.github.io/Sport-Site/favicon.ico",
         "https://doken1331.github.io/Sport-Site/index.html",
-        "https://doken1331.github.io/Sport-Site/main.fb02b15e72b3bffc.js",
+        "https://doken1331.github.io/Sport-Site/main.3943d18260740153.js",
         "https://doken1331.github.io/Sport-Site/polyfills.56519e223aca727c.js",
         "https://doken1331.github.io/Sport-Site/runtime.0db38bcf9f5ebc8c.js",
-        "https://doken1331.github.io/Sport-Site/styles.8bd48085713a6dae.css"
+        "https://doken1331.github.io/Sport-Site/styles.e8bc2c9a70f17246.css"
       ],
       "patterns": []
     },
@@ -169,11 +169,11 @@
     "https://doken1331.github.io/Sport-Site/assets/manifest/site.webmanifest": "06022e9ee027354bf85e8207f0b0c707be8fb56d",
     "https://doken1331.github.io/Sport-Site/assets/video/header.mp4": "35f558e9984756f56b70ff41203050a66a4343e3",
     "https://doken1331.github.io/Sport-Site/favicon.ico": "590c59650bb3defa5f56910ccc73398526be2d2a",
-    "https://doken1331.github.io/Sport-Site/index.html": "8002b71a2466c83765f576ebd53bcf504d42eede",
-    "https://doken1331.github.io/Sport-Site/main.fb02b15e72b3bffc.js": "d0dfde36c362688a4aaf80d46348de7f18d296c9",
+    "https://doken1331.github.io/Sport-Site/index.html": "6e1db16110d360df01ef00953392885ee9aa8f2b",
+    "https://doken1331.github.io/Sport-Site/main.3943d18260740153.js": "a090b27754a035532a529fbd546976cd462a2ff6",
     "https://doken1331.github.io/Sport-Site/polyfills.56519e223aca727c.js": "f6444c07cf41be876f0b7df8edf94cb598be93a7",
     "https://doken1331.github.io/Sport-Site/runtime.0db38bcf9f5ebc8c.js": "4690da880f81749b3ab6a63aac978a375574ddf4",
-    "https://doken1331.github.io/Sport-Site/styles.8bd48085713a6dae.css": "149a65fae9b1e7e5686d1cb8003bc43051bdffd9"
+    "https://doken1331.github.io/Sport-Site/styles.e8bc2c9a70f17246.css": "9c7919a5e45abcf1ce05f0b8eaa9d94259c29a4b"
   },
   "navigationUrls": [
     {
