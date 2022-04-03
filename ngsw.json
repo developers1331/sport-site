@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1648943258913,
+  "timestamp": 1648991608362,
   "index": "https://doken1331.github.io/Sport-Site/index.html",
   "assetGroups": [
     {
@@ -15,7 +15,7 @@
         "https://doken1331.github.io/Sport-Site/assets/manifest/site.webmanifest",
         "https://doken1331.github.io/Sport-Site/favicon.ico",
         "https://doken1331.github.io/Sport-Site/index.html",
-        "https://doken1331.github.io/Sport-Site/main.6698ac70fd993a17.js",
+        "https://doken1331.github.io/Sport-Site/main.326a869c9ecf7cdf.js",
         "https://doken1331.github.io/Sport-Site/polyfills.7cde95c32c6daaac.js",
         "https://doken1331.github.io/Sport-Site/runtime.53840b4527120d6b.js",
         "https://doken1331.github.io/Sport-Site/styles.e8bc2c9a70f17246.css"
@@ -48,6 +48,7 @@
         "https://doken1331.github.io/Sport-Site/assets/images/logo.webp",
         "https://doken1331.github.io/Sport-Site/assets/images/parallax-2.jpg",
         "https://doken1331.github.io/Sport-Site/assets/images/parallax-element.svg",
+        "https://doken1331.github.io/Sport-Site/assets/images/parallax-mobile-1.jpg",
         "https://doken1331.github.io/Sport-Site/assets/images/parallax.jpg",
         "https://doken1331.github.io/Sport-Site/assets/images/people.png",
         "https://doken1331.github.io/Sport-Site/assets/images/posts/1.jpg",
@@ -100,7 +101,8 @@
         "https://doken1331.github.io/Sport-Site/assets/manifest/favicon-32x32.png",
         "https://doken1331.github.io/Sport-Site/assets/manifest/favicon.ico",
         "https://doken1331.github.io/Sport-Site/assets/manifest/mstile-150x150.png",
-        "https://doken1331.github.io/Sport-Site/assets/video/header.mp4"
+        "https://doken1331.github.io/Sport-Site/assets/video/header.mp4",
+        "https://doken1331.github.io/Sport-Site/parallax-mobile-1.8b821c0ed1acd615.jpg"
       ],
       "patterns": []
     }
@@ -126,6 +128,7 @@
     "https://doken1331.github.io/Sport-Site/assets/images/logo.webp": "09dbf317906560ecaff011436ffbbf18f6b8cd4b",
     "https://doken1331.github.io/Sport-Site/assets/images/parallax-2.jpg": "a81531f6e7f553299956700fbbd3bb254ed51db3",
     "https://doken1331.github.io/Sport-Site/assets/images/parallax-element.svg": "fb2efbeac03af31f8a1ee2f8ca47c4d9fce68581",
+    "https://doken1331.github.io/Sport-Site/assets/images/parallax-mobile-1.jpg": "7bcf3f0ea75965d2a0e47597cf222540aab50af0",
     "https://doken1331.github.io/Sport-Site/assets/images/parallax.jpg": "9cde098ce298e3dab3b43bf27f8d11352a860634",
     "https://doken1331.github.io/Sport-Site/assets/images/people.png": "98e8187e79eacbd0db27485a247db4097c3d4f25",
     "https://doken1331.github.io/Sport-Site/assets/images/posts/1.jpg": "e665a3eec32f59c5dfc8ff62628e300118395e7e",
@@ -181,8 +184,9 @@
     "https://doken1331.github.io/Sport-Site/assets/manifest/site.webmanifest": "06022e9ee027354bf85e8207f0b0c707be8fb56d",
     "https://doken1331.github.io/Sport-Site/assets/video/header.mp4": "35f558e9984756f56b70ff41203050a66a4343e3",
     "https://doken1331.github.io/Sport-Site/favicon.ico": "590c59650bb3defa5f56910ccc73398526be2d2a",
-    "https://doken1331.github.io/Sport-Site/index.html": "66b731b46f26890eb981e050a25e959035b6b384",
-    "https://doken1331.github.io/Sport-Site/main.6698ac70fd993a17.js": "922fe34a7244438546db517129d7fba38d67b0f0",
+    "https://doken1331.github.io/Sport-Site/index.html": "669fda888aad1203849cf63a626b77d3b037db48",
+    "https://doken1331.github.io/Sport-Site/main.326a869c9ecf7cdf.js": "8c9e84710737a5f39143d15d0fc76bc0768ce4d1",
+    "https://doken1331.github.io/Sport-Site/parallax-mobile-1.8b821c0ed1acd615.jpg": "7bcf3f0ea75965d2a0e47597cf222540aab50af0",
     "https://doken1331.github.io/Sport-Site/polyfills.7cde95c32c6daaac.js": "a16b29de172c66d874717a5d8e642c3a36b1bb1c",
     "https://doken1331.github.io/Sport-Site/runtime.53840b4527120d6b.js": "3c24bfcbdb3e76b2a3f3a6b514c4f614735efa33",
     "https://doken1331.github.io/Sport-Site/styles.e8bc2c9a70f17246.css": "9c7919a5e45abcf1ce05f0b8eaa9d94259c29a4b"
