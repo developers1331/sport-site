@@ -3,7 +3,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { MainLayoutComponent } from 'src/app/main-layout/main-layout.component';
 import { AboutWrapperComponent } from 'src/app/modules/about/about-wrapper/about-wrapper.component';
 import { HomeWrapperComponent } from 'src/app/modules/home/home-wrapper/home-wrapper.component';
-import { PostComponent } from 'src/app/modules/posts/post/post.component';
+import { PostPageComponent } from 'src/app/modules/posts/post-page/post-page.component';
 import { PostsWrapperComponent } from 'src/app/modules/posts/posts-wrapper/posts-wrapper.component';
 import { ProgramsWrapperComponent } from 'src/app/modules/programs/programs-wrapper/programs-wrapper.component';
 import { PageNotFoundComponent } from 'src/app/static/page-not-found/page-not-found.component';
@@ -37,7 +37,7 @@ const routes: Routes = [
             },
             {
                 path: 'post/:id',
-                component: PostComponent,
+                component: PostPageComponent,
             },
             {
                 path: 'terms',

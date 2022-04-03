@@ -1,8 +1,9 @@
+<app-alert></app-alert>
 <h3>
     <a routerLink="/"> &#8592; Вернуться на сайт </a>
 </h3>
 <nav class="navbar">
-    <ul>
+    <ul *ngIf="auth.isAuth()">
         <li routerLinkActive="active">
             <a [routerLink]="['/admin', 'dashboard']">Главная</a>
         </li>

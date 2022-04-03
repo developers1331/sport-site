@@ -1,15 +1,13 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { IPost } from 'src/app/modules/admin/shared/interfaces';
 
 @Component({
     selector: 'app-post',
     templateUrl: './post.component.html',
     styleUrls: ['./post.component.scss'],
 })
-export class PostComponent implements OnInit {
-    @Input() showContent: boolean = true;
-    constructor() {}
+export class PostComponent {
+    @Input() post!: IPost;
 
-    ngOnInit(): void {
-        console.log('todo');
-    }
+    constructor() {}
 }

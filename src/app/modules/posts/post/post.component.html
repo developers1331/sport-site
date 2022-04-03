@@ -1,28 +1,14 @@
 <div class="card">
     <div class="card-header">
-        <h2 class="card-title">title</h2>
-        <small class="card-data">12.12.2022</small>
+        <h2 class="card-title">{{ post.title }}</h2>
+        <small class="card-data">{{
+            post.date | date: "mediumDate":undefined:"ru"
+        }}</small>
     </div>
-    <div class="card-body">
-        <small>Test</small>
-    </div>
-    <button *ngIf="!showContent" [routerLink]="['/post', 12]">Открыть</button>
 
-    <div *ngIf="showContent" class="card-content">
-        <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, modi.
-        </p>
-        <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, modi.
-        </p>
-        <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, modi.
-        </p>
-        <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, modi.
-        </p>
-        <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, modi.
-        </p>
+    <button [routerLink]="['/post', post.id]">Открыть</button>
+
+    <div class="card-author">
+        {{ post.author }}
     </div>
 </div>

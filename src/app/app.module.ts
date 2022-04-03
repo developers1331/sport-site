@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Provider } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -22,7 +22,20 @@ import { AboutModule } from 'src/app/modules/about/about.module';
 import { TermsPageComponent } from './static/terms-page/terms-page.component';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { AuthService } from 'src/app/modules/admin/services/auth.service';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { QuillModule } from 'ngx-quill';
+import { PostsService } from 'src/app/general/services/posts.service';
+import { AuthInterceptor } from 'src/app/general/shared/auth.interceptor';
+import { registerLocaleData } from '@angular/common';
+import ruLocale from '@angular/common/locales/ru';
+
+registerLocaleData(ruLocale, 'ru');
+
+const INTERCEPTOR_PROVIDER: Provider = {
+    provide: HTTP_INTERCEPTORS,
+    multi: true,
+    useClass: AuthInterceptor,
+};
 @NgModule({
     declarations: [
         AppComponent,
@@ -46,6 +59,7 @@ import { HttpClientModule } from '@angular/common/http';
         ProgramsModule,
         AboutModule,
         HttpClientModule,
+        QuillModule.forRoot(),
         ServiceWorkerModule.register('ngsw-worker.js', {
             enabled: environment.production,
             // Register the ServiceWorker as soon as the application is stable
@@ -55,7 +69,8 @@ import { HttpClientModule } from '@angular/common/http';
         ModalModule.forRoot(),
         HomeModule,
     ],
-    providers: [AuthService],
+    providers: [AuthService, PostsService, INTERCEPTOR_PROVIDER],
     bootstrap: [AppComponent],
+    exports: [QuillModule],
 })
 export class AppModule {}

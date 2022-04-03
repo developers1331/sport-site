@@ -8,7 +8,7 @@ import { AuthService } from 'src/app/modules/admin/services/auth.service';
     styleUrls: ['./admin-loayout.component.scss'],
 })
 export class AdminLoayoutComponent implements OnInit {
-    constructor(private router: Router, private auth: AuthService) {}
+    constructor(private router: Router, public auth: AuthService) {}
 
     ngOnInit(): void {
         console.log('init');
