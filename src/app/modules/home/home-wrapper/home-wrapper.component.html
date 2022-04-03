@@ -1,8 +1,23 @@
+<h2 class="title">Выбери свое направление</h2>
+<section class="menu">
+    <div class="container">
+        <ul class="menu__list">
+            <li (click)="toggleShow()" class="menu__list-item">
+                <span>Выбрать направление</span>
+            </li>
+            <app-home-menu-btn
+                [isShow]="isToggleShow"
+                (click)="toggle(item.id)"
+                *ngFor="let item of dataMenu2"
+                direction="{{ item.direction }}"
+                id="{{ item.id }}"
+                [open]="item.open"
+            ></app-home-menu-btn>
+        </ul>
+    </div>
+</section>
 <div class="container">
     <section class="home">
-        <div class="home__left">
-            <app-sidebar></app-sidebar>
-        </div>
         <div class="home__right">
             <div
                 class="home__main-picture"
@@ -36,6 +51,9 @@
             <p class="home__description-second">
                 {{ dataPage2[currentId].bottomDescription }}
             </p>
+        </div>
+        <div class="home__left">
+            <app-sidebar></app-sidebar>
         </div>
     </section>
 </div>

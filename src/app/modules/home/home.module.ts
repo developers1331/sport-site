@@ -7,18 +7,20 @@ import { TrainerComponent } from './trainer/trainer.component';
 import { SidebarBtnComponent } from './sidebar-btn/sidebar-btn.component';
 import { HomeService } from 'src/app/modules/home/services/home.service';
 import { ProgrammComponent } from './programm/programm.component';
+import { HomeMenuBtnComponent } from './home-menu-btn/home-menu-btn.component';
 
 @NgModule({
-  declarations: [
-    HomeWrapperComponent,
-    SidebarComponent,
-    PlusesComponent,
-    TrainerComponent,
-    SidebarBtnComponent,
-    ProgrammComponent,
-  ],
-  imports: [CommonModule],
-  providers: [HomeService],
-  exports: [HomeWrapperComponent],
+    declarations: [
+        HomeWrapperComponent,
+        SidebarComponent,
+        PlusesComponent,
+        TrainerComponent,
+        SidebarBtnComponent,
+        ProgrammComponent,
+        HomeMenuBtnComponent,
+    ],
+    imports: [CommonModule],
+    providers: [HomeService],
+    exports: [HomeWrapperComponent],
 })
 export class HomeModule {}

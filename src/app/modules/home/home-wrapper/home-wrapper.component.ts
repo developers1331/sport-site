@@ -5,38 +5,62 @@ import { takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
 
 import {
-  Ipage,
-  dataPage,
+    Ipage,
+    dataPage,
+    Imenu,
+    dataMenu,
 } from 'src/app/modules/home/home-wrapper/home-wrapper-params';
 import {
-  Itrainers,
-  dataTrainers,
+    Itrainers,
+    dataTrainers,
 } from 'src/app/modules/home/trainer/trainer-params';
 
 @Component({
-  selector: 'app-home-wrapper',
-  templateUrl: './home-wrapper.component.html',
-  styleUrls: ['./home-wrapper.component.scss'],
+    selector: 'app-home-wrapper',
+    templateUrl: './home-wrapper.component.html',
+    styleUrls: ['./home-wrapper.component.scss'],
 })
 export class HomeWrapperComponent implements OnInit, OnDestroy {
-  @Input() dataPage2: Ipage[] = dataPage;
-  @Input() dataTrainers2: Itrainers[] = dataTrainers;
-  private destroy$ = new Subject<void>();
+    @Input() dataPage2: Ipage[] = dataPage;
+    @Input() dataTrainers2: Itrainers[] = dataTrainers;
+    @Input() dataMenu2: Imenu[] = dataMenu;
+    private destroy$ = new Subject<void>();
 
-  public currentId: number = 0;
-  public imgMain: string = 'assets/images/exercise-1.jpg';
-  public dataPluses2: Ipluses[] = dataPluses;
+    public currentId: number = 0;
+    public imgMain: string = 'assets/images/exercise-1.jpg';
+    public dataPluses2: Ipluses[] = dataPluses;
+    public isToggleShow: boolean = false;
 
-  constructor(private readonly homeService: HomeService) {}
+    constructor(private readonly homeService: HomeService) {}
 
-  ngOnInit(): void {
-    this.homeService.homeId$.pipe(takeUntil(this.destroy$)).subscribe((id) => {
-      this.currentId = id;
-    });
-  }
+    ngOnInit(): void {
+        this.homeService.homeId$
+            .pipe(takeUntil(this.destroy$))
+            .subscribe((id) => {
+                this.currentId = id;
+            });
+    }
 
-  ngOnDestroy() {
-    this.destroy$.next();
-    this.destroy$.complete();
-  }
+    ngOnDestroy() {
+        this.destroy$.next();
+        this.destroy$.complete();
+    }
+
+    toggle(id: number) {
+        this.dataMenu2[id].open = !this.dataMenu2[id].open;
+
+        this.dataMenu2.forEach((element) => {
+            if (element.id === id) {
+                element.open = true;
+            } else {
+                element.open = false;
+            }
+        });
+        this.homeService.changeId(id);
+        this.toggleShow();
+    }
+
+    toggleShow() {
+        this.isToggleShow = !this.isToggleShow;
+    }
 }
