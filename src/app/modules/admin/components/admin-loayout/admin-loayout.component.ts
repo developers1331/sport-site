@@ -11,6 +11,9 @@ export class AdminLoayoutComponent implements OnInit {
     constructor(private router: Router, public auth: AuthService) {}
 
     ngOnInit(): void {
+        if (this.auth.isAuth()) {
+            this.router.navigate(['/admin', 'dashboard']);
+        }
         console.log('init');
     }
 

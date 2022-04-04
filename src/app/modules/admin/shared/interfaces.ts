@@ -13,6 +13,7 @@ export interface IPost {
     title: string;
     text: string;
     author: string;
+    img?: string;
     date: Date;
 }
 

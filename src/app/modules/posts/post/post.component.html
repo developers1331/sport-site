@@ -1,14 +1,16 @@
-<div class="card">
-    <div class="card-header">
-        <h2 class="card-title">{{ post.title }}</h2>
-        <small class="card-data">{{
+<div class="post">
+    <div class="post-header">
+        <img class="post__img" [src]="post.img" alt="img" />
+        <h2 class="post__title">{{ post.title }}</h2>
+        <p class="post__description">{{ stripDescriptionText(post.text) }}</p>
+    </div>
+
+    <div class="post__body">
+        <small class="post__data">{{
             post.date | date: "mediumDate":undefined:"ru"
         }}</small>
+        <div class="post__author">Автор: {{ post.author }}</div>
     </div>
 
-    <button [routerLink]="['/post', post.id]">Открыть</button>
-
-    <div class="card-author">
-        {{ post.author }}
-    </div>
+    <a class="post__link" [routerLink]="['/post', post.id]">Читать »</a>
 </div>

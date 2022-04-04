@@ -10,4 +10,8 @@ export class PostComponent {
     @Input() post!: IPost;
 
     constructor() {}
+
+    public stripDescriptionText(text: any): string {
+        return text.replace(/<\/?[^>]+>/g, '').replace(/\&nbsp\;/gi, ' ');
+    }
 }

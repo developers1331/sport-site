@@ -1,0 +1,90 @@
+@import "/src/global_styles/variables.scss";
+
+.posts {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+
+    padding: 40px 0;
+
+    &__title {
+        text-transform: uppercase;
+        text-align: center;
+        margin: 40px 0 20px 0;
+        font-weight: bold;
+        font-synthesis: $big_text;
+    }
+
+    .post {
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (min-width: 576px) {
+    .post {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .posts__title {
+        position: relative;
+
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 47%;
+            transform: translateY(-50%);
+            right: 1%;
+            width: 50px;
+            height: 4px;
+            background: #000;
+        }
+
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 47%;
+            transform: translateY(-50%);
+            left: 1%;
+            width: 50px;
+            height: 4px;
+            background: #000;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .posts__title {
+        position: relative;
+
+        &:after {
+            right: 5%;
+            width: 100px;
+        }
+
+        &:before {
+            left: 5%;
+            width: 100px;
+        }
+    }
+}
+
+@media (min-width: 1250px) {
+    .posts__title {
+        position: relative;
+
+        &:after {
+            right: 20%;
+        }
+
+        &:before {
+            left: 20%;
+        }
+    }
+}

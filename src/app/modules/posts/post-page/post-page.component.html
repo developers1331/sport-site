@@ -1,9 +1,10 @@
 <div *ngIf="post$ | async as post; else loading">
     <div class="post">
+        <button routerLink="/posts">Вернуться к постам</button>
         <div class="post__header">
             {{ post.title }}
         </div>
-        <button routerLink="/posts">Вернуться к постам</button>
+        <img [src]="post.img" alt="img" />
     </div>
     <div class="post__info">
         <strong>{{ post.author }}</strong>

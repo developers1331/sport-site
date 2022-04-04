@@ -14,6 +14,7 @@ export class DashboardPageComponent implements OnInit, OnDestroy {
     public searchStr: string = '';
     private pSub!: Subscription;
     private dSub!: Subscription;
+    public helpText: string = 'Загрузка постов...';
 
     constructor(
         private postService: PostsService,
@@ -21,9 +22,16 @@ export class DashboardPageComponent implements OnInit, OnDestroy {
     ) {}
 
     ngOnInit(): void {
-        this.pSub = this.postService.getAllPosts().subscribe((posts) => {
-            this.posts = posts;
-        });
+        this.pSub = this.postService.getAllPosts().subscribe(
+            (posts) => {
+                this.posts = posts;
+            },
+            (error) => {
+                console.log(error);
+                this.helpText =
+                    'Ошибка загрузки постов. Возможно они еще не созданы.';
+            }
+        );
     }
 
     public remove(id: any) {
