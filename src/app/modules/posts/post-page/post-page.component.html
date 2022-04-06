@@ -1,21 +1,30 @@
-<div *ngIf="post$ | async as post; else loading">
-    <div class="post">
-        <button routerLink="/posts">Вернуться к постам</button>
-        <div class="post__header">
-            {{ post.title }}
+<div class="container">
+    <div *ngIf="post$ | async as post; else loading">
+        <div class="post">
+            <div class="post__header">
+                <a class="post__link" routerLink="/posts"
+                    >&#8592; Вернуться к постам</a
+                >
+                <div class="post__info">
+                    <div class="post__info-date">
+                        {{ post.date | date: "mediumDate":undefined:"ru" }}
+                    </div>
+                    <div>
+                        Автор: <strong>{{ post.author }}</strong>
+                    </div>
+                </div>
+            </div>
+            <h1 class="post__title">
+                {{ post.title }}
+            </h1>
+            <img class="post__img" [src]="post.img" alt="img" />
         </div>
-        <img [src]="post.img" alt="img" />
-    </div>
-    <div class="post__info">
-        <strong>{{ post.author }}</strong>
-        <small>{{ post.date | date: "mediumDate":undefined:"ru" }}</small>
+        <div class="post__content">
+            <quill-view-html [content]="post.text"> </quill-view-html>
+        </div>
     </div>
 
-    <div class="post__content">
-        <quill-view-html [content]="post.text"> </quill-view-html>
-    </div>
+    <ng-template #loading>
+        <app-loader></app-loader>
+    </ng-template>
 </div>
-
-<ng-template #loading>
-    <app-loader></app-loader>
-</ng-template>

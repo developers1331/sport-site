@@ -1,4 +1,4 @@
-<div class="post">
+<!-- <div class="post">
     <div class="post-header">
         <img class="post__img" [src]="post.img" alt="img" />
         <h2 class="post__title">{{ post.title }}</h2>
@@ -12,5 +12,25 @@
         <div class="post__author">Автор: {{ post.author }}</div>
     </div>
 
-    <a class="post__link" [routerLink]="['/post', post.id]">Читать »</a>
-</div>
+    <a class="post__link" >Читать »</a>
+</div> -->
+
+<a [routerLink]="['/post', post.id]" class="post">
+    <div
+        class="post__wrapper"
+        [ngStyle]="{ 'background-image': 'url(' + post.img + ')' }"
+    >
+        <div class="post__title">
+            {{ post.title }}
+        </div>
+        <div class="post__description">
+            {{ stripDescriptionText(post.text) }}
+        </div>
+        <div class="post__subwrapper">
+            <div class="post__date">
+                {{ post.date | date: "mediumDate":undefined:"ru" }}
+            </div>
+            <div class="post__author">Автор: {{ post.author }}</div>
+        </div>
+    </div>
+</a>
