@@ -8,6 +8,7 @@
         &-link {
             text-decoration: none;
             margin-bottom: 20px;
+            margin-right: 10px;
             transition: all 0.4s ease;
             &:hover {
                 transform: translateY(-3%);
@@ -27,9 +28,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    &:nth-child(odd) {
-        margin-right: 10px;
-    }
     &::after {
         content: "";
         display: block;
