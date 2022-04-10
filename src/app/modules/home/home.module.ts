@@ -8,6 +8,7 @@ import { SidebarBtnComponent } from './sidebar-btn/sidebar-btn.component';
 import { HomeService } from 'src/app/modules/home/services/home.service';
 import { ProgrammComponent } from './programm/programm.component';
 import { HomeMenuBtnComponent } from './home-menu-btn/home-menu-btn.component';
+import { SharedModuleModule } from 'src/app/modules/shared-module/shared-module.module';
 
 @NgModule({
     declarations: [
@@ -19,7 +20,7 @@ import { HomeMenuBtnComponent } from './home-menu-btn/home-menu-btn.component';
         ProgrammComponent,
         HomeMenuBtnComponent,
     ],
-    imports: [CommonModule],
+    imports: [CommonModule, SharedModuleModule],
     providers: [HomeService],
     exports: [HomeWrapperComponent],
 })

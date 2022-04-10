@@ -5,6 +5,7 @@ import { TrainersListComponent } from './trainers-list/trainers-list.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { SwiperModule } from 'swiper/angular';
+import { SharedModuleModule } from 'src/app/modules/shared-module/shared-module.module';
 @NgModule({
     declarations: [
         AboutWrapperComponent,
@@ -12,7 +13,7 @@ import { SwiperModule } from 'swiper/angular';
         ReviewsComponent,
         ArticlesComponent,
     ],
-    imports: [CommonModule, SwiperModule],
+    imports: [CommonModule, SwiperModule, SharedModuleModule],
     exports: [AboutWrapperComponent, TrainersListComponent],
 })
 export class AboutModule {}

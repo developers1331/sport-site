@@ -11,7 +11,41 @@
         </ul>
     </nav> -->
     <div class="home__aside-posts">
-        <h2 class="home__aside-posts-title">Последнии статьи</h2>
+        <h2 class="home__aside-posts-title">Последние статьи</h2>
+        <div *ngIf="ready; else loading">
+            <div
+                class="home__aside-posts-item"
+                *ngFor="let item of postsConfig"
+            >
+                <div
+                    class="home__aside-posts-item-picture"
+                    [ngStyle]="{
+                        'background-image': 'url(' + item.img + ')'
+                    }"
+                ></div>
+                <h2 class="home__aside-posts-item-title">{{ item.title }}</h2>
+                <p class="home__aside-posts-item-desc">
+                    {{ stripDescriptionText(item.text) }}
+                </p>
+                <div class="home__aside-posts-item-bottom">
+                    <div class="home__aside-posts-item-bottom-data">
+                        {{ item.date | date: "mediumDate":undefined:"ru" }}
+                    </div>
+                    <div
+                        class="home__aside-posts-item-bottom-link"
+                        (click)="goToInfo(item.id)"
+                    >
+                        Подробнее →
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <ng-template #loading>
+            <app-loader></app-loader>
+        </ng-template>
+        <!--
+
         <div class="home__aside-posts-item">
             <div
                 class="home__aside-posts-item-picture"
@@ -77,6 +111,6 @@
                     Подробнее →</a
                 >
             </div>
-        </div>
+        </div> -->
     </div>
 </aside>

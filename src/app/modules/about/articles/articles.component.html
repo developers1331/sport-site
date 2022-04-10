@@ -2,23 +2,28 @@
     <div class="articles">
         <div class="articles__title">Новости и статьи</div>
         <div class="articles__description">А ещё мы ведем свой блог</div>
-        <div class="articles__wrapper">
-            <div *ngFor="let item of articlesConfig" class="articles__elem">
+        <div class="articles__wrapper" *ngIf="ready; else loading">
+            <div *ngFor="let item of postsConfig" class="articles__elem">
                 <div
                     class="articles__elem-img"
                     [ngStyle]="{ 'background-image': 'url(' + item.img + ')' }"
                 ></div>
                 <div class="articles__elem-title">{{ item.title }}</div>
                 <div class="articles__elem-description">
-                    {{ item.description }}
+                    {{ stripDescriptionText(item.text) }}
                 </div>
                 <div class="articles__elem-bottom">
-                    <div class="articles__elem-data">{{ item.data }}</div>
+                    <div class="articles__elem-data">
+                        {{ item.date | date: "mediumDate":undefined:"ru" }}
+                    </div>
                     <div class="articles__elem-btn" (click)="goToInfo(item.id)">
                         Подробнее &#8594;
                     </div>
                 </div>
             </div>
         </div>
+        <ng-template #loading>
+            <app-loader></app-loader>
+        </ng-template>
     </div>
 </div>
