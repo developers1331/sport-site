@@ -28,6 +28,7 @@ import { PostsService } from 'src/app/general/services/posts.service';
 import { AuthInterceptor } from 'src/app/general/shared/auth.interceptor';
 import { registerLocaleData } from '@angular/common';
 import ruLocale from '@angular/common/locales/ru';
+import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
 
 registerLocaleData(ruLocale, 'ru');
 
@@ -49,6 +50,7 @@ const INTERCEPTOR_PROVIDER: Provider = {
         ModalComponent,
         TermsPageComponent,
         MainLayoutComponent,
+        ScrollToTopComponent,
     ],
     imports: [
         BrowserModule,

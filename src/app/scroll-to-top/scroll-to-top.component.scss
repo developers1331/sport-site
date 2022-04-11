@@ -1,0 +1,21 @@
+.upp {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    background: #fff;
+    padding: 9px;
+    cursor: pointer;
+    z-index: 5;
+    transition: all 0.2s ease;
+}
+
+.show {
+    opacity: 1;
+    visibility: visible;
+}
