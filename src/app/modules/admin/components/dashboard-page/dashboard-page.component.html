@@ -1,14 +1,15 @@
 <div *ngIf="posts.length; else loading">
     <h2 class="title">Посты</h2>
 
-    <div class="form-control">
+    <div class="form-wrapper">
         <input
+            class="form-control"
             type="text"
             placeholder="Поиск по названию..."
             [(ngModel)]="searchStr"
         />
     </div>
-    <table>
+    <table class="table table-bordered">
         <thead>
             <tr>
                 <th>#</th>
@@ -37,14 +38,16 @@
                 <td>
                     {{ post.date | date: "mediumDate":undefined:"ru" }}
                 </td>
-                <td>
+                <td class="wrapper-btn">
                     <button
-                        class="btn btn-link"
+                        class="btn btn-primary"
                         [routerLink]="['/admin', 'post', post.id, 'edit']"
                     >
                         Открыть
                     </button>
-                    <a (click)="remove(post.id)">Удалить</a>
+                    <a class="btn btn-danger" (click)="remove(post.id)"
+                        >Удалить</a
+                    >
                 </td>
             </tr>
         </tbody>

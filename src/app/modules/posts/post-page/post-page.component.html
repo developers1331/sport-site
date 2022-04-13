@@ -5,14 +5,6 @@
                 <a class="post__link" routerLink="/posts"
                     >&#8592; Вернуться к постам</a
                 >
-                <div class="post__info">
-                    <div class="post__info-date">
-                        {{ post.date | date: "mediumDate":undefined:"ru" }}
-                    </div>
-                    <div>
-                        Автор: <strong>{{ post.author }}</strong>
-                    </div>
-                </div>
             </div>
             <h1 class="post__title">
                 {{ post.title }}
@@ -21,6 +13,14 @@
         </div>
         <div class="post__content">
             <quill-view-html [content]="post.text"> </quill-view-html>
+        </div>
+        <div class="post__info">
+            <div class="post__info-date">
+                {{ post.date | date: "mediumDate":undefined:"ru" }}
+            </div>
+            <div>
+                Автор: <strong>{{ post.author }}</strong>
+            </div>
         </div>
     </div>
 

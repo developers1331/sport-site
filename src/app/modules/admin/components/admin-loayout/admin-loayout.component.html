@@ -1,17 +1,22 @@
 <app-alert></app-alert>
-<h3>
-    <a routerLink="/"> &#8592; Вернуться на сайт </a>
-</h3>
-<nav class="navbar">
-    <ul *ngIf="auth.isAuth()">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <h3>
+        <a class="navbar-brand" routerLink="/"> &#8592; Вернуться на сайт </a>
+    </h3>
+    <ul class="navbar-nav mr-auto" *ngIf="auth.isAuth()">
         <li routerLinkActive="active">
-            <a [routerLink]="['/admin', 'dashboard']">Главная</a>
+            <a class="nav-link" [routerLink]="['/admin', 'dashboard']"
+                >Главная</a
+            >
         </li>
         <li routerLinkActive="active">
-            <a [routerLink]="['/admin', 'create-post']">Создать пост</a>
+            <a class="nav-link" [routerLink]="['/admin', 'create-post']"
+                >Создать пост</a
+            >
         </li>
         <li>
-            <a href="#" (click)="logout($event)">Выйти</a>
+            <a class="nav-link" href="#" (click)="logout($event)">Выйти</a>
         </li>
     </ul>
 </nav>

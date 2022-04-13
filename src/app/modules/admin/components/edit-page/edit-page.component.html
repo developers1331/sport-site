@@ -1,45 +1,60 @@
 <div *ngIf="form; else loading">
     <form [formGroup]="form" (ngSubmit)="submit()">
+        <h3>Редактирование поста</h3>
         <div
-            class="form-control"
+            class="form-group"
             [ngClass]="{
                 invalid:
                     form.get('title')?.touched && form.get('title')?.invalid
             }"
         >
             <label for="title">Заголовок поста:</label>
-            <input type="text" id="text" formControlName="title" />
+            <input
+                type="text"
+                id="text"
+                formControlName="title"
+                class="form-control"
+            />
             <div
                 class="validation"
                 *ngIf="form.get('title')?.touched && form.get('title')?.invalid"
             >
-                <small *ngIf="form.get('title')?.errors?.['required']"
+                <small
+                    class="text-danger"
+                    *ngIf="form.get('title')?.errors?.['required']"
                     >Введите заголовок поста</small
                 >
             </div>
         </div>
         <div
-            class="form-control"
+            class="form-group"
             [ngClass]="{
                 invalid: form.get('img')?.touched && form.get('img')?.invalid
             }"
         >
             <label for="img">Ссылка на картинку под заголовком:</label>
-            <input type="text" id="img" formControlName="img" />
+            <input
+                type="text"
+                id="img"
+                formControlName="img"
+                class="form-control"
+            />
             <div
                 class="validation"
                 *ngIf="form.get('img')?.touched && form.get('img')?.invalid"
             >
-                <small *ngIf="form.get('img')?.errors?.['required']"
+                <small
+                    class="text-danger"
+                    *ngIf="form.get('img')?.errors?.['required']"
                     >Добавьте ссылку на картинку</small
                 >
             </div>
         </div>
-        <div class="form-control">
+        <div class="form-group">
             <quill-editor formControlName="text"></quill-editor>
         </div>
         <button
-            class="btn btn-primery"
+            class="btn btn-primary"
             type="submit"
             [disabled]="form.invalid || submitted"
         >

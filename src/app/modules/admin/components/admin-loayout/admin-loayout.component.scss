@@ -1,5 +1,11 @@
 .active {
     a {
-        color: rgb(255, 0, 0);
+        transition: all 0.3s;
+        color: rgb(255, 0, 0) !important;
     }
+}
+
+.navbar {
+    margin-bottom: 60px;
+    padding: 20px;
 }
