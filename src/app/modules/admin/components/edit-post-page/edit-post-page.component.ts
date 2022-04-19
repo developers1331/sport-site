@@ -7,9 +7,9 @@ import { AlertService } from 'src/app/modules/admin/services/alert.service';
 import { IPost } from 'src/app/modules/admin/shared/interfaces';
 
 @Component({
-    selector: 'app-edit-page',
-    templateUrl: './edit-page.component.html',
-    styleUrls: ['./edit-page.component.scss'],
+    selector: 'app-edit-post-page',
+    templateUrl: './edit-post-page.component.html',
+    styleUrls: ['./edit-post-page.component.scss'],
 })
 export class EditPageComponent implements OnInit, OnDestroy {
     public form!: FormGroup;

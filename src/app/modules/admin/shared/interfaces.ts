@@ -20,3 +20,11 @@ export interface IPost {
 export interface IFbCreateResponse {
     name: string;
 }
+
+export interface IReviewBanner {
+    id?: string;
+    fullName: string;
+    description: string;
+    photoUrl?: string;
+    bgImageUrl?: string;
+}

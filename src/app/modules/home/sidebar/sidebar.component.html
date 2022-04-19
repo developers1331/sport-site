@@ -1,15 +1,4 @@
 <aside class="home__aside">
-    <!-- <nav class="home__aside-nav">
-        <ul class="home__aside-nav-list">
-            <app-sidebar-btn
-                (click)="toggle(item.id)"
-                *ngFor="let item of dataSidebar2"
-                direction="{{ item.direction }}"
-                id="{{ item.id }}"
-                [open]="item.open"
-            ></app-sidebar-btn>
-        </ul>
-    </nav> -->
     <div class="home__aside-posts">
         <h2 class="home__aside-posts-title">Последние статьи</h2>
         <div *ngIf="ready; else loading">
@@ -39,78 +28,18 @@
                     </div>
                 </div>
             </div>
+            <a href="#!">
+                <div class="home__aside-posts-item za-babki">
+                    <!-- класс типа reklama лучше не ставить, адблок такие блоки удаляет со страницы -->
+                    <img
+                        src="https://sun9-32.userapi.com/impg/UJ8MGNosiYKiRMCRhqSqo2sRnJvR9atrLDL6AQ/pftJ84m6D6Q.jpg?size=500x0&quality=95&sign=2f18ed0658cc7f2b4eb3c63dc7dee2f8"
+                        alt="реклама"
+                    /></div
+            ></a>
         </div>
 
         <ng-template #loading>
             <app-loader></app-loader>
         </ng-template>
-        <!--
-
-        <div class="home__aside-posts-item">
-            <div
-                class="home__aside-posts-item-picture"
-                [ngStyle]="{
-                    'background-image': 'url(assets/images/posts/1.jpg)'
-                }"
-            ></div>
-            <h2 class="home__aside-posts-item-title">КАЧАЕМ МОЗГИ</h2>
-            <p class="home__aside-posts-item-desc">
-                Мужик собрался покончить жизнь самоубийством. Стоит на мосту,
-                готовится прыгнуть в реку. Вдруг сзади кто-то хлопает его по
-                плечу: "Извините, пожалуйста, а котят не захватите? ".
-            </p>
-            <div class="home__aside-posts-item-bottom">
-                <div class="home__aside-posts-item-bottom-data">
-                    1 апреля ;)
-                </div>
-                <a href="#!" class="home__aside-posts-item-bottom-link">
-                    Подробнее →</a
-                >
-            </div>
-        </div>
-        <div class="home__aside-posts-item">
-            <div
-                class="home__aside-posts-item-picture"
-                [ngStyle]="{
-                    'background-image': 'url(assets/images/posts/2.jpg)'
-                }"
-            ></div>
-            <h2 class="home__aside-posts-item-title">КАЧАЕМ МОЗГИ</h2>
-            <p class="home__aside-posts-item-desc">
-                Собрались вечером на кладбище вампиры, вурдалаки, упыри разные и
-                заспорили, кто из них изящнее кровь сосать может. Спорили,
-                спорили да и разбежались, комары их задолбали.
-            </p>
-            <div class="home__aside-posts-item-bottom">
-                <div class="home__aside-posts-item-bottom-data">
-                    1 апреля ;)
-                </div>
-                <a href="#!" class="home__aside-posts-item-bottom-link">
-                    Подробнее →</a
-                >
-            </div>
-        </div>
-        <div class="home__aside-posts-item">
-            <div
-                class="home__aside-posts-item-picture"
-                [ngStyle]="{
-                    'background-image': 'url(assets/images/posts/3.jpg)'
-                }"
-            ></div>
-            <h2 class="home__aside-posts-item-title">КАЧАЕМ МОЗГИ</h2>
-            <p class="home__aside-posts-item-desc">
-                Собрали хороший урожай яблок. Свекровь распорядилась есть только
-                начавшие подгнивать, чтобы не пропали. Пока ели гнилые, хорошие
-                начали портиться. В итоге, едим только гнилые.
-            </p>
-            <div class="home__aside-posts-item-bottom">
-                <div class="home__aside-posts-item-bottom-data">
-                    1 апреля ;)
-                </div>
-                <a href="#!" class="home__aside-posts-item-bottom-link">
-                    Подробнее →</a
-                >
-            </div>
-        </div> -->
     </div>
 </aside>
