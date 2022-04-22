@@ -27,7 +27,6 @@ export class HomeWrapperComponent implements OnInit, OnDestroy {
     private destroy$ = new Subject<void>();
 
     public currentId: number = 0;
-    public imgMain: string = 'assets/images/exercise-1.jpg';
     public dataPluses2: Ipluses[] = dataPluses;
     public isToggleShow: boolean = false;
 

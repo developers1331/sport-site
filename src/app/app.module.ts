@@ -28,7 +28,7 @@ import { PostsService } from 'src/app/general/services/posts.service';
 import { AuthInterceptor } from 'src/app/general/shared/auth.interceptor';
 import { registerLocaleData } from '@angular/common';
 import ruLocale from '@angular/common/locales/ru';
-import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
+import { ScrollToTopComponent } from './static/scroll-to-top/scroll-to-top.component';
 
 registerLocaleData(ruLocale, 'ru');
 
