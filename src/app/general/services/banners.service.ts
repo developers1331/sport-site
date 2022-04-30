@@ -14,23 +14,25 @@ export class BannersService {
     constructor(private http: HttpClient) {}
 
     public addReviewBlock(banner: IReviewBanner): Observable<IReviewBanner> {
-        return this.http
-            .post<any>(`${environment.fbDbUrl}/banners/reviews.json`, banner)
-            .pipe(
-                map((response: IFbCreateResponse) => {
-                    return {
-                        ...banner,
-                        id: response.name,
-                    };
-                })
-            );
+        return this.http.post<IReviewBanner>(
+            `${environment.fbDbUrl}/banners/reviews.json`,
+            banner
+        );
     }
 
-    public getReviewsBlock(): void {
-        //todo
+    public getReviewsBlock(): Observable<any> {
+        return this.http.get(`${environment.fbDbUrl}/banners/reviews.json`);
     }
 
     public uppdateReviewBlock(): void {
         //todo
+    }
+
+    public setMainBannerText(text: string) {
+        //тут будешь посылать запрос text на сервер по адресу /banners/main.json
+    }
+
+    public getMainBannerText() {
+        //тут будешь получать текст баннера с сервера по адресу /banners/main.json
     }
 }

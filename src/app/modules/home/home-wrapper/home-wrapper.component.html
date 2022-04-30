@@ -6,11 +6,10 @@
                 <span>Выбрать направление</span>
             </li>
             <app-home-menu-btn
+                *ngFor="let item of dataMenu2"
                 [isShow]="isToggleShow"
                 (click)="toggle(item.id)"
-                *ngFor="let item of dataMenu2"
                 direction="{{ item.direction }}"
-                id="{{ item.id }}"
                 [open]="item.open"
             ></app-home-menu-btn>
         </ul>
@@ -69,7 +68,6 @@
 </section>
 <div class="container">
     <section class="programms">
-        <!-- <h2 class="title">Программы "{{ dataPage2[currentId].title }}"</h2> -->
         <app-programm></app-programm>
     </section>
 </div>

@@ -7,9 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class HomeMenuBtnComponent implements OnInit {
     @Input() direction: string = '';
-    @Input() id: string = '';
     @Input() open: boolean = false;
-    @Input() isActive: boolean = false;
     @Input() isShow: boolean = false;
 
     constructor() {}

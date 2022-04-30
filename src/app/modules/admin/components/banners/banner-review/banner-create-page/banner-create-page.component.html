@@ -1,1 +1,137 @@
-<p>banner-create-page works!</p>
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <h3>Создание нового поста</h3>
+    <div
+        class="form-group"
+        [ngClass]="{
+            invalid:
+                form.get('fullName')?.touched && form.get('fullName')?.invalid
+        }"
+    >
+        <label for="fullName">Полное имя клиента:</label>
+        <input
+            class="form-control"
+            type="text"
+            id="fullName"
+            formControlName="fullName"
+        />
+        <div
+            class="validation"
+            *ngIf="
+                form.get('fullName')?.touched && form.get('fullName')?.invalid
+            "
+        >
+            <small
+                class="text-danger"
+                *ngIf="form.get('fullName')?.errors?.['required']"
+                >Введите полное имя</small
+            >
+        </div>
+    </div>
+
+    <div
+        class="form-group"
+        [ngClass]="{
+            invalid:
+                form.get('photoUrl')?.touched && form.get('photoUrl')?.invalid
+        }"
+    >
+        <label for="photoUrl">Ссылка на фото клиента:</label>
+        <input
+            class="form-control"
+            type="text"
+            id="photoUrl"
+            formControlName="photoUrl"
+        />
+        <div
+            class="validation"
+            *ngIf="
+                form.get('photoUrl')?.touched && form.get('photoUrl')?.invalid
+            "
+        >
+            <small
+                class="text-danger"
+                *ngIf="form.get('photoUrl')?.errors?.['required']"
+                >Добавьте ссылку на картинку</small
+            >
+        </div>
+    </div>
+
+    <div
+        class="form-group"
+        [ngClass]="{
+            invalid:
+                form.get('description')?.touched &&
+                form.get('description')?.invalid
+        }"
+    >
+        <label for="description">Текст отзыва:</label>
+        <input
+            class="form-control"
+            type="text"
+            id="description"
+            formControlName="description"
+        />
+        <div
+            class="validation"
+            *ngIf="
+                form.get('description')?.touched &&
+                form.get('description')?.invalid
+            "
+        >
+            <small
+                class="text-danger"
+                *ngIf="form.get('description')?.errors?.['required']"
+                >Введите текст отзыва</small
+            >
+        </div>
+    </div>
+
+    <div
+        class="form-group"
+        [ngClass]="{
+            invalid:
+                form.get('bgImageUrl')?.touched &&
+                form.get('bgImageUrl')?.invalid
+        }"
+    >
+        <label for="bgImageUrl">Ссылка на картинку заднего фона:</label>
+        <input
+            class="form-control"
+            type="text"
+            id="bgImageUrl"
+            formControlName="bgImageUrl"
+        />
+        <div
+            class="validation"
+            *ngIf="
+                form.get('bgImageUrl')?.touched &&
+                form.get('bgImageUrl')?.invalid
+            "
+        >
+            <small
+                class="text-danger"
+                *ngIf="form.get('bgImageUrl')?.errors?.['required']"
+                >Введите ссылку</small
+            >
+        </div>
+    </div>
+
+    <div
+        class="form-group"
+        [ngClass]="{
+            invalid:
+                form.get('bgImageUrl')?.touched &&
+                form.get('bgImageUrl')?.invalid
+        }"
+    ></div>
+
+    <button
+        type="submit"
+        class="btn bnt-block btn-dark"
+        [disabled]="form.invalid"
+    >
+        Добавить отзыв
+    </button>
+</form>
+
+<button (click)="test()" class="btn bnt-block btn-dark">тест</button>

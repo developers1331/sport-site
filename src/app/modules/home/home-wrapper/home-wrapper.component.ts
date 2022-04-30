@@ -32,34 +32,44 @@ export class HomeWrapperComponent implements OnInit, OnDestroy {
 
     constructor(private readonly homeService: HomeService) {}
 
-    ngOnInit(): void {
+    public ngOnInit(): void {
         this.homeService.homeId$
             .pipe(takeUntil(this.destroy$))
             .subscribe((id) => {
                 this.currentId = id;
             });
+        this.resetOpen();
     }
 
-    ngOnDestroy() {
+    public ngOnDestroy(): void {
         this.destroy$.next();
         this.destroy$.complete();
     }
 
-    toggle(id: number) {
-        this.dataMenu2[id].open = !this.dataMenu2[id].open;
+    public toggle(id: number): void {
+        this.homeService.changeId(id);
 
         this.dataMenu2.forEach((element) => {
-            if (element.id === id) {
+            if (element.id === this.currentId) {
                 element.open = true;
             } else {
                 element.open = false;
             }
         });
-        this.homeService.changeId(id);
         this.toggleShow();
     }
 
-    toggleShow() {
+    public toggleShow(): void {
         this.isToggleShow = !this.isToggleShow;
+    }
+
+    private resetOpen(): void {
+        this.dataMenu2.forEach((element) => {
+            if (element.id === 0) {
+                element.open = true;
+            } else {
+                element.open = false;
+            }
+        });
     }
 }
