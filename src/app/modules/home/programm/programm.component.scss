@@ -28,9 +28,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    &:nth-child(odd) {
-        margin-right: 10px;
-    }
+
     &::after {
         content: "";
         display: block;

@@ -3,6 +3,7 @@ import {
     Component,
     ElementRef,
     HostListener,
+    OnDestroy,
     OnInit,
     ViewChild,
 } from '@angular/core';
@@ -10,18 +11,24 @@ import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { ModalComponent } from 'src/app/static/modal/modal.component';
 import { dataBtns, Ibtns } from 'src/app/static/header/header.params';
 import { Parallax } from 'swiper';
+import { BannersService } from 'src/app/general/services/banners.service';
+import { IMainBanner } from 'src/app/modules/admin/shared/interfaces';
+import { Subject } from 'rxjs/internal/Subject';
+import { takeUntil } from 'rxjs';
 
 @Component({
     selector: 'app-header',
     templateUrl: './header.component.html',
     styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, OnDestroy {
+    public textBanner: string = '';
     public isActive: boolean = false;
     public btns: Ibtns[] = dataBtns;
     public imgPath: string = 'assets/images/bg-main.jpg';
     private widthScreen: number = 0;
     private modalHref!: BsModalRef;
+    private destroy$ = new Subject<void>();
 
     @ViewChild('parallax', { static: true })
     parallaxContainer!: ElementRef<HTMLDivElement>;
@@ -39,10 +46,23 @@ export class HeaderComponent implements OnInit {
         }
     }
 
-    constructor(private modalService: BsModalService) {}
+    constructor(
+        private modalService: BsModalService,
+        private bannersService: BannersService
+    ) {}
 
     ngOnInit(): void {
-        console.log('init');
+        this.bannersService
+            .getMainBannerText()
+            .pipe(takeUntil(this.destroy$))
+            .subscribe((value: IMainBanner) => {
+                this.textBanner = value.text;
+            });
+    }
+
+    ngOnDestroy() {
+        this.destroy$.next();
+        this.destroy$.complete();
     }
 
     public openModal() {

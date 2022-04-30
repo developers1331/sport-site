@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
 import {
     IFbCreateResponse,
+    IMainBanner,
     IReviewBanner,
 } from 'src/app/modules/admin/shared/interfaces';
 import { environment } from 'src/environments/environment';
@@ -28,11 +29,16 @@ export class BannersService {
         //todo
     }
 
-    public setMainBannerText(text: string) {
+    public setMainBannerText(text: IMainBanner) {
+        return this.http.patch(
+            `${environment.fbDbUrl}/banners/main.json`,
+            text
+        );
         //тут будешь посылать запрос text на сервер по адресу /banners/main.json
     }
 
-    public getMainBannerText() {
+    public getMainBannerText(): Observable<any> {
+        return this.http.get(`${environment.fbDbUrl}/banners/main.json`);
         //тут будешь получать текст баннера с сервера по адресу /banners/main.json
     }
 }

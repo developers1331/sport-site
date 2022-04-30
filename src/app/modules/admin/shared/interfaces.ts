@@ -28,3 +28,7 @@ export interface IReviewBanner {
     photoUrl?: string;
     bgImageUrl?: string;
 }
+
+export interface IMainBanner {
+    text: string;
+}
