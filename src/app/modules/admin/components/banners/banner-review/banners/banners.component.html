@@ -1,1 +1,66 @@
-<p>banners works!</p>
+<div *ngIf="banners.length; else loading">
+    <h2 class="title">Баннер с отзывами</h2>
+
+    <div class="form-wrapper">
+        <input
+            class="form-control"
+            type="text"
+            placeholder="Поиск по имени клиента..."
+            [(ngModel)]="searchStr"
+        />
+    </div>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Полное имя клиента</th>
+                <th>Текст отзыва</th>
+                <th>Картинка на фоне (ссылка)</th>
+                <th>Фото клиента (ссылка)</th>
+                <th>Действие</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr
+                *ngFor="
+                    let banner of banners | searchBanner: searchStr;
+                    let idx = index
+                "
+            >
+                <td>
+                    {{ idx + 1 }}
+                </td>
+                <td>
+                    {{ banner.fullName }}
+                </td>
+                <td>
+                    {{ banner.description }}
+                </td>
+                <td>
+                    {{ banner.bgImageUrl }}
+                </td>
+                <td>
+                    {{ banner.photoUrl }}
+                </td>
+                <td class="wrapper-btn">
+                    <button
+                        class="btn btn-primary"
+                        [routerLink]="[
+                            '/admin',
+                            'banner-review',
+                            banner.id,
+                            'edit'
+                        ]"
+                    >
+                        Открыть
+                    </button>
+                    <a class="btn btn-danger" (click)="remove()">Удалить</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<ng-template #loading>
+    <p class="text-center">{{ helpText }}</p>
+</ng-template>

@@ -21,11 +21,23 @@ export class BannersService {
         );
     }
 
-    public getReviewsBlock(): Observable<any> {
-        return this.http.get(`${environment.fbDbUrl}/banners/reviews.json`);
+    public getReviewsBlock(): Observable<IReviewBanner[]> {
+        return this.http
+            .get(`${environment.fbDbUrl}/banners/reviews.json`)
+            .pipe(
+                map((response: { [key: string]: any }) => {
+                    return Object.keys(response).map((key) => ({
+                        ...response[key],
+                        id: key,
+                    }));
+                })
+            );
     }
 
     public uppdateReviewBlock(): void {
+        //todo
+    }
+    public removeReviewBlock(): void {
         //todo
     }
 
