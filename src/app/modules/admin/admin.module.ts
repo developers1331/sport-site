@@ -20,6 +20,7 @@ import { BannersComponent } from './components/banners/banner-review/banners/ban
 import { BannerEditPageComponent } from './components/banners/banner-review/banner-edit-page/banner-edit-page.component';
 import { BannerListComponent } from 'src/app/modules/admin/components/banners/banner-list/banner-list.component';
 import { BannerHeaderComponent } from './components/banners/banner-header/banner-header.component';
+import { SearchBannerPipe } from 'src/app/modules/admin/shared/search.banner.pipe';
 const INTERCEPTOR_PROVIDER: Provider = {
     provide: HTTP_INTERCEPTORS,
     multi: true,
@@ -33,6 +34,7 @@ const INTERCEPTOR_PROVIDER: Provider = {
         EditPageComponent,
         DashboardPageComponent,
         SearchPipe,
+        SearchBannerPipe,
         AlertComponent,
         BannerCreatePageComponent,
         BannersComponent,
@@ -84,6 +86,11 @@ const INTERCEPTOR_PROVIDER: Provider = {
                     {
                         path: 'create-review-banner',
                         component: BannerCreatePageComponent,
+                        canActivate: [AuthGuard],
+                    },
+                    {
+                        path: 'banner-review/:id/edit',
+                        component: BannerEditPageComponent,
                         canActivate: [AuthGuard],
                     },
                 ],

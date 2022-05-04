@@ -42,10 +42,4 @@ export class BannerCreatePageComponent implements OnInit {
             this.alert.succes('Баннер с отзывом добавлен!');
         });
     }
-
-    public test() {
-        this.bannerServiice.getReviewsBlock().subscribe((elem: any) => {
-            console.log(elem);
-        });
-    }
 }
