@@ -1,5 +1,4 @@
 import {
-    AfterViewInit,
     Component,
     ElementRef,
     HostListener,
@@ -7,10 +6,9 @@ import {
     OnInit,
     ViewChild,
 } from '@angular/core';
-import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import { BsModalService } from 'ngx-bootstrap/modal';
 import { ModalComponent } from 'src/app/static/modal/modal.component';
 import { dataBtns, Ibtns } from 'src/app/static/header/header.params';
-import { Parallax } from 'swiper';
 import { BannersService } from 'src/app/general/services/banners.service';
 import { IMainBanner } from 'src/app/modules/admin/shared/interfaces';
 import { Subject } from 'rxjs/internal/Subject';
@@ -27,7 +25,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
     public btns: Ibtns[] = dataBtns;
     public imgPath: string = 'assets/images/bg-main.jpg';
     private widthScreen: number = 0;
-    private modalHref!: BsModalRef;
     private destroy$ = new Subject<void>();
 
     @ViewChild('parallax', { static: true })
@@ -66,7 +63,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     }
 
     public openModal() {
-        this.modalHref = this.modalService.show(ModalComponent);
+        this.modalService.show(ModalComponent);
     }
 
     public toggle() {

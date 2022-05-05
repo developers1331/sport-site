@@ -27,7 +27,5 @@ export class ModalComponent implements OnInit {
         if (this.form.valid) {
             this.bsModalRef.hide();
         }
-        console.log(this.form);
-        //
     }
 }

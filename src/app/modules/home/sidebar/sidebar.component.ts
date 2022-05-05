@@ -47,7 +47,6 @@ export class SidebarComponent implements OnInit {
     public getLastsPosts() {
         this.posts$.subscribe((posts: IPost[]): void => {
             this.postsConfig = posts.slice(-2).reverse();
-            console.log(this.postsConfig);
             this.ready = true;
         });
     }

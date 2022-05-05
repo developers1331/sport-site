@@ -26,7 +26,6 @@ export class ArticlesComponent implements OnInit {
     public getLastsPosts() {
         this.posts$.subscribe((posts: IPost[]): void => {
             this.postsConfig = posts.slice(-3);
-            console.log(this.postsConfig);
             this.ready = true;
         });
     }

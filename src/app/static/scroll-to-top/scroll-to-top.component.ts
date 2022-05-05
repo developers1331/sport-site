@@ -1,22 +1,14 @@
-import {
-    Component,
-    ElementRef,
-    HostListener,
-    Input,
-    OnInit,
-    ViewChild,
-} from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
     selector: 'app-scroll-to-top',
     templateUrl: './scroll-to-top.component.html',
     styleUrls: ['./scroll-to-top.component.scss'],
 })
-export class ScrollToTopComponent implements OnInit {
+export class ScrollToTopComponent {
     public visible: boolean = false;
 
     @HostListener('window:scroll', []) onWindowScroll() {
-        console.log(window.scrollY, document.documentElement.scrollTop);
         if (
             window.pageYOffset >= 1000 ||
             document.documentElement.scrollTop >= 1000
@@ -28,10 +20,6 @@ export class ScrollToTopComponent implements OnInit {
     }
 
     constructor() {}
-
-    ngOnInit(): void {
-        console.log('init');
-    }
 
     public scroll() {
         window.scroll(0, 0);
