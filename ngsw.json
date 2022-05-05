@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1651697112801,
+  "timestamp": 1651786700673,
   "index": "https://developers1331.github.io/sport-site/index.html",
   "assetGroups": [
     {
@@ -11,14 +11,14 @@
         "ignoreVary": true
       },
       "urls": [
-        "https://developers1331.github.io/sport-site/892.18bc56127fbd2a0e.js",
+        "https://developers1331.github.io/sport-site/892.9b5fa11fbe33c800.js",
         "https://developers1331.github.io/sport-site/971.0caf65141bc8e9fe.js",
         "https://developers1331.github.io/sport-site/assets/manifest/site.webmanifest",
         "https://developers1331.github.io/sport-site/favicon.ico",
         "https://developers1331.github.io/sport-site/index.html",
-        "https://developers1331.github.io/sport-site/main.eb64f40db148e8da.js",
+        "https://developers1331.github.io/sport-site/main.df6078f895bcb7f3.js",
         "https://developers1331.github.io/sport-site/polyfills.7cde95c32c6daaac.js",
-        "https://developers1331.github.io/sport-site/runtime.f9e1e061806089b2.js",
+        "https://developers1331.github.io/sport-site/runtime.825630267e46dd54.js",
         "https://developers1331.github.io/sport-site/styles.cbb60d829474f763.css"
       ],
       "patterns": []
@@ -119,7 +119,7 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "https://developers1331.github.io/sport-site/892.18bc56127fbd2a0e.js": "84947301ac217aecaca668a059e32f0a97d5305e",
+    "https://developers1331.github.io/sport-site/892.9b5fa11fbe33c800.js": "b29dd253abacc079a08fab5dba3df82b8165bcb8",
     "https://developers1331.github.io/sport-site/971.0caf65141bc8e9fe.js": "0e82cfbae869616b0338f5d6e0d91036700afad9",
     "https://developers1331.github.io/sport-site/assets/fonts/tt-norms-pro-400-normal.v2.woff2": "1672e5fc6fd9f085379cc6c4dc4de5a6ebe667cd",
     "https://developers1331.github.io/sport-site/assets/fonts/tt-norms-pro-500-normal.v2.woff2": "1b9820f7c8375c175633de7f534a1b80f697ad40",
@@ -202,10 +202,10 @@
     "https://developers1331.github.io/sport-site/assets/manifest/site.webmanifest": "06022e9ee027354bf85e8207f0b0c707be8fb56d",
     "https://developers1331.github.io/sport-site/assets/video/header.mp4": "35f558e9984756f56b70ff41203050a66a4343e3",
     "https://developers1331.github.io/sport-site/favicon.ico": "590c59650bb3defa5f56910ccc73398526be2d2a",
-    "https://developers1331.github.io/sport-site/index.html": "cfd6963fe4d9265baa1416e6c17ad045d7d5fcf3",
-    "https://developers1331.github.io/sport-site/main.eb64f40db148e8da.js": "16548dcbe406dc1df83147e9c10902ab6e4cbd4e",
+    "https://developers1331.github.io/sport-site/index.html": "78b91909539ac7b3fc5393ff045042d2a090f6ee",
+    "https://developers1331.github.io/sport-site/main.df6078f895bcb7f3.js": "e042d082c62299d3c4446f93949305437fa501bc",
     "https://developers1331.github.io/sport-site/polyfills.7cde95c32c6daaac.js": "a16b29de172c66d874717a5d8e642c3a36b1bb1c",
-    "https://developers1331.github.io/sport-site/runtime.f9e1e061806089b2.js": "f50be901bb208bf6535f66c9685ee261a4438993",
+    "https://developers1331.github.io/sport-site/runtime.825630267e46dd54.js": "73a885e9134c68a377ae8b790be0d0903231c666",
     "https://developers1331.github.io/sport-site/styles.cbb60d829474f763.css": "16df429d6f0c01c6b523f514c83664671a486cec",
     "https://developers1331.github.io/sport-site/tt-norms-pro-400-normal.v2.5071ecd3affe073c.woff2": "1672e5fc6fd9f085379cc6c4dc4de5a6ebe667cd",
     "https://developers1331.github.io/sport-site/tt-norms-pro-500-normal.v2.18052c564e0378b1.woff2": "1b9820f7c8375c175633de7f534a1b80f697ad40",
