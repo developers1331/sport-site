@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { IswiperImage } from 'src/app/modules/about/reviews/reviews.params';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { BannersService } from 'src/app/general/services/banners.service';
+import { IReviewBanner } from 'src/app/modules/admin/shared/interfaces';
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 
 import SwiperCore, {
     Navigation,
@@ -15,55 +18,23 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
     templateUrl: './reviews.component.html',
     styleUrls: ['./reviews.component.scss'],
 })
-export class ReviewsComponent implements OnInit {
-    public swiperImagePath: IswiperImage[] = [];
+export class ReviewsComponent implements OnInit, OnDestroy {
+    private destroy$ = new Subject<void>();
+    public bannerReview: IReviewBanner[] = [];
 
-    constructor() {}
+    constructor(private bannerService: BannersService) {}
 
     ngOnInit(): void {
-        this.swiperImagePath = [
-            {
-                imgPath: 'assets/images/swiper/swiper1.jpg',
-                imgFacePath: 'assets/images/swiper/swiper1_face.jpg',
-                name: 'Денис Демин',
-                textMsg:
-                    'Ты знаешь что такое безумие? Ты знаешь что такое безумие? Ты знаешь что такое безумие? Ты знаешь что такое безумие? Ты знаешь что такое безумие? Ты знаешь что такое безумие? Ты знаешь что такое безумие? Ты знаешь что такое безумие?',
-            },
-            {
-                imgPath: 'assets/images/swiper/swiper2.jpg',
-                imgFacePath: 'assets/images/swiper/swiper1_face.jpg',
-                name: 'Денис Демин',
-                textMsg:
-                    'Ты знаешь что такое безумие? Ты знаешь что такое безумие? Ты знаешь что такое безумие? Ты знаешь что такое безумие? Ты знаешь что такое безумие? Ты знаешь что такое безумие? Ты знаешь что такое безумие? Ты знаешь что такое безумие?',
-            },
-            {
-                imgPath: 'assets/images/swiper/swiper3.jpg',
-                imgFacePath: 'assets/images/swiper/swiper1_face.jpg',
-                name: 'Денис Демин',
-                textMsg:
-                    'Ты знаешь что такое безумие? Ты знаешь что такое безумие? Ты знаешь что такое безумие? Ты знаешь что такое безумие? Ты знаешь что такое безумие? Ты знаешь что такое безумие? Ты знаешь что такое безумие? Ты знаешь что такое безумие?',
-            },
-            {
-                imgPath: 'assets/images/swiper/swiper4.jpg',
-                imgFacePath: 'assets/images/swiper/swiper1_face.jpg',
-                name: 'Денис Демин',
-                textMsg:
-                    'Ты знаешь что такое безумие? Ты знаешь что такое безумие? Ты знаешь что такое безумие? Ты знаешь что такое безумие? Ты знаешь что такое безумие? Ты знаешь что такое безумие? Ты знаешь что такое безумие? Ты знаешь что такое безумие?',
-            },
-            {
-                imgPath: 'assets/images/swiper/swiper5.jpg',
-                imgFacePath: 'assets/images/swiper/swiper1_face.jpg',
-                name: 'Денис Демин',
-                textMsg:
-                    'Ты знаешь что такое безумие? Ты знаешь что такое безумие? Ты знаешь что такое безумие? Ты знаешь что такое безумие? Ты знаешь что такое безумие? Ты знаешь что такое безумие? Ты знаешь что такое безумие? Ты знаешь что такое безумие?',
-            },
-            {
-                imgPath: 'assets/images/swiper/swiper6.jpg',
-                imgFacePath: 'assets/images/swiper/swiper1_face.jpg',
-                name: 'Денис Демин',
-                textMsg:
-                    'Ты знаешь что такое безумие? Ты знаешь что такое безумие? Ты знаешь что такое безумие? Ты знаешь что такое безумие? Ты знаешь что такое безумие? Ты знаешь что такое безумие? Ты знаешь что такое безумие? Ты знаешь что такое безумие?',
-            },
-        ];
+        this.bannerService
+            .getReviewsBlock()
+            .pipe(takeUntil(this.destroy$))
+            .subscribe((blocks: IReviewBanner[]): void => {
+                this.bannerReview = blocks;
+            });
+    }
+
+    ngOnDestroy() {
+        this.destroy$.next();
+        this.destroy$.complete();
     }
 }

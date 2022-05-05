@@ -8,12 +8,12 @@
         [scrollbar]="{ draggable: true }"
         [autoplay]="true"
     >
-        <ng-template swiperSlide *ngFor="let item of swiperImagePath">
+        <ng-template swiperSlide *ngFor="let item of bannerReview">
             <div class="carousel-cell">
                 <div
                     class="carousel-img"
                     [ngStyle]="{
-                        'background-image': 'url(' + item.imgPath + ')'
+                        'background-image': 'url(' + item.bgImageUrl + ')'
                     }"
                 >
                     <div class="review__wrapper">
@@ -30,15 +30,15 @@
                                     class="review__right-info__photo"
                                     [ngStyle]="{
                                         'background-image':
-                                            'url(' + item.imgFacePath + ')'
+                                            'url(' + item.photoUrl + ')'
                                     }"
                                 ></div>
                                 <div class="review__right-info__name">
-                                    {{ item.name }}
+                                    {{ item.fullName }}
                                 </div>
                             </div>
                             <div class="review__right-text">
-                                {{ item.textMsg }}
+                                {{ item.description }}
                             </div>
                         </div>
                     </div>
