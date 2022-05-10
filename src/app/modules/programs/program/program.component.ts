@@ -1,14 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import { IProgramm, programmData } from './program.params';
 
 @Component({
-  selector: 'app-program',
-  templateUrl: './program.component.html',
-  styleUrls: ['./program.component.scss'],
+    selector: 'app-program',
+    templateUrl: './program.component.html',
+    styleUrls: ['./program.component.scss'],
 })
 export class ProgramComponent implements OnInit {
-  constructor() {}
+    public programType: IProgramm[] = programmData;
 
-  ngOnInit(): void {
-    console.log('todo');
-  }
+    constructor() {}
+
+    ngOnInit(): void {
+        console.log('todo');
+    }
 }

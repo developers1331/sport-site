@@ -1,1 +1,27 @@
-<p>program works!</p>
+<div class="container">
+    <h2 class="title">Бодибилдинг</h2>
+    <section class="program">
+        <div
+            [routerLink]="['/programs', type.id]"
+            class="programms__item"
+            *ngFor="let type of programType"
+        >
+            <div
+                class="programms__frontend"
+                [ngStyle]="{ background: 'url(' + type.imgFront + ')' }"
+            >
+                <h2 class="programms__item-title">
+                    {{ type.name }}
+                </h2>
+            </div>
+            <div
+                class="programms__backend"
+                [ngStyle]="{ background: 'url(' + type.imgBack + ')' }"
+            >
+                <h2 class="programms__item-title">
+                    {{ type.name }}
+                </h2>
+            </div>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,143 @@
+@import "/src/global_styles/variables.scss";
+.container {
+    max-width: $container-width;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.title {
+    text-align: center;
+    margin: 50px auto;
+    font-size: 65px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 4px;
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 47%;
+        transform: translateY(-50%);
+        left: -85px;
+        width: 100px;
+        height: 4px;
+        background: #000;
+    }
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 47%;
+        transform: translateY(-50%);
+        right: -85px;
+        width: 100px;
+        height: 4px;
+        background: #000;
+    }
+}
+
+.programms {
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 320px;
+        margin-bottom: 50px;
+        border-radius: 10px;
+        cursor: pointer;
+        position: relative;
+        transition: all 0.2s ease;
+        &:hover {
+            transform: scale(1.05);
+            .programms__frontend {
+                transform: rotateY(180deg);
+            }
+            .programms__backend {
+                transform: rotateY(360deg);
+            }
+        }
+        &-title {
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 100px;
+            color: #fff;
+        }
+        &-description {
+            font-size: 20px;
+            text-align: center;
+        }
+    }
+    &__frontend,
+    &__backend {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 1.1s;
+        backface-visibility: hidden; //указываем чтобы тыльная сторона была прозрачной
+        border-radius: 10px;
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+    }
+    &__backend {
+        transform: rotateY(180deg);
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .title {
+        &::before {
+            display: none;
+        }
+        &::after {
+            top: 115%;
+            right: 50%;
+            transform: translate(50%, -50%);
+            width: 200px;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .programms__item-title {
+        font-size: 60px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+        text-align: center;
+        margin: 30px auto;
+        font-size: 45px;
+        &::after {
+            display: none;
+        }
+    }
+    .programms__item {
+        height: 250px;
+        &-title {
+            font-size: 39px;
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .title {
+        font-size: 29px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .programms__item-title {
+        font-size: 28px;
+    }
+}
