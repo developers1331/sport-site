@@ -8,6 +8,8 @@ import { PostsWrapperComponent } from 'src/app/modules/posts/posts-wrapper/posts
 import { ProgramsWrapperComponent } from 'src/app/modules/programs/programs-wrapper/programs-wrapper.component';
 import { PageNotFoundComponent } from 'src/app/static/page-not-found/page-not-found.component';
 import { TermsPageComponent } from 'src/app/static/terms-page/terms-page.component';
+import { ProgramListComponent } from './modules/programs/program-list/program-list.component';
+import { ProgramComponent } from './modules/programs/program/program.component';
 
 const routes: Routes = [
     {
@@ -32,12 +34,20 @@ const routes: Routes = [
                 component: ProgramsWrapperComponent,
             },
             {
+                path: 'programs/:id',
+                component: ProgramComponent,
+            },
+            {
                 path: 'posts',
                 component: PostsWrapperComponent,
             },
             {
                 path: 'post/:id',
                 component: PostPageComponent,
+            },
+            {
+                path: 'program-list',
+                component: ProgramListComponent,
             },
             {
                 path: 'terms',

@@ -1,0 +1,30 @@
+<div class="container">
+    <h2 class="title">Ну тип чо та</h2>
+    <div class="programms__cards">
+        <a
+            href="#!"
+            *ngFor="let item of programList"
+            class="programms__cards-link"
+        >
+            <div
+                class="programms__cards-item"
+                [ngStyle]="{
+                    'background-image': 'url(' + item.programms[0].img_jpg + ')'
+                }"
+            >
+                <!-- <picture>
+                    <source srcset="{{ item.img_webp }}" type="image/webp" />
+                    <img src="{{ item.img_jpg }}" alt="programm" class="programms__cards-item-picture" />
+                </picture> -->
+                <div class="programms__cards-item-inside">
+                    <h2 class="programms__cards-item-title">
+                        {{ item.programms[0].title }}
+                    </h2>
+                    <p class="programms__cards-item-desc">
+                        {{ item.programms[0].description }}
+                    </p>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
