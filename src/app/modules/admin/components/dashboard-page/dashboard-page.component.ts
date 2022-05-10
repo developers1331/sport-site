@@ -27,7 +27,6 @@ export class DashboardPageComponent implements OnInit, OnDestroy {
                 this.posts = posts;
             },
             (error) => {
-                console.log(error);
                 this.helpText =
                     'Ошибка загрузки постов. Возможно они еще не созданы.';
             }

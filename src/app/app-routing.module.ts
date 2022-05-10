@@ -5,11 +5,12 @@ import { AboutWrapperComponent } from 'src/app/modules/about/about-wrapper/about
 import { HomeWrapperComponent } from 'src/app/modules/home/home-wrapper/home-wrapper.component';
 import { PostPageComponent } from 'src/app/modules/posts/post-page/post-page.component';
 import { PostsWrapperComponent } from 'src/app/modules/posts/posts-wrapper/posts-wrapper.component';
-import { ProgramsWrapperComponent } from 'src/app/modules/programs/programs-wrapper/programs-wrapper.component';
+import { ProgramComponent } from 'src/app/modules/programs/program/program.component';
+import { ProgramsWrapperComponent } from 'src/app/modules/programs/programs-direction/programs-wrapper.component';
 import { PageNotFoundComponent } from 'src/app/static/page-not-found/page-not-found.component';
 import { TermsPageComponent } from 'src/app/static/terms-page/terms-page.component';
 import { ProgramListComponent } from './modules/programs/program-list/program-list.component';
-import { ProgramComponent } from './modules/programs/program/program.component';
+import { ProgramTypeComponent } from './modules/programs/program-type/program.component';
 
 const routes: Routes = [
     {
@@ -34,8 +35,16 @@ const routes: Routes = [
                 component: ProgramsWrapperComponent,
             },
             {
-                path: 'programs/:id',
+                path: 'program/:id',
                 component: ProgramComponent,
+            },
+            {
+                path: 'programs/:direction',
+                component: ProgramTypeComponent,
+            },
+            {
+                path: 'programs/:direction/:type',
+                component: ProgramListComponent,
             },
             {
                 path: 'posts',

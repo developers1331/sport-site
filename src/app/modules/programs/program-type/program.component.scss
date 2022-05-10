@@ -1,4 +1,5 @@
 @import "/src/global_styles/variables.scss";
+
 .container {
     max-width: $container-width;
     margin: 0 auto;
@@ -13,25 +14,27 @@
     font-weight: 700;
     letter-spacing: 4px;
     position: relative;
-    max-width: 1250px;
+    max-width: 900px;
     width: 100%;
+
     &::before {
         content: "";
         display: block;
         position: absolute;
         top: 47%;
-        transform: translateY(-50%);
+        transform: translateX(-50%);
         left: -85px;
         width: 100px;
         height: 4px;
         background: #000;
     }
+
     &::after {
         content: "";
         display: block;
         position: absolute;
         top: 47%;
-        transform: translateY(-50%);
+        transform: translateX(-50%);
         right: -85px;
         width: 100px;
         height: 4px;
@@ -51,28 +54,38 @@
         cursor: pointer;
         position: relative;
         transition: all 0.2s ease;
-        &:hover {
-            transform: scale(1.05);
-            .programms__frontend {
-                transform: rotateY(180deg);
-            }
-            .programms__backend {
-                transform: rotateY(360deg);
-            }
-        }
+
         &-title {
             text-transform: uppercase;
             font-weight: 700;
             font-size: 100px;
             color: #fff;
+            z-index: 10;
         }
+
         &-description {
             font-size: 20px;
             text-align: center;
         }
+
+        &:hover {
+            transform: translateY(-2%);
+            opacity: 0.9;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), transparent);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
     }
-    &__frontend,
-    &__backend {
+
+    &__frontend {
         position: absolute;
         width: 100%;
         height: 100%;
@@ -88,9 +101,6 @@
         background-repeat: no-repeat !important;
         background-position: center !important;
     }
-    &__backend {
-        transform: rotateY(180deg);
-    }
 }
 
 @media screen and (max-width: 1440px) {
@@ -98,6 +108,7 @@
         &::before {
             display: none;
         }
+
         &::after {
             top: 115%;
             right: 50%;
@@ -118,12 +129,15 @@
         text-align: center;
         margin: 30px auto;
         font-size: 45px;
+
         &::after {
             display: none;
         }
     }
+
     .programms__item {
         height: 250px;
+
         &-title {
             font-size: 39px;
         }

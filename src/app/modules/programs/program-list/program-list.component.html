@@ -1,15 +1,15 @@
 <div class="container">
-    <h2 class="title">Ну тип чо та</h2>
-    <div class="programms__cards">
+    <h2 class="title">Список программ</h2>
+    <div class="programms__cards" *ngIf="programListData.length; else loading">
         <a
-            href="#!"
-            *ngFor="let item of programList"
+            *ngFor="let program of programListData"
             class="programms__cards-link"
+            [routerLink]="['/program/', program.id]"
         >
             <div
                 class="programms__cards-item"
                 [ngStyle]="{
-                    'background-image': 'url(' + item.programms[0].img_jpg + ')'
+                    'background-image': 'url(' + program.bgImageProgram + ')'
                 }"
             >
                 <!-- <picture>
@@ -18,13 +18,17 @@
                 </picture> -->
                 <div class="programms__cards-item-inside">
                     <h2 class="programms__cards-item-title">
-                        {{ item.programms[0].title }}
+                        {{ program.title }}
                     </h2>
                     <p class="programms__cards-item-desc">
-                        {{ item.programms[0].description }}
+                        {{ program.description }}
                     </p>
                 </div>
             </div>
         </a>
     </div>
 </div>
+
+<ng-template #loading>
+    <app-loader></app-loader>
+</ng-template>

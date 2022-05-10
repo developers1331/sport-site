@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IProgramms, programmsData } from './programms-wrapper.params';
+import { ProgramService } from 'src/app/general/services/program.service';
 
 @Component({
     selector: 'app-programs-wrapper',
@@ -7,11 +7,12 @@ import { IProgramms, programmsData } from './programms-wrapper.params';
     styleUrls: ['./programs-wrapper.component.scss'],
 })
 export class ProgramsWrapperComponent implements OnInit {
-    public programms: IProgramms[] = programmsData;
-
-    constructor() {}
+    public programsDiretcion: any;
+    constructor(private programService: ProgramService) {}
 
     ngOnInit(): void {
-        console.log('todo');
+        this.programService.getDirectionProgram().subscribe((data) => {
+            this.programsDiretcion = data;
+        });
     }
 }

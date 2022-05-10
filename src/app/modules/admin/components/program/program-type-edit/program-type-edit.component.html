@@ -1,0 +1,55 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <h3>Изменение картинки у типа тренировок</h3>
+    <div
+        class="form-group"
+        [ngClass]="{
+            invalid: form.get('type')?.touched && form.get('type')?.invalid
+        }"
+    >
+        <label for="type">Выберите тип программы</label>
+
+        <select name="type" formControlName="type" class="form-select">
+            <option value="beginning" selected>Начинающий</option>
+            <option value="advanced">Продвинутый</option>
+            <option value="professional">Профессионал</option>
+        </select>
+    </div>
+
+    <div
+        class="form-group"
+        [ngClass]="{
+            invalid:
+                form.get('bgImageType')?.touched &&
+                form.get('bgImageType')?.invalid
+        }"
+    >
+        <label for="bgImageType">Ссылка на картинку</label>
+        <input
+            class="form-control"
+            type="text"
+            id="bgImageType"
+            formControlName="bgImageType"
+        />
+        <div
+            class="validation"
+            *ngIf="
+                form.get('bgImageType')?.touched &&
+                form.get('bgImageType')?.invalid
+            "
+        >
+            <small
+                class="text-danger"
+                *ngIf="form.get('bgImageType')?.errors?.['required']"
+                >Укажите ссылку</small
+            >
+        </div>
+    </div>
+
+    <button
+        type="submit"
+        class="btn bnt-block btn-dark"
+        [disabled]="form.invalid"
+    >
+        Изменить картинку
+    </button>
+</form>

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { IProgramm, programmData } from './program.params';
+import { ActivatedRoute, Params } from '@angular/router';
+import { ProgramService } from 'src/app/general/services/program.service';
+import { IProgram } from 'src/app/modules/programs/shared/interfaces';
 
 @Component({
     selector: 'app-program',
@@ -7,11 +9,19 @@ import { IProgramm, programmData } from './program.params';
     styleUrls: ['./program.component.scss'],
 })
 export class ProgramComponent implements OnInit {
-    public programType: IProgramm[] = programmData;
-
-    constructor() {}
+    public programData!: IProgram;
+    private idProgram = '';
+    constructor(
+        private programService: ProgramService,
+        private activatedRoute: ActivatedRoute
+    ) {}
 
     ngOnInit(): void {
-        console.log('todo');
+        this.activatedRoute.params.subscribe((params: Params) => {
+            this.idProgram = params['id'];
+        });
+        this.programService.getProgramById(this.idProgram).subscribe((data) => {
+            this.programData = data;
+        });
     }
 }

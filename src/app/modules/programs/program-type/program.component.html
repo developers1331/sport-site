@@ -1,0 +1,19 @@
+<div class="container">
+    <h2 class="title">{{ title }}</h2>
+    <section class="program">
+        <div
+            class="programms__item"
+            *ngFor="let type of programsType"
+            [routerLink]="['/programs/', direction, type.type]"
+        >
+            <div
+                class="programms__frontend"
+                [ngStyle]="{ background: 'url(' + type.bgImageType + ')' }"
+            >
+                <h2 class="programms__item-title">
+                    {{ type.text }}
+                </h2>
+            </div>
+        </div>
+    </section>
+</div>

@@ -21,6 +21,12 @@ import { BannerEditPageComponent } from './components/banners/banner-review/bann
 import { BannerListComponent } from 'src/app/modules/admin/components/banners/banner-list/banner-list.component';
 import { BannerHeaderComponent } from './components/banners/banner-header/banner-header.component';
 import { SearchBannerPipe } from 'src/app/modules/admin/shared/search.banner.pipe';
+import { ProgramListComponent } from './components/program/program-list/program-list.component';
+import { ProgramEditComponent } from './components/program/program-edit/program-edit.component';
+import { ProgramCreateComponent } from './components/program/program-create/program-create.component';
+import { ProgramTypeEditComponent } from './components/program/program-type-edit/program-type-edit.component';
+import { ProgramDirectionEditComponent } from './components/program/program-direction-edit/program-direction-edit.component';
+import { ProgramWrapperComponent } from './components/program/program-wrapper/program-wrapper.component';
 const INTERCEPTOR_PROVIDER: Provider = {
     provide: HTTP_INTERCEPTORS,
     multi: true,
@@ -41,6 +47,12 @@ const INTERCEPTOR_PROVIDER: Provider = {
         BannerEditPageComponent,
         BannerListComponent,
         BannerHeaderComponent,
+        ProgramListComponent,
+        ProgramEditComponent,
+        ProgramCreateComponent,
+        ProgramTypeEditComponent,
+        ProgramDirectionEditComponent,
+        ProgramWrapperComponent,
     ],
     imports: [
         CommonModule,
@@ -91,6 +103,21 @@ const INTERCEPTOR_PROVIDER: Provider = {
                     {
                         path: 'banner-review/:id/edit',
                         component: BannerEditPageComponent,
+                        canActivate: [AuthGuard],
+                    },
+                    {
+                        path: 'program',
+                        component: ProgramWrapperComponent,
+                        canActivate: [AuthGuard],
+                    },
+                    {
+                        path: 'program/:id/edit',
+                        component: ProgramEditComponent,
+                        canActivate: [AuthGuard],
+                    },
+                    {
+                        path: 'program-create',
+                        component: ProgramCreateComponent,
                         canActivate: [AuthGuard],
                     },
                 ],

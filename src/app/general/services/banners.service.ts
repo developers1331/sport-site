@@ -2,7 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
 import {
-    IFbCreateResponse,
     IMainBanner,
     IReviewBanner,
 } from 'src/app/modules/admin/shared/interfaces';
@@ -37,8 +36,10 @@ export class BannersService {
     public uppdateReviewBlock(): void {
         //todo
     }
-    public removeReviewBlock(): void {
-        //todo
+    public removeReviewBlock(id: string) {
+        return this.http.delete(
+            `${environment.fbDbUrl}/banners/reviews/${id}.json`
+        );
     }
 
     public setMainBannerText(text: IMainBanner) {
@@ -46,11 +47,9 @@ export class BannersService {
             `${environment.fbDbUrl}/banners/main.json`,
             text
         );
-        //тут будешь посылать запрос text на сервер по адресу /banners/main.json
     }
 
     public getMainBannerText(): Observable<any> {
         return this.http.get(`${environment.fbDbUrl}/banners/main.json`);
-        //тут будешь получать текст баннера с сервера по адресу /banners/main.json
     }
 }

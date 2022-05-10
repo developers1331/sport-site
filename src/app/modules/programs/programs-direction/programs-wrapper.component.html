@@ -1,0 +1,21 @@
+<div class="container">
+    <h2 class="title">Выбери свое направление</h2>
+    <section class="programms">
+        <div
+            class="programms__item"
+            *ngFor="let programm of programsDiretcion"
+            [routerLink]="['/programs', programm.direction]"
+        >
+            <div
+                class="programms__frontend"
+                [ngStyle]="{
+                    background: 'url(' + programm.bgImageDirection + ')'
+                }"
+            >
+                <h2 class="programms__item-title">
+                    {{ programm.text }}
+                </h2>
+            </div>
+        </div>
+    </section>
+</div>

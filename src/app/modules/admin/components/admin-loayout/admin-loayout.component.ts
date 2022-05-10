@@ -14,7 +14,6 @@ export class AdminLoayoutComponent implements OnInit {
         if (this.auth.isAuth()) {
             this.router.navigate(['/admin', 'dashboard']);
         }
-        console.log('init');
     }
 
     public logout(event: Event) {

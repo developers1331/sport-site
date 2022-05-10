@@ -1,0 +1,64 @@
+<div *ngIf="programData.length; else loading">
+    <h2 class="title">Программы тренировок</h2>
+
+    <!-- <div class="form-wrapper">
+        <input
+            class="form-control"
+            type="text"
+            placeholder="Поиск по имени клиента..."
+            [(ngModel)]="searchStr"
+        />
+    </div> -->
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Название программы</th>
+                <th>Краткое описание программы</th>
+                <th>Направление программы</th>
+                <th>Категория программы</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let program of programData; let idx = index">
+                <tr>
+                    <td>
+                        {{ idx + 1 }}
+                    </td>
+                    <td>
+                        {{ program.title }}
+                    </td>
+                    <td>
+                        {{ program.description }}
+                    </td>
+                    <td>
+                        {{ program.direction }}
+                    </td>
+                    <td>
+                        {{ program.type }}
+                    </td>
+                    <td class="wrapper-btn">
+                        <button
+                            class="btn btn-primary"
+                            [routerLink]="[
+                                '/admin',
+                                'program',
+                                program.id,
+                                'edit'
+                            ]"
+                        >
+                            Открыть
+                        </button>
+                        <a class="btn btn-danger" (click)="remove(program.id)"
+                            >Удалить</a
+                        >
+                    </td>
+                </tr></ng-container
+            >
+        </tbody>
+    </table>
+</div>
+
+<ng-template #loading>
+    <p class="text-center">{{ helpText }}</p>
+</ng-template>
