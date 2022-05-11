@@ -8,6 +8,7 @@ import { HomeService } from 'src/app/modules/home/services/home.service';
 import { ProgrammComponent } from './programm/programm.component';
 import { HomeMenuBtnComponent } from './home-menu-btn/home-menu-btn.component';
 import { SharedModuleModule } from 'src/app/modules/shared-module/shared-module.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
     declarations: [
@@ -18,7 +19,7 @@ import { SharedModuleModule } from 'src/app/modules/shared-module/shared-module.
         ProgrammComponent,
         HomeMenuBtnComponent,
     ],
-    imports: [CommonModule, SharedModuleModule],
+    imports: [CommonModule, SharedModuleModule, RouterModule],
     providers: [HomeService],
     exports: [HomeWrapperComponent],
 })

@@ -1,12 +1,14 @@
-<div class="programms__cards">
-    <a
-        href="#!"
-        *ngFor="let item of currentConfig"
+<div class="programms__cards" *ngIf="programData?.length > 0; else loading">
+    <div
+        *ngFor="let item of programData"
         class="programms__cards-link"
+        [routerLink]="['/program/', item.id]"
     >
         <div
             class="programms__cards-item"
-            [ngStyle]="{ 'background-image': 'url(' + item.img_jpg + ')' }"
+            [ngStyle]="{
+                'background-image': 'url(' + item.bgImageProgram + ')'
+            }"
         >
             <!-- <picture>
                 <source srcset="{{ item.img_webp }}" type="image/webp" />
@@ -21,5 +23,9 @@
                 </p>
             </div>
         </div>
-    </a>
+    </div>
 </div>
+
+<ng-template #loading>
+    <app-loader></app-loader>
+</ng-template>

@@ -9,7 +9,7 @@ import { IProgram } from 'src/app/modules/programs/shared/interfaces';
     styleUrls: ['./program.component.scss'],
 })
 export class ProgramComponent implements OnInit {
-    public programData!: IProgram;
+    public programData: IProgram | undefined = undefined;
     private idProgram = '';
     constructor(
         private programService: ProgramService,

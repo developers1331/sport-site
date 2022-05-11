@@ -24,6 +24,7 @@ export class ProgramTypeComponent implements OnInit {
         });
         this.programService.getTypeProgram().subscribe((data) => {
             this.programsType = data;
+            this.programsType = this.swapItem(this.programsType, 0, 1);
         });
     }
 
@@ -50,5 +51,20 @@ export class ProgramTypeComponent implements OnInit {
                 break;
         }
         return name;
+    }
+
+    /*
+     * костыль =)
+     *todo переделать
+     */
+    private swapItem(
+        arr: { [x: string]: any },
+        idx: string | number,
+        idxTwo: string | number
+    ): any {
+        const tmp = arr[idx];
+        arr[idx] = arr[idxTwo];
+        arr[idxTwo] = tmp;
+        return arr;
     }
 }

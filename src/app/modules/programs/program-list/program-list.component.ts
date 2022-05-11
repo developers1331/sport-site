@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { ProgramService } from 'src/app/general/services/program.service';
-import {
-    programmsConfig,
-    IprogrammsConfig,
-} from 'src/app/modules/home/programm/programm-params';
 import _filter from 'lodash-es/filter';
 interface FilterType {
     direction: string;
@@ -16,8 +12,7 @@ interface FilterType {
     styleUrls: ['./program-list.component.scss'],
 })
 export class ProgramListComponent implements OnInit {
-    public programList: IprogrammsConfig[] = programmsConfig;
-    public programListData: any;
+    public programListData: any = undefined;
     private filterType!: FilterType;
 
     constructor(
@@ -37,7 +32,6 @@ export class ProgramListComponent implements OnInit {
         this.programService.dataProgam$.subscribe((data) => {
             this.programListData = data;
             this.filterProgram();
-            console.log(this.programListData);
         });
     }
 

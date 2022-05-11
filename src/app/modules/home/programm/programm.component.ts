@@ -1,44 +1,70 @@
-import { Component, Input, OnDestroy, OnInit } from '@angular/core';
-import {
-  programmsConfig,
-  IprogrammsConfig,
-  Iprogramms,
-} from 'src/app/modules/home/programm/programm-params';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { HomeService } from 'src/app/modules/home/services/home.service';
 import { takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
+import { ProgramService } from 'src/app/general/services/program.service';
+
+import _filter from 'lodash-es/filter';
 
 @Component({
-  selector: 'app-programm',
-  templateUrl: './programm.component.html',
-  styleUrls: ['./programm.component.scss'],
+    selector: 'app-programm',
+    templateUrl: './programm.component.html',
+    styleUrls: ['./programm.component.scss'],
 })
 export class ProgrammComponent implements OnInit, OnDestroy {
-  public programConfig: IprogrammsConfig[] = programmsConfig;
-  public id: number = 0;
-  public currentConfig: Iprogramms[] = [];
-  private destroy$ = new Subject<void>();
+    public programData: any = undefined;
+    public id: number = 0;
 
-  constructor(private homeService: HomeService) {}
+    private currentDirection: string = 'bodybuilding';
+    private destroy$ = new Subject<void>();
 
-  ngOnInit(): void {
-    this.homeService.homeId$.pipe(takeUntil(this.destroy$)).subscribe((id) => {
-      this.id = id;
-      this.getConfig(this.id);
-    });
-    this.getConfig(this.id);
-  }
+    constructor(
+        private homeService: HomeService,
+        private programService: ProgramService
+    ) {}
 
-  public getConfig(id: number) {
-    this.programConfig.forEach((element) => {
-      if (element.id === id) {
-        this.currentConfig = element.programms;
-      }
-    });
-  }
+    public ngOnInit(): void {
+        this.homeService.homeId$
+            .pipe(takeUntil(this.destroy$))
+            .subscribe((id) => {
+                this.currentDirection = this.getCurrentDirection(id);
 
-  ngOnDestroy() {
-    this.destroy$.next();
-    this.destroy$.complete();
-  }
+                this.programService.dataProgam$
+                    .pipe(takeUntil(this.destroy$))
+                    .subscribe((data) => {
+                        this.programData = _filter(data, {
+                            direction: this.currentDirection,
+                        }).slice(-6);
+                    });
+            });
+    }
+
+    public getCurrentDirection(id: number): string {
+        let direction = '';
+        switch (id) {
+            case 0:
+                direction = 'bodybuilding';
+                break;
+            case 1:
+                direction = 'powerlifting';
+                break;
+            case 2:
+                direction = 'crossfit';
+                break;
+            case 3:
+                direction = 'workout';
+                break;
+            case 4:
+                direction = 'home';
+                break;
+            default:
+                break;
+        }
+        return direction;
+    }
+
+    public ngOnDestroy(): void {
+        this.destroy$.next();
+        this.destroy$.complete();
+    }
 }

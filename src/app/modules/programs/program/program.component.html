@@ -1,9 +1,19 @@
 <div class="container">
-    {{ programData.title }}
-    <br />
-    {{ programData.description }}
-    <br />
-    {{ programData.bgImageProgram }}
-    <br />
-    {{ programData.text }}
+    <a class="program__link" routerLink="/programs"
+        >&#8592; Вернуться к выбору программы</a
+    >
+
+    <div *ngIf="programData; else loading">
+        {{ programData?.title }}
+        <br />
+        {{ programData?.description }}
+        <br />
+        {{ programData?.bgImageProgram }}
+        <br />
+        <quill-view-html [content]="programData?.text"> </quill-view-html>
+    </div>
 </div>
+
+<ng-template #loading>
+    <app-loader></app-loader>
+</ng-template>

@@ -1,6 +1,6 @@
 <div class="container">
     <h2 class="title">Выбери свое направление</h2>
-    <section class="programms">
+    <section class="programms" *ngIf="programsDiretcion; else loading">
         <div
             class="programms__item"
             *ngFor="let programm of programsDiretcion"
@@ -19,3 +19,7 @@
         </div>
     </section>
 </div>
+
+<ng-template #loading>
+    <app-loader></app-loader>
+</ng-template>

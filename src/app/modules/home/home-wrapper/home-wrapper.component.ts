@@ -21,9 +21,9 @@ import {
     styleUrls: ['./home-wrapper.component.scss'],
 })
 export class HomeWrapperComponent implements OnInit, OnDestroy {
-    @Input() dataPage2: Ipage[] = dataPage;
-    @Input() dataTrainers2: Itrainers[] = dataTrainers;
-    @Input() dataMenu2: Imenu[] = dataMenu;
+    public dataPage2: Ipage[] = dataPage;
+    public dataTrainers2: Itrainers[] = dataTrainers;
+    public dataMenu2: Imenu[] = dataMenu;
     private destroy$ = new Subject<void>();
 
     public currentId: number = 0;

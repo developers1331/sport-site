@@ -1,6 +1,6 @@
 <div class="container">
     <h2 class="title">Список программ</h2>
-    <div class="programms__cards" *ngIf="programListData.length; else loading">
+    <div class="programms__cards" *ngIf="programListData; else loading">
         <a
             *ngFor="let program of programListData"
             class="programms__cards-link"
