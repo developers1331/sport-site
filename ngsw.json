@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1652307504155,
+  "timestamp": 1652309387955,
   "index": "https://developers1331.github.io/sport-site/index.html",
   "assetGroups": [
     {
@@ -16,7 +16,7 @@
         "https://developers1331.github.io/sport-site/assets/manifest/site.webmanifest",
         "https://developers1331.github.io/sport-site/favicon.ico",
         "https://developers1331.github.io/sport-site/index.html",
-        "https://developers1331.github.io/sport-site/main.fa3ec6ce19eac172.js",
+        "https://developers1331.github.io/sport-site/main.5593e464b83462b8.js",
         "https://developers1331.github.io/sport-site/polyfills.7cde95c32c6daaac.js",
         "https://developers1331.github.io/sport-site/runtime.ec6a25d8a84c0757.js",
         "https://developers1331.github.io/sport-site/styles.11c5b073c7c8ba52.css"
@@ -206,8 +206,8 @@
     "https://developers1331.github.io/sport-site/assets/manifest/site.webmanifest": "06022e9ee027354bf85e8207f0b0c707be8fb56d",
     "https://developers1331.github.io/sport-site/assets/video/header.mp4": "35f558e9984756f56b70ff41203050a66a4343e3",
     "https://developers1331.github.io/sport-site/favicon.ico": "590c59650bb3defa5f56910ccc73398526be2d2a",
-    "https://developers1331.github.io/sport-site/index.html": "03d29a0b34a0608d54cfa35b876ab53548727f62",
-    "https://developers1331.github.io/sport-site/main.fa3ec6ce19eac172.js": "eae81ab5635ecf2161b2b02750a13b0b33bcb031",
+    "https://developers1331.github.io/sport-site/index.html": "6c9dd9cee3e9dca6b4aacedbd41c84796d3b7572",
+    "https://developers1331.github.io/sport-site/main.5593e464b83462b8.js": "aeec64686253a1135b54604324bfeed634cf7c14",
     "https://developers1331.github.io/sport-site/polyfills.7cde95c32c6daaac.js": "a16b29de172c66d874717a5d8e642c3a36b1bb1c",
     "https://developers1331.github.io/sport-site/runtime.ec6a25d8a84c0757.js": "c7f6934c8163f8b9f426542b4ea809c74ff88e59",
     "https://developers1331.github.io/sport-site/styles.11c5b073c7c8ba52.css": "d951db08499913cc71f9c648a17b34e86355adc4",
