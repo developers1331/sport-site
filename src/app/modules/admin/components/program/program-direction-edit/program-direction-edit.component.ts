@@ -52,7 +52,7 @@ export class ProgramDirectionEditComponent implements OnInit {
                 name = 'Бодибилдинг';
                 break;
             case 'powerlifting':
-                name = 'Паэерлифтинг';
+                name = 'Пауэрлифтинг';
                 break;
             case 'crossfit':
                 name = 'Кроссфит';

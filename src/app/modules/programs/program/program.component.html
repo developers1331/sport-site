@@ -1,16 +1,22 @@
 <div class="container">
-    <a class="program__link" routerLink="/programs"
-        >&#8592; Вернуться к выбору программы</a
-    >
+    <div class="program">
+        <div class="program__header">
+            <a class="program__link" routerLink="/programs"
+                >&#8592; Вернуться к выбору программы</a
+            >
+        </div>
 
-    <div *ngIf="programData; else loading">
-        {{ programData?.title }}
-        <br />
-        {{ programData?.description }}
-        <br />
-        {{ programData?.bgImageProgram }}
-        <br />
-        <quill-view-html [content]="programData?.text"> </quill-view-html>
+        <div *ngIf="programData; else loading">
+            <h1 class="program__title">
+                {{ programData?.title }}
+            </h1>
+            <img
+                [src]="programData?.bgImageProgram"
+                alt=""
+                class="program__img"
+            />
+            <quill-view-html [content]="programData?.text"> </quill-view-html>
+        </div>
     </div>
 </div>
 
