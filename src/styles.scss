@@ -1,26 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
-
-@font-face {
-    font-family: "TT Norms Pro";
-    src: url("assets/fonts/tt-norms-pro-400-normal.v2.woff2") format("woff2");
-    font-style: normal;
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: "TT Norms Pro";
-    src: url("assets/fonts/tt-norms-pro-500-normal.v2.woff2") format("woff2");
-    font-style: normal;
-    font-weight: 500;
-}
-
-@font-face {
-    font-family: "TT Norms Pro";
-    src: url("assets/fonts/tt-norms-pro-700-normal.v2.woff2") format("woff2");
-    font-style: normal;
-    font-weight: 700;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
 * {
-    font-family: "TT Norms Pro", sans-serif;
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.7;
 }
