@@ -5,6 +5,7 @@
             <div
                 class="home__aside-posts-item"
                 *ngFor="let item of postsConfig"
+                (click)="goToInfo(item.id)"
             >
                 <div
                     class="home__aside-posts-item-picture"
@@ -28,14 +29,14 @@
                     </div>
                 </div>
             </div>
-            <a href="#!">
+            <!-- <a href="#!">
                 <div class="home__aside-posts-item za-babki">
-                    <!-- класс типа reklama лучше не ставить, адблок такие блоки удаляет со страницы -->
+                    класс типа reklama лучше не ставить, адблок такие блоки удаляет со страницы
                     <img
                         src="https://sun9-32.userapi.com/impg/UJ8MGNosiYKiRMCRhqSqo2sRnJvR9atrLDL6AQ/pftJ84m6D6Q.jpg?size=500x0&quality=95&sign=2f18ed0658cc7f2b4eb3c63dc7dee2f8"
                         alt="реклама"
                     /></div
-            ></a>
+            ></a> -->
         </div>
 
         <ng-template #loading>

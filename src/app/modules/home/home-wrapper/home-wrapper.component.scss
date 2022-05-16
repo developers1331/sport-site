@@ -48,7 +48,7 @@
     align-items: center;
     width: 100%;
     min-height: 60px;
-    background: rgba(0, 0, 0, 83%);
+    background: rgba(0, 0, 0, 90%);
     z-index: 3;
     padding: 15px 0;
     transition: all 0.3s ease;
@@ -149,6 +149,7 @@
         text-transform: uppercase;
         margin-bottom: 30px;
         font-size: $big_text;
+        font-weight: 700;
     }
     &__description {
         margin-bottom: 30px;
@@ -194,6 +195,8 @@
         color: $second_color;
         text-align: center;
         text-transform: uppercase;
+        font-weight: 700;
+        text-shadow: 3px 5px 2px #2c2c2c;
     }
 }
 

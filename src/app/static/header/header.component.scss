@@ -1,16 +1,13 @@
 @import "/src/global_styles/variables.scss";
-
 .container {
     max-width: $container-width;
     margin: 0 auto;
     padding: 0 10px;
-
     &_flex-sb {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-
     &_flex-direction {
         flex-direction: column;
     }
@@ -23,7 +20,6 @@
         align-items: center;
         width: 100%;
     }
-
     &__bottom {
         display: flex;
         justify-content: center;
@@ -32,7 +28,6 @@
         min-height: 150px;
         z-index: 4;
         margin-top: 30px;
-
         &-title {
             display: -webkit-box;
             -webkit-line-clamp: 2;
@@ -45,32 +40,29 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 5px;
+            text-shadow: 3px 5px 2px #2c2c2c;
         }
     }
-
     min-height: 500px;
     position: relative;
     overflow: hidden;
     margin: -50px 0;
     padding: 50px 0;
-
     &::after {
         content: "";
         display: block;
-        background: linear-gradient(rgba(0, 0, 0, 0.9), transparent);
+        background: linear-gradient(rgba(0, 0, 0, 0.6), transparent);
         width: 100%;
-        height: 100%;
+        height: 80%;
         position: absolute;
         left: 0;
         top: 0;
     }
-
     &:hover {
         .header__background {
             transform: scale(1.15);
         }
     }
-
     &__background {
         position: absolute;
         top: 0;
@@ -81,7 +73,6 @@
         background-position: center;
         background-size: cover;
         transition: all 0.3s ease;
-
         &-picture {
             width: 500px;
             height: 100%;
@@ -93,17 +84,14 @@
             background-position: center;
         }
     }
-
     &__sup-modal {
         cursor: pointer;
         color: #fff;
         transition: all 0.3s;
-
         &:hover {
             color: $header_text_link;
         }
     }
-
     &__background {
         .full-screen {
             position: absolute;
@@ -117,41 +105,34 @@
             object-fit: cover;
         }
     }
-
     &__left {
         z-index: 5;
     }
-
     &__right {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         align-items: center;
         max-width: 680px;
         width: 100%;
         z-index: 5;
     }
-
     &__logo {
         max-width: 135px;
         margin-top: 10px;
         border-radius: 10px;
         padding: 3px;
         transition: all 0.3s;
-
         &:hover {
             transform: scale(1.1);
         }
-
         &-picture {
             width: 100%;
         }
     }
-
     &__nav {
         max-width: 450px;
         width: 100%;
     }
-
     &__nav-list {
         display: flex;
         justify-content: space-between;
@@ -159,7 +140,6 @@
         list-style: none;
         width: 100%;
     }
-
     &__search-link {
         display: block;
         width: 22px;
@@ -172,7 +152,6 @@
     width: 20px;
     height: 20px;
     z-index: 10;
-
     &__line-1 {
         position: absolute;
         top: 0;
@@ -182,7 +161,6 @@
         background: #fff;
         transition: all 0.2s ease;
     }
-
     &__line-2 {
         position: absolute;
         top: 50%;
@@ -194,7 +172,6 @@
         transition: all 0.2s ease;
         opacity: 1;
     }
-
     &__line-3 {
         position: absolute;
         bottom: 0;
@@ -219,16 +196,13 @@
         &__nav-list {
             justify-content: flex-end;
         }
-
         &__right {
             flex-direction: row-reverse;
             max-width: 60px;
         }
-
         &__sup-modal {
             display: none;
         }
-
         &__bottom {
             &-title {
                 -webkit-line-clamp: 4;
@@ -236,21 +210,17 @@
             }
         }
     }
-
     .burger {
         display: block;
     }
-
     .active {
         .burger__line-1 {
             transform: rotate(-45deg) translate(-7px, 6px);
             background: $easy_color;
         }
-
         .burger__line-2 {
             opacity: 0;
         }
-
         .burger__line-3 {
             transform: rotate(45deg) translate(-5px, -5px);
             background: $easy_color;
