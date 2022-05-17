@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1652742446976,
+  "timestamp": 1652831017053,
   "index": "https://developers1331.github.io/sport-site/index.html",
   "assetGroups": [
     {
@@ -16,7 +16,7 @@
         "https://developers1331.github.io/sport-site/assets/manifest/site.webmanifest",
         "https://developers1331.github.io/sport-site/favicon.ico",
         "https://developers1331.github.io/sport-site/index.html",
-        "https://developers1331.github.io/sport-site/main.9971dabbbb3135fc.js",
+        "https://developers1331.github.io/sport-site/main.45adb1066e17f8a0.js",
         "https://developers1331.github.io/sport-site/polyfills.7cde95c32c6daaac.js",
         "https://developers1331.github.io/sport-site/runtime.ec6a25d8a84c0757.js",
         "https://developers1331.github.io/sport-site/styles.496049da3b15bb4a.css"
@@ -49,6 +49,10 @@
         "https://developers1331.github.io/sport-site/assets/images/exercise-2.jpg",
         "https://developers1331.github.io/sport-site/assets/images/exercise-2.webp",
         "https://developers1331.github.io/sport-site/assets/images/icons/arrow-upp.svg",
+        "https://developers1331.github.io/sport-site/assets/images/icons/body-icon-1.png",
+        "https://developers1331.github.io/sport-site/assets/images/icons/body-icon-2.png",
+        "https://developers1331.github.io/sport-site/assets/images/icons/body-icon-3.png",
+        "https://developers1331.github.io/sport-site/assets/images/icons/body-icon-4.png",
         "https://developers1331.github.io/sport-site/assets/images/icons/icon-upp.svg",
         "https://developers1331.github.io/sport-site/assets/images/icons/icon1.svg",
         "https://developers1331.github.io/sport-site/assets/images/icons/icon2.svg",
@@ -139,6 +143,10 @@
     "https://developers1331.github.io/sport-site/assets/images/exercise-2.jpg": "0f31ed8037ed59edde041cdef4e23317399a1b80",
     "https://developers1331.github.io/sport-site/assets/images/exercise-2.webp": "d747e060e982545438ea28176c0e0ecacafd096b",
     "https://developers1331.github.io/sport-site/assets/images/icons/arrow-upp.svg": "8452d29a5770e70a407f833454eeaf4b4bab243e",
+    "https://developers1331.github.io/sport-site/assets/images/icons/body-icon-1.png": "706b9c38bd01ff6a5176efaa54e27c7079058d5b",
+    "https://developers1331.github.io/sport-site/assets/images/icons/body-icon-2.png": "0585a779eb09288f2cdb325000ed8ece216caa94",
+    "https://developers1331.github.io/sport-site/assets/images/icons/body-icon-3.png": "6557a35336d9ddc77d87c87268dc9f92d3ff6659",
+    "https://developers1331.github.io/sport-site/assets/images/icons/body-icon-4.png": "45472fad215b13581c551b02f1b1cfc10c48cf91",
     "https://developers1331.github.io/sport-site/assets/images/icons/icon-upp.svg": "f00e526e2685b558b8b7cf2ca74b8c1408f13204",
     "https://developers1331.github.io/sport-site/assets/images/icons/icon1.svg": "6af6776d38bcb211ca28ec391a03c5e72693b545",
     "https://developers1331.github.io/sport-site/assets/images/icons/icon2.svg": "cb0594cdcc14abec06fdebfa387ab1621d7c4add",
@@ -205,8 +213,8 @@
     "https://developers1331.github.io/sport-site/assets/manifest/site.webmanifest": "06022e9ee027354bf85e8207f0b0c707be8fb56d",
     "https://developers1331.github.io/sport-site/assets/video/header.mp4": "35f558e9984756f56b70ff41203050a66a4343e3",
     "https://developers1331.github.io/sport-site/favicon.ico": "590c59650bb3defa5f56910ccc73398526be2d2a",
-    "https://developers1331.github.io/sport-site/index.html": "119aa83ce851ed232d58979ab85d5fa3dc61f7a7",
-    "https://developers1331.github.io/sport-site/main.9971dabbbb3135fc.js": "599d4138c0b208ff2110b42532eee960c7f8b136",
+    "https://developers1331.github.io/sport-site/index.html": "157eecac39e410cad674f69e3e0f43f8126c5b91",
+    "https://developers1331.github.io/sport-site/main.45adb1066e17f8a0.js": "17b7a6f06037300c52885d7ed634b171caa7d641",
     "https://developers1331.github.io/sport-site/polyfills.7cde95c32c6daaac.js": "a16b29de172c66d874717a5d8e642c3a36b1bb1c",
     "https://developers1331.github.io/sport-site/runtime.ec6a25d8a84c0757.js": "c7f6934c8163f8b9f426542b4ea809c74ff88e59",
     "https://developers1331.github.io/sport-site/styles.496049da3b15bb4a.css": "976ace026febbe8beaefb24b602d7ef3c9b8d82a"
