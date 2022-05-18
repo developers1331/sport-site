@@ -1,6 +1,9 @@
-<div class="programms__cards" *ngIf="programData?.length > 0; else loading">
+<div
+    class="programms__cards"
+    *ngIf="currentProgramData?.length > 0; else loading"
+>
     <div
-        *ngFor="let item of programData"
+        *ngFor="let item of currentProgramData"
         class="programms__cards-link"
         [routerLink]="['/program/', item.id]"
     >

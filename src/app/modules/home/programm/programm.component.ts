@@ -13,6 +13,7 @@ import _filter from 'lodash-es/filter';
 })
 export class ProgrammComponent implements OnInit, OnDestroy {
     public programData: any = undefined;
+    public currentProgramData: any = undefined;
     public id: number = 0;
 
     private currentDirection: string = 'bodybuilding';
@@ -24,19 +25,29 @@ export class ProgrammComponent implements OnInit, OnDestroy {
     ) {}
 
     public ngOnInit(): void {
+        this.programService.dataProgam$
+            .pipe(takeUntil(this.destroy$))
+            .subscribe((data) => {
+                this.programData = data;
+                this.currentProgramData = this.getCurrentData(
+                    this.currentDirection
+                );
+            });
+
         this.homeService.homeId$
             .pipe(takeUntil(this.destroy$))
             .subscribe((id) => {
                 this.currentDirection = this.getCurrentDirection(id);
-
-                this.programService.dataProgam$
-                    .pipe(takeUntil(this.destroy$))
-                    .subscribe((data) => {
-                        this.programData = _filter(data, {
-                            direction: this.currentDirection,
-                        }).slice(-6);
-                    });
+                this.currentProgramData = this.getCurrentData(
+                    this.currentDirection
+                );
             });
+    }
+
+    private getCurrentData(filter: string): any {
+        return _filter(this.programData, {
+            direction: filter,
+        }).slice(-6);
     }
 
     public getCurrentDirection(id: number): string {
