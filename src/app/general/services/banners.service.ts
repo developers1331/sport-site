@@ -33,9 +33,28 @@ export class BannersService {
             );
     }
 
-    public uppdateReviewBlock(): void {
-        //todo
+    public getReviewsBlockById(id: string): Observable<IReviewBanner> {
+        return this.http
+            .get(`${environment.fbDbUrl}/banners/reviews/${id}.json`)
+            .pipe(
+                map((banner: any) => {
+                    return {
+                        ...banner,
+                        id: id,
+                    };
+                })
+            );
     }
+
+    public uppdateReviewBlock(
+        banner: IReviewBanner
+    ): Observable<IReviewBanner> {
+        return this.http.patch<IReviewBanner>(
+            `${environment.fbDbUrl}/banners/reviews/${banner.id}.json`,
+            banner
+        );
+    }
+
     public removeReviewBlock(id: string) {
         return this.http.delete(
             `${environment.fbDbUrl}/banners/reviews/${id}.json`

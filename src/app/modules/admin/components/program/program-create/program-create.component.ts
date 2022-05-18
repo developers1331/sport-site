@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Subscription } from 'rxjs';
 import { ProgramService } from 'src/app/general/services/program.service';
 import { AlertService } from 'src/app/modules/admin/services/alert.service';
 import { IProgram } from 'src/app/modules/programs/shared/interfaces';
@@ -9,8 +10,10 @@ import { IProgram } from 'src/app/modules/programs/shared/interfaces';
     templateUrl: './program-create.component.html',
     styleUrls: ['./program-create.component.scss'],
 })
-export class ProgramCreateComponent implements OnInit {
+export class ProgramCreateComponent implements OnInit, OnDestroy {
     public form!: FormGroup;
+    public submitted: boolean = false;
+    private uSub!: Subscription;
     constructor(
         private programSerivce: ProgramService,
         private alert: AlertService
@@ -28,6 +31,7 @@ export class ProgramCreateComponent implements OnInit {
     }
 
     public submit() {
+        this.submitted = true;
         if (this.form.invalid) {
             return;
         }
@@ -41,9 +45,16 @@ export class ProgramCreateComponent implements OnInit {
             type: this.form.value.type,
         };
 
-        this.programSerivce.postProgram(program).subscribe(() => {
+        this.uSub = this.programSerivce.postProgram(program).subscribe(() => {
             this.form.reset();
             this.alert.succes('Программа тренировок добавлена!');
+            this.submitted = false;
         });
+    }
+
+    ngOnDestroy(): void {
+        if (this.uSub) {
+            this.uSub.unsubscribe();
+        }
     }
 }

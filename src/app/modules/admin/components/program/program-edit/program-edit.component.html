@@ -1,1 +1,136 @@
-<p>program-edit works!</p>
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <h3>Редактирование программы тренировок</h3>
+    <div
+        class="form-group"
+        [ngClass]="{
+            invalid: form.get('title')?.touched && form.get('title')?.invalid
+        }"
+    >
+        <label for="title">Название программы</label>
+        <input
+            class="form-control"
+            type="text"
+            id="title"
+            formControlName="title"
+        />
+        <div
+            class="validation"
+            *ngIf="form.get('title')?.touched && form.get('title')?.invalid"
+        >
+            <small
+                class="text-danger"
+                *ngIf="form.get('title')?.errors?.['required']"
+                >Введите название программы</small
+            >
+        </div>
+    </div>
+
+    <div
+        class="form-group"
+        [ngClass]="{
+            invalid:
+                form.get('bgImageProgram')?.touched &&
+                form.get('bgImageProgram')?.invalid
+        }"
+    >
+        <label for="photoUrl">Картинка для программы тренировок</label>
+        <input
+            class="form-control"
+            type="text"
+            id="bgImageProgram"
+            formControlName="bgImageProgram"
+        />
+        <div
+            class="validation"
+            *ngIf="
+                form.get('bgImageProgram')?.touched &&
+                form.get('bgImageProgram')?.invalid
+            "
+        >
+            <small
+                class="text-danger"
+                *ngIf="form.get('bgImageProgram')?.errors?.['required']"
+                >Добавьте картинку программы тренировок</small
+            >
+        </div>
+    </div>
+
+    <div
+        class="form-group"
+        [ngClass]="{
+            invalid:
+                form.get('description')?.touched &&
+                form.get('description')?.invalid
+        }"
+    >
+        <label for="description">Краткое описание программы</label>
+        <input
+            class="form-control"
+            type="text"
+            id="description"
+            formControlName="description"
+        />
+        <div
+            class="validation"
+            *ngIf="
+                form.get('description')?.touched &&
+                form.get('description')?.invalid
+            "
+        >
+            <small
+                class="text-danger"
+                *ngIf="form.get('description')?.errors?.['required']"
+                >Введите описание</small
+            >
+        </div>
+    </div>
+
+    <div
+        class="form-group"
+        [ngClass]="{
+            invalid:
+                form.get('direction')?.touched && form.get('direction')?.invalid
+        }"
+    >
+        <label for="direction">Выберите направление программы</label>
+
+        <select
+            name="direction"
+            formControlName="direction"
+            class="form-select"
+        >
+            <option value="home" selected>Домашняя</option>
+            <option value="crossfit">Кроссфит</option>
+            <option value="bodybuilding">Бодибилдинг</option>
+            <option value="powerlifting">Пауэрлифтинг</option>
+            <option value="workout">Воркаут</option>
+        </select>
+    </div>
+
+    <div
+        class="form-group"
+        [ngClass]="{
+            invalid: form.get('type')?.touched && form.get('type')?.invalid
+        }"
+    >
+        <label for="type">Выберите тип тренировки</label>
+        <select name="type" formControlName="type" class="form-select">
+            <option value="beginning" selected>Для начинающих</option>
+            <option value="advanced">Для продвинутых</option>
+            <option value="professional">Для профессионалов</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Весь контент тренировки</label>
+        <quill-editor formControlName="text"></quill-editor>
+    </div>
+
+    <button
+        type="submit"
+        class="btn bnt-block btn-dark"
+        [disabled]="form.invalid || submitted"
+    >
+        Изменить программу
+    </button>
+</form>

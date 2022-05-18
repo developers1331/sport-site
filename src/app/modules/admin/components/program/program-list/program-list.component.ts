@@ -11,6 +11,7 @@ import { IProgram } from 'src/app/modules/programs/shared/interfaces';
 export class ProgramListComponent implements OnInit {
     public helpText: string = 'Загрузка программ тренировок...';
     public programData: IProgram[] = [];
+    public searchProgram: string = '';
     constructor(
         private programService: ProgramService,
         private alert: AlertService
@@ -29,5 +30,49 @@ export class ProgramListComponent implements OnInit {
             );
             this.alert.danger('Программа удалена');
         });
+    }
+
+    public checkNameDiretcion(type: string): string {
+        let name = '';
+        switch (type) {
+            case 'home':
+                name = 'Домашняя';
+                break;
+            case 'bodybuilding':
+                name = 'Бодибилдинг';
+                break;
+            case 'powerlifting':
+                name = 'Пауэрлифтинг';
+                break;
+            case 'crossfit':
+                name = 'Кроссфит';
+                break;
+            case 'workout':
+                name = 'Воркаут';
+                break;
+
+            default:
+                break;
+        }
+        return name;
+    }
+
+    public checkNameType(type: string): string {
+        let name = '';
+        switch (type) {
+            case 'beginning':
+                name = 'Начинающий';
+                break;
+            case 'advanced':
+                name = 'Продвинутый';
+                break;
+            case 'professional':
+                name = 'Профессионал';
+                break;
+
+            default:
+                break;
+        }
+        return name;
     }
 }

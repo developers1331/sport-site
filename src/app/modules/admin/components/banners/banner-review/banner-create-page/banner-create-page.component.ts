@@ -10,11 +10,11 @@ import { IReviewBanner } from 'src/app/modules/admin/shared/interfaces';
     styleUrls: ['./banner-create-page.component.scss'],
 })
 export class BannerCreatePageComponent implements OnInit {
+    public form!: FormGroup;
     constructor(
         private bannerServiice: BannersService,
         private alert: AlertService
     ) {}
-    public form!: FormGroup;
 
     ngOnInit(): void {
         this.form = new FormGroup({

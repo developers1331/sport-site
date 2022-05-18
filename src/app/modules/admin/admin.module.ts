@@ -27,6 +27,7 @@ import { ProgramCreateComponent } from './components/program/program-create/prog
 import { ProgramTypeEditComponent } from './components/program/program-type-edit/program-type-edit.component';
 import { ProgramDirectionEditComponent } from './components/program/program-direction-edit/program-direction-edit.component';
 import { ProgramWrapperComponent } from './components/program/program-wrapper/program-wrapper.component';
+import { SearchProgramPipe } from 'src/app/modules/admin/shared/search.program.pipe';
 const INTERCEPTOR_PROVIDER: Provider = {
     provide: HTTP_INTERCEPTORS,
     multi: true,
@@ -41,6 +42,7 @@ const INTERCEPTOR_PROVIDER: Provider = {
         DashboardPageComponent,
         SearchPipe,
         SearchBannerPipe,
+        SearchProgramPipe,
         AlertComponent,
         BannerCreatePageComponent,
         BannersComponent,

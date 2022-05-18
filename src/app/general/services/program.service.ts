@@ -78,8 +78,11 @@ export class ProgramService {
         );
     }
 
-    public editProgram() {
-        //todo
+    public editProgram(program: IProgram): Observable<IProgram> {
+        return this.http.patch<IProgram>(
+            `${environment.fbDbUrl}/program/${program.id}.json`,
+            program
+        );
     }
 
     public getTypeProgram(): Observable<any> {
@@ -109,6 +112,7 @@ export class ProgramService {
             map((program: any) => {
                 return {
                     ...program,
+                    id: id,
                 };
             })
         );
