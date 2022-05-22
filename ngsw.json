@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1652917704402,
+  "timestamp": 1653249339698,
   "index": "https://developers1331.github.io/sport-site/index.html",
   "assetGroups": [
     {
@@ -16,7 +16,7 @@
         "https://developers1331.github.io/sport-site/assets/manifest/site.webmanifest",
         "https://developers1331.github.io/sport-site/favicon.ico",
         "https://developers1331.github.io/sport-site/index.html",
-        "https://developers1331.github.io/sport-site/main.96a447010269b2db.js",
+        "https://developers1331.github.io/sport-site/main.31f111811a2252c7.js",
         "https://developers1331.github.io/sport-site/polyfills.7cde95c32c6daaac.js",
         "https://developers1331.github.io/sport-site/runtime.cbbf39d8fdad24a8.js",
         "https://developers1331.github.io/sport-site/styles.496049da3b15bb4a.css"
@@ -249,8 +249,8 @@
     "https://developers1331.github.io/sport-site/assets/manifest/site.webmanifest": "06022e9ee027354bf85e8207f0b0c707be8fb56d",
     "https://developers1331.github.io/sport-site/assets/video/header.mp4": "35f558e9984756f56b70ff41203050a66a4343e3",
     "https://developers1331.github.io/sport-site/favicon.ico": "590c59650bb3defa5f56910ccc73398526be2d2a",
-    "https://developers1331.github.io/sport-site/index.html": "136bd3e54b089897b46a47b690b7a8238f858816",
-    "https://developers1331.github.io/sport-site/main.96a447010269b2db.js": "67ed4ecf6f3599b022cb9f7c208ac6d6bf578764",
+    "https://developers1331.github.io/sport-site/index.html": "7d82edbf35d935f63885fa92a32bd01ad23562bd",
+    "https://developers1331.github.io/sport-site/main.31f111811a2252c7.js": "2a09069cb6245e4e5682edaf0dbb1b7aceeabde4",
     "https://developers1331.github.io/sport-site/polyfills.7cde95c32c6daaac.js": "a16b29de172c66d874717a5d8e642c3a36b1bb1c",
     "https://developers1331.github.io/sport-site/runtime.cbbf39d8fdad24a8.js": "465bbc1802fa4cc7378bad32ab8ba5b4b69406b9",
     "https://developers1331.github.io/sport-site/styles.496049da3b15bb4a.css": "976ace026febbe8beaefb24b602d7ef3c9b8d82a"
