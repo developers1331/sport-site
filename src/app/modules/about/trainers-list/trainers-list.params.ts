@@ -8,39 +8,46 @@ export interface ITraniner {
 
 export const trainersListConfig: ITraniner[] = [
     {
-        fullname: 'Денис Демин',
-        coach: 'Все виды спорта',
-        imgPath: 'assets/images/trainers/trainer-1.png',
-        slogan: 'Помогу в любом вопросе',
-        description: 'Слава ВДВ! Слава ВДВ! Слава ВДВ! Слава ВДВ!',
-    },
-    {
-        fullname: 'Никита Иванов',
-        coach: 'Качалка',
-        imgPath: 'assets/images/trainers/trainer-2.png',
-        slogan: 'Помогу накачаться',
-        description: 'Какой то мотивационный текст про качалку или мышцы...',
-    },
-    {
-        fullname: 'Дмитрий Гаврилов',
-        coach: 'Без спорта',
-        imgPath: 'assets/images/trainers/trainer-3.png',
-        slogan: 'Дед инсайд',
+        fullname: 'Вин Дизель',
+        coach: 'Бодибилдинг',
+        imgPath:
+            'https://belradio.net/wp-content/uploads/2012/09/QQSZZHHK.jpeg',
+        slogan: 'Индивидуальный  подход  ко  всем.',
         description:
-            '1000-7? 1000-7? 1000-7? 1000-7? 1000-7? 1000-7? 1000-7? 1000-7? 1000-7? 1000-7? 1000-7? 1000-7? 1000-7? 1000-7? 1000-7? 1000-7? 1000-7? 1000-7? ',
+            'На сайте имеется множество программ тренировок от меня. Также помогу составить индивидуальную программу.',
     },
     {
-        fullname: 'Леха Журавский',
-        coach: 'Наркотики',
-        imgPath: 'assets/images/trainers/trainer-4.png',
-        slogan: 'Употребляю всякое',
-        description: 'В основном глицин, но иногда то за что можно сесть',
+        fullname: 'Арнольд Шварценеггер',
+        coach: 'Профессиональный бодибилдинг',
+        imgPath: 'https://www.shkolazhizni.ru/img/content/i189/189795_or.jpg',
+        slogan: 'Профессиональный подход к соревновательному бодибилдингу.',
+        description:
+            'Составлю индивидуальный план тренировок, питания и прочего для выхода на проф. сцену бодибилдинга.',
     },
     {
-        fullname: 'Давид',
-        coach: 'Гонки',
-        imgPath: 'assets/images/trainers/trainer-5.png',
-        slogan: 'Гоняю на мотике',
-        description: 'Тебя давно не было в уличных гонках, заходи!',
+        fullname: 'Игорь Войтенко',
+        coach: 'Воркаут',
+        imgPath:
+            'https://sun9-77.userapi.com/impf/c845521/v845521339/27117/NglPMoVcelc.jpg?size=604x604&quality=96&sign=3e619b1f067283c7864e82be610c4386&type=album',
+        slogan: 'Мотивирую достигать поставленные цели.',
+        description:
+            'Помогаю добиваться целей не только в спорте. Провожу воркаут тренировки.',
+    },
+    {
+        fullname: 'Юрий Спасокукоцкий',
+        coach: 'Пауэрлифтинг',
+        imgPath:
+            'http://force-man.ru/uploads/posts/2018-12/1545769800_3aivpk1qwls1.jpg',
+        slogan: 'Провожу силовые тренировки.',
+        description:
+            'Расскажу и покажу как правильно наращивать мышечную массу вместе с силовыми.',
+    },
+    {
+        fullname: 'Максим Марцинкевич',
+        coach: 'Единоборства',
+        imgPath:
+            'https://avatars.mds.yandex.net/get-zen_doc/3645545/pub_5f62ad315477ff281e703daf_5f62b0425477ff281e7109ce/scale_1200',
+        slogan: 'Единоборства и спортивная деятельность.',
+        description: 'Тренировки с элементами ОФП, воркаута и единоборств.',
     },
 ];

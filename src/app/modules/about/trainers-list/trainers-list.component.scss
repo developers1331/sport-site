@@ -123,7 +123,7 @@
         }
 
         figure.snip0015 h2 {
-            word-spacing: -0.15em;
+            word-spacing: 0.15em;
             font-weight: 300;
             text-transform: uppercase;
             transform: translate3d(0%, 50%, 0);
@@ -136,6 +136,7 @@
         }
 
         figure.snip0015:hover figcaption h2 {
+            font-size: 1.7rem;
             opacity: 1;
             transform: translate3d(0%, 0%, 0);
             transition-delay: 0.3s;
